@@ -1,0 +1,12 @@
+ Program
+   Robot Program
+     MoveJ
+       Waypoint_1
+       y≔.1
+       rx≔1
+       ry≔.5
+       o≔p[0,y,0,rx,ry,0]
+       Plane_5≔pose_trans(Plane_5_const, o)
+     MoveJ
+       Waypoint_1
+       Waypoint_3

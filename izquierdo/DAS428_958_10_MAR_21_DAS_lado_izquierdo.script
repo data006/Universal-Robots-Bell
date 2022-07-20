@@ -1,0 +1,4934 @@
+def DAS428_958_10_MAR_21_DAS_lado_izquierdo():
+  step_count_5b7ba1d7_3cec_43a9_bb61_ec3e0f51b7b0 = 0
+  thread Step_Counter_Thread_701f4156_67d8_4070_b6e9_b04e38b71f47():
+    while (True):
+      step_count_5b7ba1d7_3cec_43a9_bb61_ec3e0f51b7b0 = step_count_5b7ba1d7_3cec_43a9_bb61_ec3e0f51b7b0 + 1
+      sync()
+    end
+  end
+  run Step_Counter_Thread_701f4156_67d8_4070_b6e9_b04e38b71f47()
+  set_safety_mode_transition_hardness(1)
+  modbus_add_signal("192.168.10.45", 255, 187, 1, "postrnas_m187", False)
+  modbus_set_signal_update_frequency("postrnas_m187", 10)
+  modbus_add_signal("192.168.10.45", 255, 289, 1, "ini_cambro_m289", False)
+  modbus_set_signal_update_frequency("ini_cambro_m289", 10)
+  modbus_add_signal("192.168.10.45", 255, 290, 0, "fin_cambro_m290", False)
+  modbus_set_signal_update_frequency("fin_cambro_m290", 10)
+  modbus_add_signal("192.168.10.45", 255, 291, 1, "outputbroc_m291", False)
+  modbus_set_signal_update_frequency("outputbroc_m291", 10)
+  modbus_add_signal("192.168.10.45", 255, 292, 0, "fciclocarr_m292", False)
+  modbus_set_signal_update_frequency("fciclocarr_m292", 10)
+  modbus_add_signal("192.168.10.45", 255, 7, 1, "avancarrusel_m7", False)
+  modbus_set_signal_update_frequency("avancarrusel_m7", 10)
+  modbus_add_signal("192.168.10.45", 255, 252, 1, "pose2_m252", False)
+  modbus_set_signal_update_frequency("pose2_m252", 10)
+  modbus_add_signal("192.168.10.45", 255, 253, 1, "pose3_m253", False)
+  modbus_set_signal_update_frequency("pose3_m253", 10)
+  modbus_add_signal("192.168.10.45", 255, 254, 1, "pose4_m254", False)
+  modbus_set_signal_update_frequency("pose4_m254", 10)
+  modbus_add_signal("192.168.10.45", 255, 441, 1, "finciclo_m441", False)
+  modbus_set_signal_update_frequency("finciclo_m441", 10)
+  modbus_add_signal("192.168.10.45", 255, 442, 1, "finciclo_m442", False)
+  modbus_set_signal_update_frequency("finciclo_m442", 10)
+  modbus_add_signal("192.168.10.45", 255, 443, 1, "finciclo_m443", False)
+  modbus_set_signal_update_frequency("finciclo_m443", 10)
+  modbus_add_signal("192.168.10.45", 255, 503, 0, "homecobot_m503", False)
+  modbus_set_signal_update_frequency("homecobot_m503", 10)
+  modbus_add_signal("192.168.10.45", 255, 288, 1, "cargar_run_m288", False)
+  modbus_set_signal_update_frequency("cargar_run_m288", 10)
+  modbus_add_signal("192.168.10.45", 255, 287, 0, "desactiver_m288", False)
+  modbus_set_signal_update_frequency("desactiver_m288", 10)
+  modbus_add_signal("192.168.10.45", 255, 183, 0, "eje7home_m183", False)
+  modbus_set_signal_update_frequency("eje7home_m183", 10)
+  modbus_add_signal("192.168.10.45", 255, 444, 1, "finciclo_m444", False)
+  modbus_set_signal_update_frequency("finciclo_m444", 10)
+  modbus_add_signal("192.168.10.45", 255, 381, 0, "pat1_m381", False)
+  modbus_set_signal_update_frequency("pat1_m381", 10)
+  modbus_add_signal("192.168.10.45", 255, 382, 0, "pat2_m382", False)
+  modbus_set_signal_update_frequency("pat2_m382", 10)
+  modbus_add_signal("192.168.10.45", 255, 383, 0, "pat3_m383", False)
+  modbus_set_signal_update_frequency("pat3_m383", 10)
+  modbus_add_signal("192.168.10.45", 255, 384, 0, "pat4_m384", False)
+  modbus_set_signal_update_frequency("pat4_m384", 10)
+  modbus_add_signal("192.168.10.45", 255, 385, 0, "pat5_m385", False)
+  modbus_set_signal_update_frequency("pat5_m385", 10)
+  modbus_add_signal("192.168.10.45", 255, 386, 0, "pat6_m386", False)
+  modbus_set_signal_update_frequency("pat6_m386", 10)
+  modbus_add_signal("192.168.10.45", 255, 387, 0, "pat7_m387", False)
+  modbus_set_signal_update_frequency("pat7_m387", 10)
+  modbus_add_signal("192.168.10.45", 255, 388, 0, "pat8_m388", False)
+  modbus_set_signal_update_frequency("pat8_m388", 10)
+  modbus_add_signal("192.168.10.45", 255, 389, 0, "pat9_m389", False)
+  modbus_set_signal_update_frequency("pat9_m389", 10)
+  modbus_add_signal("192.168.10.45", 255, 390, 0, "pat10_m390", False)
+  modbus_set_signal_update_frequency("pat10_m390", 10)
+  modbus_add_signal("192.168.10.45", 255, 391, 0, "pat11_m391", False)
+  modbus_set_signal_update_frequency("pat11_m391", 10)
+  modbus_add_signal("192.168.10.45", 255, 392, 0, "pat12_m392", False)
+  modbus_set_signal_update_frequency("pat12_m392", 10)
+  modbus_add_signal("192.168.10.45", 255, 401, 0, "inipat1_m401", False)
+  modbus_set_signal_update_frequency("inipat1_m401", 10)
+  modbus_add_signal("192.168.10.45", 255, 402, 0, "inipat2_m402", False)
+  modbus_set_signal_update_frequency("inipat2_m402", 10)
+  modbus_add_signal("192.168.10.45", 255, 403, 0, "inipat3_m403", False)
+  modbus_set_signal_update_frequency("inipat3_m403", 10)
+  modbus_add_signal("192.168.10.45", 255, 404, 0, "inipat4_m404", False)
+  modbus_set_signal_update_frequency("inipat4_m404", 10)
+  modbus_add_signal("192.168.10.45", 255, 405, 0, "inipat5_m405", False)
+  modbus_set_signal_update_frequency("inipat5_m405", 10)
+  modbus_add_signal("192.168.10.45", 255, 406, 0, "inipat6_m406", False)
+  modbus_set_signal_update_frequency("inipat6_m406", 10)
+  modbus_add_signal("192.168.10.45", 255, 407, 0, "inipat7_m407", False)
+  modbus_set_signal_update_frequency("inipat7_m407", 10)
+  modbus_add_signal("192.168.10.45", 255, 408, 0, "inipat8_m408", False)
+  modbus_set_signal_update_frequency("inipat8_m408", 10)
+  modbus_add_signal("192.168.10.45", 255, 409, 0, "inipat9_m409", False)
+  modbus_set_signal_update_frequency("inipat9_m409", 10)
+  modbus_add_signal("192.168.10.45", 255, 410, 0, "inipat10_m410", False)
+  modbus_set_signal_update_frequency("inipat10_m410", 10)
+  modbus_add_signal("192.168.10.45", 255, 411, 0, "inipat11_m411", False)
+  modbus_set_signal_update_frequency("inipat11_m411", 10)
+  modbus_add_signal("192.168.10.45", 255, 412, 0, "inipat12_m412", False)
+  modbus_set_signal_update_frequency("inipat12_m412", 10)
+  modbus_add_signal("192.168.10.45", 255, 430, 0, "modeloDer_m430", False)
+  modbus_set_signal_update_frequency("modeloDer_m430", 10)
+  modbus_add_signal("192.168.10.45", 255, 380, 1, "mensaje_m380", False)
+  modbus_set_signal_update_frequency("mensaje_m380", 10)
+  modbus_add_signal("192.168.10.45", 255, 379, 0, "respues_m379", False)
+  modbus_set_signal_update_frequency("respues_m379", 10)
+  modbus_add_signal("192.168.10.45", 255, 251, 1, "pose1_m251", False)
+  modbus_set_signal_update_frequency("pose1_m251", 10)
+  modbus_set_runstate_dependent_choice("postrnas_m187",0)
+  modbus_set_runstate_dependent_choice("ini_cambro_m289",0)
+  modbus_set_runstate_dependent_choice("outputbroc_m291",0)
+  modbus_set_runstate_dependent_choice("avancarrusel_m7",0)
+  modbus_set_runstate_dependent_choice("pose2_m252",0)
+  modbus_set_runstate_dependent_choice("pose3_m253",0)
+  modbus_set_runstate_dependent_choice("pose4_m254",0)
+  modbus_set_runstate_dependent_choice("finciclo_m441",0)
+  modbus_set_runstate_dependent_choice("finciclo_m442",0)
+  modbus_set_runstate_dependent_choice("finciclo_m443",0)
+  modbus_set_runstate_dependent_choice("cargar_run_m288",0)
+  modbus_set_runstate_dependent_choice("finciclo_m444",0)
+  modbus_set_runstate_dependent_choice("mensaje_m380",0)
+  modbus_set_runstate_dependent_choice("pose1_m251",0)
+  set_standard_analog_input_domain(0, 1)
+  set_standard_analog_input_domain(1, 1)
+  set_tool_analog_input_domain(0, 1)
+  set_tool_analog_input_domain(1, 1)
+  set_analog_outputdomain(0, 0)
+  set_analog_outputdomain(1, 0)
+  set_input_actions_to_default()
+  set_runstate_standard_digital_outputs([2])
+  set_runstate_configurable_digital_outputs([1])
+  set_runstate_standard_digital_output_to_value(2, 1)
+  set_runstate_configurable_digital_output_to_value(1, 1)
+  set_gravity([0.0, 0.0, 9.82])
+  set_tcp(p[4.109330471764039E-4,-0.21829828276152607,0.037994196120996,1.5580092985761962,-0.12546870791316503,0.12120248426608284])
+  set_payload(1.5)
+  set_tool_communication(False, 115200, 0, 1, 1.5, 3.5)
+  set_tool_output_mode(0)
+  set_tool_digital_output_mode(0, 1)
+  set_tool_digital_output_mode(1, 1)
+  set_tool_voltage(0)
+  global contador=0
+  global i_var_1=0
+  global Pallet_1_cnt_1=1
+  global Pallet_1_cnt=1
+  global Line_1=p[0.0,0.0,0.0,0.0,0.0,0.0]
+  global Line_2=p[0.0,0.0,0.0,0.0,0.0,0.0]
+  global Line_3=p[0.0,0.0,0.0,0.0,0.0,0.0]
+  global Line_4=p[-0.2932874787951964,0.3932288129452105,0.013749459185886714,0.019478391032120013,-0.0350876085014595,1.5300278925331599]
+  global Line_5=p[0.0,0.0,0.0,0.0,0.0,0.0]
+  global Plane_1=p[-0.4357649673792705,0.3571224276764373,-0.011331751409534768,-0.03455953496512708,-0.012487423981114925,3.103751116092306]
+  global Plane_2=p[-0.4823864034329737,0.3302516442079689,0.014283714098506706,0.017125077458443067,0.05770060098903715,-2.9134709732588786]
+  global Plane_3=p[0.003678615545088639,0.4082921331082374,0.10477407557236007,-2.072177303174012E-4,7.379081343290108E-4,-6.424400645467977E-4]
+  global Plane_4=p[-0.4500206307677429,-0.2823718146925442,-0.4767416657426552,0.013278190059218174,0.013334473770785706,1.8479691991032237]
+  global Plano_patron1=p[-0.7699005610122596,0.304894434078545,0.0420369514744936,-0.0031270356010209216,1.7180543614697593E-4,-3.508888786211572E-5]
+  global Point_13=p[0.0,0.0,0.0,0.0,0.0,0.0]
+  global Point_3=p[0.0,0.0,0.0,0.0,0.0,0.0]
+  global Point_8=p[0.0,0.0,0.0,0.0,0.0,0.0]
+  global Punto_prot_1=p[0.0,0.0,0.0,0.0,0.0,0.0]
+  global Punto_seg_der=p[0.23741638234469645,0.3587772222537799,0.42419077585740217,0.818517054876345,1.4216436941132238,1.005041187710707]
+  global pisp_958=p[-0.41395442210486977,-0.2082168853247176,0.041553466664982,0.014014788518713659,0.01101911827984854,1.569193423241601]
+  rtde_set_watchdog("speed_slider_mask", 10.0, "ignore")
+  global punto_inicio1_p=p[.646450557051, -.011703646441, .260165521498, 2.151053848061, 2.289666295300, .000000043502]
+  global punto_inicio1_q=[-3.5886768785108325, -1.6817359473409255, 2.0205390290055516, -0.3262609477485494, -5.381271373505864, -0.005740641690357151]
+  global Linea1_A_p=p[.462969608464, -.228380567226, .081416927932, 3.127419348118, -.094247711870, .002663395301]
+  global Linea1_A_q=[-3.7029921182284617, -1.5949735576900537, 2.3088842372899556, -0.7219928267987301, -3.8029029375725996, -0.0035193216535809313]
+  global Linea1_B_p=p[.665709281922, -.229050806306, .081124486486, 3.127419356512, -.094247711231, .002663400326]
+  global Linea1_B_q=[-3.527257572996575, -1.2787982534862579, 1.935118415006528, -0.6668828003908986, -3.6271564559920275, -0.006256497339121481]
+  global Linea1_C_p=p[.691124353009, -.228948596284, .080166909164, 3.127419354238, -.094247698244, .002663398246]
+  global Linea1_C_q=[-3.5124957292981236, -1.2417715922948638, 1.884966164736685, -0.6540632589083604, -3.612377321339714, -0.00658625887601616]
+  global Linea1_D_p=p[.895377559336, -.229074648972, .081054090577, 3.049411756413, .712548629483, -.001760788260]
+  global Linea1_D_q=[-3.4855904099284207, -1.0514458152139872, 1.5904456020940465, -0.539809044389834, -4.10459399942917, -0.0026151802377478717]
+  global Linea1_E_p=p[.920630851882, -.228997838309, .081299999998, 3.049358159554, .712479972904, -.001565807304]
+  global Linea1_E_q=[-3.475091616191031, -1.015521030605374, 1.5312526642178481, -0.5166986541769116, -4.094014873809566, -0.002626192959967355]
+  global Linea1_F_p=p[1.149194842053, -.230503259279, .080115766517, 3.049411733581, .712548652855, -.001760803543]
+  global Linea1_F_q=[-3.4048328327842015, -0.6328468020187117, 0.8529846039769852, -0.2211810609682594, -4.023072039419777, -0.002869425377006962]
+  def calculate_point_to_move_towards(feature, direction, position_distance):
+    local posDir=[direction[0], direction[1], direction[2]]
+    if (norm(posDir) < 1e-6):
+      return get_target_waypoint()
+    end
+    local direction_vector_normalized=normalize(posDir)
+    local displacement_pose=p[direction_vector_normalized[0] * position_distance,direction_vector_normalized[1] * position_distance,direction_vector_normalized[2] * position_distance,0,0,0]
+    local wanted_displacement_in_base_frame=pose_sub(pose_trans(feature, displacement_pose), feature)
+    return pose_add(get_target_waypoint(), wanted_displacement_in_base_frame)
+  end
+  global Linea2_A_p=p[.466152036536, .180094697295, .080595812410, 2.709191110303, 1.575162134631, .003537736282]
+  global Linea2_A_q=[-2.968278115666255, -1.6982344908841451, 2.4011127278525706, -0.7020654676544096, -4.1816316980812855, -3.107667850272833E-4]
+  global Linea2_B_p=p[.669642139143, .179865549894, .080736601018, 2.709191092527, 1.575162152747, .003537729833]
+  global Linea2_B_q=[-3.031743555178565, -1.3925887399176293, 2.0842503539512904, -0.6906886748840932, -4.245173181799821, -1.1649700381077821E-4]
+  global Linea2_C_p=p[.694938532830, .178642812815, .080842861840, 2.709191073477, 1.575162169791, .003537724300]
+  global Linea2_C_q=[-3.0386715776106006, -1.3585914968663024, 2.040866607020835, -0.6812939037159804, -4.252092817465346, -1.1250757029745984E-4]
+  global Linea2_D_p=p[.897969513226, .178427044113, .080372690437, 2.709191056457, 1.575162186979, .003537719758]
+  global Linea2_D_q=[-3.065803288873766, -1.084900713872746, 1.6451071261881625, -0.559210312305769, -4.27903602417013, -1.3643155482689906E-4]
+  global Linea2_E_p=p[.923126669767, .178076496054, .079946983909, 2.709191048404, 1.575162193195, .003537716876]
+  global Linea2_E_q=[-3.0686260205536886, -1.0502778912712145, 1.590366732999816, -0.5390942133643479, -4.281820079273791, -1.4618502251551035E-4]
+  global Linea2_F_p=p[1.151497675285, .177179167663, .080751584906, 2.709191030325, 1.575162204513, .003537709127]
+  global Linea2_F_q=[-3.0857976721564313, -0.6968740740877966, 0.9711693483627695, -0.27334236391728783, -4.298372152639132, -2.885772092131589E-4]
+  global Linea3_A_p=p[.460549585639, -.395563060889, .080682441626, 3.132568688775, -.094343196815, .005705682151]
+  global Linea3_A_q=[-3.994453293034889, -1.5018790404202402, 2.2127829893060067, -0.7107014965356138, -4.094418849553687, 0.00539725495226584]
+  global Linea3_B_p=p[.664301280477, -.395445283799, .081307572347, 3.132568680776, -.094343169931, .005705680640]
+  global Linea3_B_q=[-3.7552812610676902, -1.22392595483608, 1.8551134527220405, -0.6311079857626405, -3.8551682660300606, 0.0055508861328705805]
+  global Linea3_C_p=p[.689222855671, -.395791416338, .080698554632, 3.132568663468, -.094343110200, .005705661758]
+  global Linea3_C_q=[-3.73493139152541, -1.1900382700344085, 1.8066137237362985, -0.6165106961534335, -3.8347955397750724, 0.005555654300204882]
+  global Linea3_D_p=p[.892727004922, -.396221118920, .080324929217, 3.132568662114, -.094343080911, .005705656558]
+  global Linea3_D_q=[-3.6058019036749265, -0.9085575951219251, 1.3520563370135061, -0.44364672206063016, -3.7053250888505986, 0.005442335002795673]
+  global Linea3_E_p=p[.918375149963, -.396593839378, .080115337913, 3.132568654204, -.094343062931, .005705650136]
+  global Linea3_E_q=[-3.5936389169239242, -0.8696111390224264, 1.2845883022481488, -0.4151600955214718, -3.6930966396546694, 0.005415100479176399]
+  global Linea3_F_p=p[1.146286802024, -.396632614600, .080257870921, 3.132408679282, -.093751966175, .006288096847]
+  global Linea3_F_q=[-3.5060250122531595, -0.36725074566805205, 0.3361075139837171, 0.03011502919631133, -3.604624454034791, 0.005021910154788145]
+  global Linea4_A_p=p[.464054549478, .012985021363, .080074200241, 2.534672665931, 1.848425949968, .013396033787]
+  global Linea4_A_q=[-3.6201315470100432, -1.896853744411974, 2.5404951774657754, -0.6436689237618163, -5.04023011087533, 0.004943994033641097]
+  global Linea4_B_p=p[.667246343360, .012985021579, .080289860517, 2.534672615691, 1.848425978785, .013396041589]
+  global Linea4_B_q=[-3.4186521603822833, -1.484518410400348, 2.1948531473802877, -0.7106979273941745, -4.8390219894920845, 0.005362375942234543]
+  global Linea4_C_p=p[.692678647899, .013032641223, .080384677998, 2.534672583663, 1.848426007144, .013396023762]
+  global Linea4_C_q=[-3.4049309541669603, -1.4441716892600684, 2.148235342405694, -0.7044419134967992, -4.825301329711676, 0.0053786247154834575]
+  global Linea4_D_p=p[.895962644920, .012683831402, .081163380059, 2.534672566930, 1.848426021038, .013396014484]
+  global Linea4_D_q=[-3.331420343973002, -1.1487706339257961, 1.7437343834646777, -0.5954110168268159, -4.751648791424731, 0.005390927129277049]
+  global Linea4_E_p=p[.921050152664, .012351704717, .081664900196, 2.534672558569, 1.848426027633, .013396009535]
+  global Linea4_E_q=[-3.325522311062958, -1.1137898033813016, 1.6885684152516296, -0.5752308974796989, -4.745715167002134, 0.0053813516405991635]
+  global Linea4_F_p=p[1.149402230555, .011805064784, .082230289732, 2.534672528087, 1.848426054400, .013395993208]
+  global Linea4_F_q=[-3.2833580733023204, -0.7645458590500152, 1.0932003107625308, -0.32914616147320874, -4.70300756641808, 0.005258430619142551]
+  global precambio_broc2_p=p[.640934505921, .215920190592, .683770704203, -1.894532381366, -2.505734452065, -.000201861908]
+  global precambio_broc2_q=[-3.187873549678418, -1.6112716443955506, 1.1959643217288367, 0.4262708445478198, -5.192339335570027, -0.0032140464792007606]
+  global precambio_broc3_p=p[.212892172693, .357620190572, .683770704258, -1.894532392760, -2.505734432066, -.000201791864]
+  global precambio_broc3_q=[-2.4390192305311054, -1.9878843869417153, 1.4707110656421323, 0.5256036863563525, -4.443084194007822, 0.003720255600653334]
+  global Precambio_broca_p=p[.000830370305, .461517540512, .287521124194, -.221784750204, -3.131955254916, .000429460883]
+  global Precambio_broca_q=[-2.1838225298159477, -2.0964618902985066, 2.243453456263678, -0.13436505871461257, -5.342774534909408, -0.004043449473680738]
+  global Dejar_broca_p=p[.000823895762, .461515687097, .012951720949, -.221812511419, -3.131977617574, .000372127747]
+  global Dejar_broca_q=[-2.183495316599444, -1.7678482895328447, 2.6170152878959705, -0.837583231698904, -5.343897117921112, -0.0023471751717600853]
+  def Quitar_broca():
+    $ 1809 "Quitar_broca" "noBreak"
+    $ 1810 "Quitar_broca"
+    $ 1811 "barrenos_hechos≔barrenos_hechos+1"
+    global barrenos_hechos=barrenos_hechos+1
+    $ 1812 "If barrenos_hechos≟14 or cambiar_broca≟ True "
+    if (barrenos_hechos == 14  or  cambiar_broca ==   True  ):
+      $ 1813 "'Codigo de quitar broca'"
+      # 'Codigo de quitar broca'
+      $ 1814 "MoveL"
+      $ 1815 "Direction: Base Z+"
+      global move_thread_flag_1815=0
+      thread move_thread_1815():
+        enter_critical
+        move_thread_flag_1815 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.3)
+        movel(towardsPos, a=1.2, v=0.25)
+        move_thread_flag_1815 = 2
+        exit_critical
+      end
+      move_thread_flag_1815 = 0
+      move_thread_han_1815 = run move_thread_1815()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_1815 > 1):
+          join move_thread_han_1815
+          $ 1816 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 1817 "If eje7≟3"
+      if (eje7 == 3):
+        $ 1818 "punto_inicio1" "breakAfter"
+        movel(punto_inicio1_p, a=1.2, v=0.25)
+        $ 1819 "precambio_broc2" "breakAfter"
+        movel(precambio_broc2_p, a=1.2, v=0.25)
+        $ 1820 "precambio_broc3" "breakAfter"
+        movel(precambio_broc3_p, a=1.2, v=0.25)
+      end
+      $ 1821 "Precambio_broca" "breakAfter"
+      movel(Precambio_broca_p, a=1.2, v=0.25)
+      $ 1822 "Dejar_broca" "breakAfter"
+      movel(Dejar_broca_p, a=0.1, v=0.09)
+      $ 1823 "Set outputbroc_m291=Encender"
+      modbus_set_output_signal("outputbroc_m291", True)
+      $ 1824 "Wait: 4.0"
+      sleep(4.0)
+      $ 1825 "Set outputbroc_m291=Apagar"
+      modbus_set_output_signal("outputbroc_m291", False)
+      $ 1826 "Wait: 0.5"
+      sleep(0.5)
+      $ 1827 "Wait fciclocarr_m292=LO"
+      while (modbus_get_signal_status("fciclocarr_m292") == True):
+        sync()
+      end
+      $ 1828 "Wait: 0.5"
+      sleep(0.5)
+      $ 1829 "MoveL"
+      $ 1830 "Precambio_broca" "breakAfter"
+      movel(Precambio_broca_p, a=0.1, v=0.09)
+      $ 1831 "Set avancarrusel_m7=Encender"
+      modbus_set_output_signal("avancarrusel_m7", True)
+      $ 1832 "Wait: 1.0"
+      sleep(1.0)
+      $ 1833 "Set avancarrusel_m7=Apagar"
+      modbus_set_output_signal("avancarrusel_m7", False)
+      $ 1834 "Wait: 0.1"
+      sleep(0.1)
+    end
+  end
+  def Poner_broca():
+    $ 1835 "Poner_broca" "noBreak"
+    $ 1836 "Poner_broca"
+    $ 1837 "If cambiar_broca≟ True  or iniciando_prog≟ True "
+    if (cambiar_broca ==   True    or  iniciando_prog ==   True  ):
+      $ 1838 "'Codigo de poner broca'"
+      # 'Codigo de poner broca'
+      $ 1839 "Set ini_cambro_m289=Apagar"
+      modbus_set_output_signal("ini_cambro_m289", False)
+      $ 1840 "MoveL"
+      $ 1841 "If eje7≟3 and iniciando_prog≟ True "
+      if (eje7 == 3  and  iniciando_prog ==   True  ):
+        $ 1842 "punto_inicio1" "breakAfter"
+        movel(punto_inicio1_p, a=1.2, v=0.25)
+        $ 1843 "precambio_broc2" "breakAfter"
+        movel(precambio_broc2_p, a=1.2, v=0.25)
+        $ 1844 "precambio_broc3" "breakAfter"
+        movel(precambio_broc3_p, a=1.2, v=0.25)
+      end
+      $ 1845 "Precambio_broca" "breakAfter"
+      movel(Precambio_broca_p, a=1.2, v=0.25)
+      $ 1846 "Popup: Cambia a las siguientes brocas"
+      popup("Cambia a las siguientes brocas", "Advertencia", True, False, blocking=True)
+      $ 1847 "Dejar_broca" "breakAfter"
+      movel(Dejar_broca_p, a=0.1, v=0.09)
+      $ 1848 "Set ini_cambro_m289=Encender"
+      modbus_set_output_signal("ini_cambro_m289", True)
+      $ 1849 "Wait: 4.0"
+      sleep(4.0)
+      $ 1850 "Set ini_cambro_m289=Apagar"
+      modbus_set_output_signal("ini_cambro_m289", False)
+      $ 1851 "Wait: 0.5"
+      sleep(0.5)
+      $ 1852 "Wait fciclocarr_m292=LO"
+      while (modbus_get_signal_status("fciclocarr_m292") == True):
+        sync()
+      end
+      $ 1853 "Wait: 0.5"
+      sleep(0.5)
+      $ 1854 "MoveL"
+      $ 1855 "Precambio_broca" "breakAfter"
+      movel(Precambio_broca_p, a=0.1, v=0.09)
+      $ 1856 "If eje7≟3"
+      if (eje7 == 3):
+        $ 1857 "precambio_broc3" "breakAfter"
+        movel(precambio_broc3_p, a=1.2, v=0.25)
+        $ 1858 "precambio_broc2" "breakAfter"
+        movel(precambio_broc2_p, a=1.2, v=0.25)
+        $ 1859 "punto_inicio1" "breakAfter"
+        movel(punto_inicio1_p, a=1.2, v=0.25)
+      end
+      $ 1860 "barrenos_hechos≔0"
+      global barrenos_hechos=0
+      $ 1861 "iniciando_prog≔ False "
+      global iniciando_prog=  False  
+      $ 1862 "cambiar_broca≔ False "
+      global cambiar_broca=  False  
+    end
+    $ 1863 "If barrenos_hechos≟14"
+    if (barrenos_hechos == 14):
+      $ 1864 "If cambiar_broca≟ False "
+      if (cambiar_broca ==   False  ):
+        $ 1865 "'Codigo de poner broca'"
+        # 'Codigo de poner broca'
+        $ 1866 "Set ini_cambro_m289=Apagar"
+        modbus_set_output_signal("ini_cambro_m289", False)
+        $ 1867 "MoveL"
+        $ 1868 "Precambio_broca" "breakAfter"
+        movel(Precambio_broca_p, a=1.2, v=0.25)
+        $ 1869 "Dejar_broca" "breakAfter"
+        movel(Dejar_broca_p, a=0.1, v=0.09)
+        $ 1870 "Set ini_cambro_m289=Encender"
+        modbus_set_output_signal("ini_cambro_m289", True)
+        $ 1871 "Wait: 4.0"
+        sleep(4.0)
+        $ 1872 "Set ini_cambro_m289=Apagar"
+        modbus_set_output_signal("ini_cambro_m289", False)
+        $ 1873 "Wait: 0.5"
+        sleep(0.5)
+        $ 1874 "Wait fciclocarr_m292=LO"
+        while (modbus_get_signal_status("fciclocarr_m292") == True):
+          sync()
+        end
+        $ 1875 "Wait: 0.5"
+        sleep(0.5)
+        $ 1876 "MoveL"
+        $ 1877 "Precambio_broca" "breakAfter"
+        movel(Precambio_broca_p, a=0.1, v=0.09)
+        $ 1878 "If eje7≟3"
+        if (eje7 == 3):
+          $ 1879 "precambio_broc3" "breakAfter"
+          movel(precambio_broc3_p, a=1.2, v=0.25)
+          $ 1880 "precambio_broc2" "breakAfter"
+          movel(precambio_broc2_p, a=1.2, v=0.25)
+          $ 1881 "punto_inicio1" "breakAfter"
+          movel(punto_inicio1_p, a=1.2, v=0.25)
+        end
+        $ 1882 "barrenos_hechos≔0"
+        global barrenos_hechos=0
+      else:
+        $ 1883 "Else" "noBreak"
+        $ 1884 "'Codigo de poner broca'"
+        # 'Codigo de poner broca'
+        $ 1885 "Set ini_cambro_m289=Apagar"
+        modbus_set_output_signal("ini_cambro_m289", False)
+        $ 1886 "MoveL"
+        $ 1887 "Precambio_broca" "breakAfter"
+        movel(Precambio_broca_p, a=1.2, v=0.25)
+        $ 1888 "Popup: Cambia a las siguientes brocas"
+        popup("Cambia a las siguientes brocas", "Advertencia", True, False, blocking=True)
+        $ 1889 "Dejar_broca" "breakAfter"
+        movel(Dejar_broca_p, a=0.1, v=0.09)
+        $ 1890 "Set ini_cambro_m289=Encender"
+        modbus_set_output_signal("ini_cambro_m289", True)
+        $ 1891 "Wait: 4.0"
+        sleep(4.0)
+        $ 1892 "Set ini_cambro_m289=Apagar"
+        modbus_set_output_signal("ini_cambro_m289", False)
+        $ 1893 "Wait: 0.5"
+        sleep(0.5)
+        $ 1894 "Wait fciclocarr_m292=LO"
+        while (modbus_get_signal_status("fciclocarr_m292") == True):
+          sync()
+        end
+        $ 1895 "Wait: 0.5"
+        sleep(0.5)
+        $ 1896 "MoveL"
+        $ 1897 "Precambio_broca" "breakAfter"
+        movel(Precambio_broca_p, a=0.1, v=0.09)
+        $ 1898 "If eje7≟3"
+        if (eje7 == 3):
+          $ 1899 "precambio_broc3" "breakAfter"
+          movel(precambio_broc3_p, a=1.2, v=0.25)
+          $ 1900 "precambio_broc2" "breakAfter"
+          movel(precambio_broc2_p, a=1.2, v=0.25)
+          $ 1901 "punto_inicio1" "breakAfter"
+          movel(punto_inicio1_p, a=1.2, v=0.25)
+        end
+        $ 1902 "barrenos_hechos≔0"
+        global barrenos_hechos=0
+        $ 1903 "iniciando_prog≔ False "
+        global iniciando_prog=  False  
+        $ 1904 "cambiar_broca≔ False "
+        global cambiar_broca=  False  
+      end
+    end
+  end
+  while (True):
+    $ 1 "Robot Program"
+    $ 2 "Variables"
+    $ 3 "bajada_broca≔p[0,0,-0.008,0,0,0]"
+    global bajada_broca=p[0,0,-0.008,0,0,0]
+    $ 4 "barrenos_menos1≔0"
+    global barrenos_menos1=0
+    $ 5 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 6 "posicion≔p[0,0,300,0,0,0]"
+    global posicion=p[0,0,300,0,0,0]
+    $ 7 "cambiar_broca≔ False "
+    global cambiar_broca=  False  
+    $ 8 "barrenos_hechos≔0"
+    global barrenos_hechos=0
+    $ 9 "eje7≔3"
+    global eje7=3
+    $ 10 "Wait: 0.5"
+    sleep(0.5)
+    $ 11 "Home"
+    $ 12 "Wait: 0.3"
+    sleep(0.3)
+    $ 13 "Home"
+    movej([-2.5890958934427104, -1.990702925865989, 2.190075797821148, -0.17834602565650215, -5.748178516127443, -0.01395064457738826], a=1.3962634015954636, v=1.0471975511965976)
+    $ 16 "Wait: 0.3"
+    sleep(0.3)
+    $ 17 "iniciando_prog≔ True "
+    global iniciando_prog=  True  
+    $ 18 "Call Poner_broca"
+    Poner_broca()
+    $ 19 "Posicion2"
+    $ 20 "eje7≔2"
+    global eje7=2
+    $ 21 "Broca_1"
+    $ 22 "Linea1"
+    $ 23 "Marcar_puntos"
+    $ 24 "MoveL"
+    $ 25 "Home"
+    movej([-2.5890958934427104, -1.990702925865989, 2.190075797821148, -0.17834602565650215, -5.748178516127443, -0.01395064457738826], a=1.3962634015954636, v=1.0471975511965976)
+    $ 26 "punto_inicio1" "breakAfter"
+    movel(punto_inicio1_p, a=0.5, v=0.1)
+    $ 27 "Linea1_A" "breakAfter"
+    movel(Linea1_A_p, a=0.5, v=0.1)
+    $ 28 "Linea1_B" "breakAfter"
+    movel(Linea1_B_p, a=0.5, v=0.1)
+    $ 29 "Linea1_C" "breakAfter"
+    movel(Linea1_C_p, a=0.5, v=0.1)
+    $ 30 "Linea1_D" "breakAfter"
+    movel(Linea1_D_p, a=0.5, v=0.1)
+    $ 31 "Linea1_E" "breakAfter"
+    movel(Linea1_E_p, a=0.5, v=0.1)
+    $ 32 "Linea1_F" "breakAfter"
+    movel(Linea1_F_p, a=0.5, v=0.1)
+    $ 33 "AB"
+    $ 34 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 35 "bajada_broca≔p[0,0,-0.008,0,0,0]"
+    global bajada_broca=p[0,0,-0.008,0,0,0]
+    $ 36 "barrenos_menos1≔8"
+    global barrenos_menos1=8
+    $ 37 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 38 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 39 "Perforacion"
+      $ 40 "MoveL"
+      $ 41 "internos≔interpolate_pose(Linea1_A, Linea1_B, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea1_A_p, Linea1_B_p, barreno_actual/barrenos_menos1)
+      $ 42 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 43 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 44 "bajada_broca≔p[0,0,-0.008,0,0,0]"
+      global bajada_broca=p[0,0,-0.008,0,0,0]
+      $ 45 "bajada≔p[0,0,0.008,0,0,0]"
+      global bajada=p[0,0,0.008,0,0,0]
+      $ 46 "Direction: Base Z-"
+      global move_thread_flag_46=0
+      thread move_thread_46():
+        enter_critical
+        move_thread_flag_46 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.054)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_46 = 2
+        exit_critical
+      end
+      move_thread_flag_46 = 0
+      move_thread_han_46 = run move_thread_46()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_46 > 1):
+          join move_thread_han_46
+          $ 47 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 48 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 49 "Direction: Base Z+"
+      global move_thread_flag_49=0
+      thread move_thread_49():
+        enter_critical
+        move_thread_flag_49 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.002)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_49 = 2
+        exit_critical
+      end
+      move_thread_flag_49 = 0
+      move_thread_han_49 = run move_thread_49()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_49 > 1):
+          join move_thread_han_49
+          $ 50 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 51 "Wait: 0.3"
+      sleep(0.3)
+      $ 52 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 53 "Wait: 0.3"
+      sleep(0.3)
+      $ 54 "Loop 3 times"
+      Loop_11 = 0
+      while (Loop_11 < 3):
+        $ 55 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 56 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 57 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 58 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.005)
+        $ 59 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_11 = Loop_11 + 1
+      end
+      $ 60 "Direction: Base Z+"
+      global move_thread_flag_60=0
+      thread move_thread_60():
+        enter_critical
+        move_thread_flag_60 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_60 = 2
+        exit_critical
+      end
+      move_thread_flag_60 = 0
+      move_thread_han_60 = run move_thread_60()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_60 > 1):
+          join move_thread_han_60
+          $ 61 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 62 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 63 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+      $ 64 "Call Quitar_broca"
+      Quitar_broca()
+      $ 65 "Call Poner_broca"
+      Poner_broca()
+    end
+    $ 66 "CD"
+    $ 67 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 68 "bajada_broca≔p[0,0,-0.008,0,0,0]"
+    global bajada_broca=p[0,0,-0.008,0,0,0]
+    $ 69 "barrenos_menos1≔8"
+    global barrenos_menos1=8
+    $ 70 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 71 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 72 "Perforacion"
+      $ 73 "MoveL"
+      $ 74 "internos≔interpolate_pose(Linea1_C, Linea1_D, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea1_C_p, Linea1_D_p, barreno_actual/barrenos_menos1)
+      $ 75 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 76 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 77 "bajada_broca≔p[0,0,-0.008,0,0,0]"
+      global bajada_broca=p[0,0,-0.008,0,0,0]
+      $ 78 "bajada≔p[0,0,0.008,0,0,0]"
+      global bajada=p[0,0,0.008,0,0,0]
+      $ 79 "Direction: Base Z-"
+      global move_thread_flag_79=0
+      thread move_thread_79():
+        enter_critical
+        move_thread_flag_79 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.054)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_79 = 2
+        exit_critical
+      end
+      move_thread_flag_79 = 0
+      move_thread_han_79 = run move_thread_79()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_79 > 1):
+          join move_thread_han_79
+          $ 80 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 81 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 82 "Direction: Base Z+"
+      global move_thread_flag_82=0
+      thread move_thread_82():
+        enter_critical
+        move_thread_flag_82 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.002)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_82 = 2
+        exit_critical
+      end
+      move_thread_flag_82 = 0
+      move_thread_han_82 = run move_thread_82()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_82 > 1):
+          join move_thread_han_82
+          $ 83 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 84 "Wait: 0.3"
+      sleep(0.3)
+      $ 85 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 86 "Wait: 0.3"
+      sleep(0.3)
+      $ 87 "Loop 3 times"
+      Loop_14 = 0
+      while (Loop_14 < 3):
+        $ 88 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 89 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 90 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 91 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.005)
+        $ 92 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_14 = Loop_14 + 1
+      end
+      $ 93 "Direction: Base Z+"
+      global move_thread_flag_93=0
+      thread move_thread_93():
+        enter_critical
+        move_thread_flag_93 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_93 = 2
+        exit_critical
+      end
+      move_thread_flag_93 = 0
+      move_thread_han_93 = run move_thread_93()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_93 > 1):
+          join move_thread_han_93
+          $ 94 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 95 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 96 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+      $ 97 "Call Quitar_broca"
+      Quitar_broca()
+      $ 98 "Call Poner_broca"
+      Poner_broca()
+    end
+    $ 99 "EF"
+    $ 100 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 101 "bajada_broca≔p[0,0,-0.008,0,0,0]"
+    global bajada_broca=p[0,0,-0.008,0,0,0]
+    $ 102 "barrenos_menos1≔9"
+    global barrenos_menos1=9
+    $ 103 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 104 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 105 "Perforacion"
+      $ 106 "MoveL"
+      $ 107 "internos≔interpolate_pose(Linea1_E, Linea1_F, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea1_E_p, Linea1_F_p, barreno_actual/barrenos_menos1)
+      $ 108 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 109 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 110 "bajada_broca≔p[0,0,-0.008,0,0,0]"
+      global bajada_broca=p[0,0,-0.008,0,0,0]
+      $ 111 "bajada≔p[0,0,0.008,0,0,0]"
+      global bajada=p[0,0,0.008,0,0,0]
+      $ 112 "Direction: Base Z-"
+      global move_thread_flag_112=0
+      thread move_thread_112():
+        enter_critical
+        move_thread_flag_112 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.054)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_112 = 2
+        exit_critical
+      end
+      move_thread_flag_112 = 0
+      move_thread_han_112 = run move_thread_112()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_112 > 1):
+          join move_thread_han_112
+          $ 113 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 114 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 115 "Direction: Base Z+"
+      global move_thread_flag_115=0
+      thread move_thread_115():
+        enter_critical
+        move_thread_flag_115 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.002)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_115 = 2
+        exit_critical
+      end
+      move_thread_flag_115 = 0
+      move_thread_han_115 = run move_thread_115()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_115 > 1):
+          join move_thread_han_115
+          $ 116 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 117 "Wait: 0.3"
+      sleep(0.3)
+      $ 118 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 119 "Wait: 0.3"
+      sleep(0.3)
+      $ 120 "Loop 3 times"
+      Loop_16 = 0
+      while (Loop_16 < 3):
+        $ 121 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 122 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 123 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 124 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.005)
+        $ 125 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_16 = Loop_16 + 1
+      end
+      $ 126 "Direction: Base Z+"
+      global move_thread_flag_126=0
+      thread move_thread_126():
+        enter_critical
+        move_thread_flag_126 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_126 = 2
+        exit_critical
+      end
+      move_thread_flag_126 = 0
+      move_thread_han_126 = run move_thread_126()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_126 > 1):
+          join move_thread_han_126
+          $ 127 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 128 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 129 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+      $ 130 "Call Quitar_broca"
+      Quitar_broca()
+      $ 131 "Call Poner_broca"
+      Poner_broca()
+    end
+    $ 132 "Popup: Linea1 con chica Terminada!"
+    popup("Linea1 con chica Terminada!", "Mensaje", False, False, blocking=True)
+    $ 133 "Linea2"
+    $ 134 "Marcar_puntos"
+    $ 135 "MoveL"
+    $ 136 "punto_inicio1" "breakAfter"
+    movel(punto_inicio1_p, a=0.5, v=0.1)
+    $ 137 "Linea2_A" "breakAfter"
+    movel(Linea2_A_p, a=0.5, v=0.1)
+    $ 138 "Linea2_B" "breakAfter"
+    movel(Linea2_B_p, a=0.5, v=0.1)
+    $ 139 "Linea2_C" "breakAfter"
+    movel(Linea2_C_p, a=0.5, v=0.1)
+    $ 140 "Linea2_D" "breakAfter"
+    movel(Linea2_D_p, a=0.5, v=0.1)
+    $ 141 "Linea2_E" "breakAfter"
+    movel(Linea2_E_p, a=0.5, v=0.1)
+    $ 142 "Linea2_F" "breakAfter"
+    movel(Linea2_F_p, a=0.5, v=0.1)
+    $ 143 "AB"
+    $ 144 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 145 "bajada_broca≔p[0,0,-0.008,0,0,0]"
+    global bajada_broca=p[0,0,-0.008,0,0,0]
+    $ 146 "barrenos_menos1≔8"
+    global barrenos_menos1=8
+    $ 147 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 148 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 149 "Perforacion"
+      $ 150 "MoveL"
+      $ 151 "internos≔interpolate_pose(Linea2_A, Linea2_B, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea2_A_p, Linea2_B_p, barreno_actual/barrenos_menos1)
+      $ 152 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 153 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 154 "bajada_broca≔p[0,0,-0.008,0,0,0]"
+      global bajada_broca=p[0,0,-0.008,0,0,0]
+      $ 155 "bajada≔p[0,0,0.008,0,0,0]"
+      global bajada=p[0,0,0.008,0,0,0]
+      $ 156 "Direction: Base Z-"
+      global move_thread_flag_156=0
+      thread move_thread_156():
+        enter_critical
+        move_thread_flag_156 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.054)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_156 = 2
+        exit_critical
+      end
+      move_thread_flag_156 = 0
+      move_thread_han_156 = run move_thread_156()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_156 > 1):
+          join move_thread_han_156
+          $ 157 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 158 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 159 "Direction: Base Z+"
+      global move_thread_flag_159=0
+      thread move_thread_159():
+        enter_critical
+        move_thread_flag_159 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.002)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_159 = 2
+        exit_critical
+      end
+      move_thread_flag_159 = 0
+      move_thread_han_159 = run move_thread_159()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_159 > 1):
+          join move_thread_han_159
+          $ 160 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 161 "Wait: 0.3"
+      sleep(0.3)
+      $ 162 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 163 "Wait: 0.3"
+      sleep(0.3)
+      $ 164 "Loop 3 times"
+      Loop_2 = 0
+      while (Loop_2 < 3):
+        $ 165 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 166 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 167 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 168 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.005)
+        $ 169 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_2 = Loop_2 + 1
+      end
+      $ 170 "Direction: Base Z+"
+      global move_thread_flag_170=0
+      thread move_thread_170():
+        enter_critical
+        move_thread_flag_170 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_170 = 2
+        exit_critical
+      end
+      move_thread_flag_170 = 0
+      move_thread_han_170 = run move_thread_170()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_170 > 1):
+          join move_thread_han_170
+          $ 171 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 172 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 173 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+      $ 174 "Call Quitar_broca"
+      Quitar_broca()
+      $ 175 "Call Poner_broca"
+      Poner_broca()
+    end
+    $ 176 "CD"
+    $ 177 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 178 "bajada_broca≔p[0,0,-0.008,0,0,0]"
+    global bajada_broca=p[0,0,-0.008,0,0,0]
+    $ 179 "barrenos_menos1≔8"
+    global barrenos_menos1=8
+    $ 180 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 181 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 182 "Perforacion"
+      $ 183 "MoveL"
+      $ 184 "internos≔interpolate_pose(Linea2_C, Linea2_D, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea2_C_p, Linea2_D_p, barreno_actual/barrenos_menos1)
+      $ 185 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 186 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 187 "bajada_broca≔p[0,0,-0.008,0,0,0]"
+      global bajada_broca=p[0,0,-0.008,0,0,0]
+      $ 188 "bajada≔p[0,0,0.008,0,0,0]"
+      global bajada=p[0,0,0.008,0,0,0]
+      $ 189 "Direction: Base Z-"
+      global move_thread_flag_189=0
+      thread move_thread_189():
+        enter_critical
+        move_thread_flag_189 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.054)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_189 = 2
+        exit_critical
+      end
+      move_thread_flag_189 = 0
+      move_thread_han_189 = run move_thread_189()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_189 > 1):
+          join move_thread_han_189
+          $ 190 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 191 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 192 "Direction: Base Z+"
+      global move_thread_flag_192=0
+      thread move_thread_192():
+        enter_critical
+        move_thread_flag_192 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.002)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_192 = 2
+        exit_critical
+      end
+      move_thread_flag_192 = 0
+      move_thread_han_192 = run move_thread_192()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_192 > 1):
+          join move_thread_han_192
+          $ 193 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 194 "Wait: 0.3"
+      sleep(0.3)
+      $ 195 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 196 "Wait: 0.3"
+      sleep(0.3)
+      $ 197 "Loop 3 times"
+      Loop_5 = 0
+      while (Loop_5 < 3):
+        $ 198 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 199 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 200 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 201 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.005)
+        $ 202 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_5 = Loop_5 + 1
+      end
+      $ 203 "Direction: Base Z+"
+      global move_thread_flag_203=0
+      thread move_thread_203():
+        enter_critical
+        move_thread_flag_203 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_203 = 2
+        exit_critical
+      end
+      move_thread_flag_203 = 0
+      move_thread_han_203 = run move_thread_203()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_203 > 1):
+          join move_thread_han_203
+          $ 204 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 205 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 206 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+      $ 207 "Call Quitar_broca"
+      Quitar_broca()
+      $ 208 "Call Poner_broca"
+      Poner_broca()
+    end
+    $ 209 "EF"
+    $ 210 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 211 "bajada_broca≔p[0,0,-0.008,0,0,0]"
+    global bajada_broca=p[0,0,-0.008,0,0,0]
+    $ 212 "barrenos_menos1≔9"
+    global barrenos_menos1=9
+    $ 213 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 214 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 215 "Perforacion"
+      $ 216 "MoveL"
+      $ 217 "internos≔interpolate_pose(Linea2_E, Linea2_F, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea2_E_p, Linea2_F_p, barreno_actual/barrenos_menos1)
+      $ 218 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 219 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 220 "bajada_broca≔p[0,0,-0.008,0,0,0]"
+      global bajada_broca=p[0,0,-0.008,0,0,0]
+      $ 221 "bajada≔p[0,0,0.008,0,0,0]"
+      global bajada=p[0,0,0.008,0,0,0]
+      $ 222 "Direction: Base Z-"
+      global move_thread_flag_222=0
+      thread move_thread_222():
+        enter_critical
+        move_thread_flag_222 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.054)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_222 = 2
+        exit_critical
+      end
+      move_thread_flag_222 = 0
+      move_thread_han_222 = run move_thread_222()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_222 > 1):
+          join move_thread_han_222
+          $ 223 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 224 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 225 "Direction: Base Z+"
+      global move_thread_flag_225=0
+      thread move_thread_225():
+        enter_critical
+        move_thread_flag_225 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.002)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_225 = 2
+        exit_critical
+      end
+      move_thread_flag_225 = 0
+      move_thread_han_225 = run move_thread_225()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_225 > 1):
+          join move_thread_han_225
+          $ 226 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 227 "Wait: 0.3"
+      sleep(0.3)
+      $ 228 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 229 "Wait: 0.3"
+      sleep(0.3)
+      $ 230 "Loop 3 times"
+      Loop_9 = 0
+      while (Loop_9 < 3):
+        $ 231 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 232 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 233 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 234 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.005)
+        $ 235 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_9 = Loop_9 + 1
+      end
+      $ 236 "Direction: Base Z+"
+      global move_thread_flag_236=0
+      thread move_thread_236():
+        enter_critical
+        move_thread_flag_236 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_236 = 2
+        exit_critical
+      end
+      move_thread_flag_236 = 0
+      move_thread_han_236 = run move_thread_236()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_236 > 1):
+          join move_thread_han_236
+          $ 237 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 238 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 239 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+      $ 240 "If barreno_actual>barrenos_menos1"
+      if (barreno_actual>barrenos_menos1):
+        $ 241 "cambiar_broca≔ True "
+        global cambiar_broca=  True  
+      end
+      $ 242 "Call Quitar_broca"
+      Quitar_broca()
+      $ 243 "Call Poner_broca"
+      Poner_broca()
+    end
+    $ 244 "Popup: Linea2 con chica Terminada!"
+    popup("Linea2 con chica Terminada!", "Mensaje", False, False, blocking=True)
+    $ 245 "Broca_2"
+    $ 246 "Linea1"
+    $ 247 "Marcar_puntos"
+    $ 248 "MoveL"
+    $ 249 "punto_inicio1" "breakAfter"
+    movel(punto_inicio1_p, a=0.5, v=0.1)
+    $ 250 "Linea1_A" "breakAfter"
+    movel(Linea1_A_p, a=0.5, v=0.1)
+    $ 251 "Linea1_B" "breakAfter"
+    movel(Linea1_B_p, a=0.5, v=0.1)
+    $ 252 "Linea1_C" "breakAfter"
+    movel(Linea1_C_p, a=0.5, v=0.1)
+    $ 253 "Linea1_D" "breakAfter"
+    movel(Linea1_D_p, a=0.5, v=0.1)
+    $ 254 "Linea1_E" "breakAfter"
+    movel(Linea1_E_p, a=0.5, v=0.1)
+    $ 255 "Linea1_F" "breakAfter"
+    movel(Linea1_F_p, a=0.5, v=0.1)
+    $ 256 "AB"
+    $ 257 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 258 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+    global bajada_broca=p[0,0,-0.012,0,0,0]
+    $ 259 "barrenos_menos1≔8"
+    global barrenos_menos1=8
+    $ 260 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 261 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 262 "Perforacion"
+      $ 263 "MoveL"
+      $ 264 "internos≔interpolate_pose(Linea1_A, Linea1_B, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea1_A_p, Linea1_B_p, barreno_actual/barrenos_menos1)
+      $ 265 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 266 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 267 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+      global bajada_broca=p[0,0,-0.012,0,0,0]
+      $ 268 "bajada≔p[0,0,0.012,0,0,0]"
+      global bajada=p[0,0,0.012,0,0,0]
+      $ 269 "Direction: Base Z-"
+      global move_thread_flag_269=0
+      thread move_thread_269():
+        enter_critical
+        move_thread_flag_269 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.054)
+        movel(towardsPos, a=0.015, v=0.01)
+        move_thread_flag_269 = 2
+        exit_critical
+      end
+      move_thread_flag_269 = 0
+      move_thread_han_269 = run move_thread_269()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_269 > 1):
+          join move_thread_han_269
+          $ 270 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 271 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 272 "Direction: Base Z+"
+      global move_thread_flag_272=0
+      thread move_thread_272():
+        enter_critical
+        move_thread_flag_272 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.002)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_272 = 2
+        exit_critical
+      end
+      move_thread_flag_272 = 0
+      move_thread_han_272 = run move_thread_272()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_272 > 1):
+          join move_thread_han_272
+          $ 273 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 274 "Wait: 0.3"
+      sleep(0.3)
+      $ 275 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 276 "Wait: 0.3"
+      sleep(0.3)
+      $ 277 "Loop 2 times"
+      Loop_46 = 0
+      while (Loop_46 < 2):
+        $ 278 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 279 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 280 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 281 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.005)
+        $ 282 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_46 = Loop_46 + 1
+      end
+      $ 283 "Direction: Base Z+"
+      global move_thread_flag_283=0
+      thread move_thread_283():
+        enter_critical
+        move_thread_flag_283 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_283 = 2
+        exit_critical
+      end
+      move_thread_flag_283 = 0
+      move_thread_han_283 = run move_thread_283()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_283 > 1):
+          join move_thread_han_283
+          $ 284 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 285 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 286 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+      $ 287 "Call Quitar_broca"
+      Quitar_broca()
+      $ 288 "Call Poner_broca"
+      Poner_broca()
+    end
+    $ 289 "CD"
+    $ 290 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 291 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+    global bajada_broca=p[0,0,-0.012,0,0,0]
+    $ 292 "barrenos_menos1≔8"
+    global barrenos_menos1=8
+    $ 293 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 294 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 295 "Perforacion"
+      $ 296 "MoveL"
+      $ 297 "internos≔interpolate_pose(Linea1_C, Linea1_D, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea1_C_p, Linea1_D_p, barreno_actual/barrenos_menos1)
+      $ 298 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 299 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 300 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+      global bajada_broca=p[0,0,-0.012,0,0,0]
+      $ 301 "bajada≔p[0,0,0.012,0,0,0]"
+      global bajada=p[0,0,0.012,0,0,0]
+      $ 302 "Direction: Base Z-"
+      global move_thread_flag_302=0
+      thread move_thread_302():
+        enter_critical
+        move_thread_flag_302 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.054)
+        movel(towardsPos, a=0.015, v=0.01)
+        move_thread_flag_302 = 2
+        exit_critical
+      end
+      move_thread_flag_302 = 0
+      move_thread_han_302 = run move_thread_302()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_302 > 1):
+          join move_thread_han_302
+          $ 303 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 304 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 305 "Direction: Base Z+"
+      global move_thread_flag_305=0
+      thread move_thread_305():
+        enter_critical
+        move_thread_flag_305 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.002)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_305 = 2
+        exit_critical
+      end
+      move_thread_flag_305 = 0
+      move_thread_han_305 = run move_thread_305()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_305 > 1):
+          join move_thread_han_305
+          $ 306 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 307 "Wait: 0.3"
+      sleep(0.3)
+      $ 308 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 309 "Wait: 0.3"
+      sleep(0.3)
+      $ 310 "Loop 2 times"
+      Loop_48 = 0
+      while (Loop_48 < 2):
+        $ 311 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 312 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 313 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 314 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.005)
+        $ 315 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_48 = Loop_48 + 1
+      end
+      $ 316 "Direction: Base Z+"
+      global move_thread_flag_316=0
+      thread move_thread_316():
+        enter_critical
+        move_thread_flag_316 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_316 = 2
+        exit_critical
+      end
+      move_thread_flag_316 = 0
+      move_thread_han_316 = run move_thread_316()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_316 > 1):
+          join move_thread_han_316
+          $ 317 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 318 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 319 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+      $ 320 "Call Quitar_broca"
+      Quitar_broca()
+      $ 321 "Call Poner_broca"
+      Poner_broca()
+    end
+    $ 322 "EF"
+    $ 323 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 324 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+    global bajada_broca=p[0,0,-0.012,0,0,0]
+    $ 325 "barrenos_menos1≔9"
+    global barrenos_menos1=9
+    $ 326 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 327 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 328 "Perforacion"
+      $ 329 "MoveL"
+      $ 330 "internos≔interpolate_pose(Linea1_E, Linea1_F, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea1_E_p, Linea1_F_p, barreno_actual/barrenos_menos1)
+      $ 331 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 332 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 333 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+      global bajada_broca=p[0,0,-0.012,0,0,0]
+      $ 334 "bajada≔p[0,0,0.012,0,0,0]"
+      global bajada=p[0,0,0.012,0,0,0]
+      $ 335 "Direction: Base Z-"
+      global move_thread_flag_335=0
+      thread move_thread_335():
+        enter_critical
+        move_thread_flag_335 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.054)
+        movel(towardsPos, a=0.015, v=0.01)
+        move_thread_flag_335 = 2
+        exit_critical
+      end
+      move_thread_flag_335 = 0
+      move_thread_han_335 = run move_thread_335()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_335 > 1):
+          join move_thread_han_335
+          $ 336 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 337 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 338 "Direction: Base Z+"
+      global move_thread_flag_338=0
+      thread move_thread_338():
+        enter_critical
+        move_thread_flag_338 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.002)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_338 = 2
+        exit_critical
+      end
+      move_thread_flag_338 = 0
+      move_thread_han_338 = run move_thread_338()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_338 > 1):
+          join move_thread_han_338
+          $ 339 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 340 "Wait: 0.3"
+      sleep(0.3)
+      $ 341 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 342 "Wait: 0.3"
+      sleep(0.3)
+      $ 343 "Loop 2 times"
+      Loop_50 = 0
+      while (Loop_50 < 2):
+        $ 344 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 345 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 346 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 347 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.005)
+        $ 348 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_50 = Loop_50 + 1
+      end
+      $ 349 "Direction: Base Z+"
+      global move_thread_flag_349=0
+      thread move_thread_349():
+        enter_critical
+        move_thread_flag_349 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_349 = 2
+        exit_critical
+      end
+      move_thread_flag_349 = 0
+      move_thread_han_349 = run move_thread_349()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_349 > 1):
+          join move_thread_han_349
+          $ 350 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 351 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 352 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+      $ 353 "Call Quitar_broca"
+      Quitar_broca()
+      $ 354 "Call Poner_broca"
+      Poner_broca()
+    end
+    $ 355 "Popup: Linea1 con media Terminada!"
+    popup("Linea1 con media Terminada!", "Mensaje", False, False, blocking=True)
+    $ 356 "Linea2"
+    $ 357 "Marcar_puntos"
+    $ 358 "MoveL"
+    $ 359 "punto_inicio1" "breakAfter"
+    movel(punto_inicio1_p, a=0.5, v=0.1)
+    $ 360 "Linea2_A" "breakAfter"
+    movel(Linea2_A_p, a=0.5, v=0.1)
+    $ 361 "Linea2_B" "breakAfter"
+    movel(Linea2_B_p, a=0.5, v=0.1)
+    $ 362 "Linea2_C" "breakAfter"
+    movel(Linea2_C_p, a=0.5, v=0.1)
+    $ 363 "Linea2_D" "breakAfter"
+    movel(Linea2_D_p, a=0.5, v=0.1)
+    $ 364 "Linea2_E" "breakAfter"
+    movel(Linea2_E_p, a=0.5, v=0.1)
+    $ 365 "Linea2_F" "breakAfter"
+    movel(Linea2_F_p, a=0.5, v=0.1)
+    $ 366 "AB"
+    $ 367 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 368 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+    global bajada_broca=p[0,0,-0.012,0,0,0]
+    $ 369 "barrenos_menos1≔8"
+    global barrenos_menos1=8
+    $ 370 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 371 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 372 "Perforacion"
+      $ 373 "MoveL"
+      $ 374 "internos≔interpolate_pose(Linea2_A, Linea2_B, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea2_A_p, Linea2_B_p, barreno_actual/barrenos_menos1)
+      $ 375 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 376 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 377 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+      global bajada_broca=p[0,0,-0.012,0,0,0]
+      $ 378 "bajada≔p[0,0,0.012,0,0,0]"
+      global bajada=p[0,0,0.012,0,0,0]
+      $ 379 "Direction: Base Z-"
+      global move_thread_flag_379=0
+      thread move_thread_379():
+        enter_critical
+        move_thread_flag_379 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.054)
+        movel(towardsPos, a=0.015, v=0.02)
+        move_thread_flag_379 = 2
+        exit_critical
+      end
+      move_thread_flag_379 = 0
+      move_thread_han_379 = run move_thread_379()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_379 > 1):
+          join move_thread_han_379
+          $ 380 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 381 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 382 "Direction: Base Z+"
+      global move_thread_flag_382=0
+      thread move_thread_382():
+        enter_critical
+        move_thread_flag_382 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.002)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_382 = 2
+        exit_critical
+      end
+      move_thread_flag_382 = 0
+      move_thread_han_382 = run move_thread_382()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_382 > 1):
+          join move_thread_han_382
+          $ 383 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 384 "Wait: 0.3"
+      sleep(0.3)
+      $ 385 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 386 "Wait: 0.3"
+      sleep(0.3)
+      $ 387 "Loop 2 times"
+      Loop_34 = 0
+      while (Loop_34 < 2):
+        $ 388 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 389 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 390 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 391 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.005)
+        $ 392 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_34 = Loop_34 + 1
+      end
+      $ 393 "Direction: Base Z+"
+      global move_thread_flag_393=0
+      thread move_thread_393():
+        enter_critical
+        move_thread_flag_393 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_393 = 2
+        exit_critical
+      end
+      move_thread_flag_393 = 0
+      move_thread_han_393 = run move_thread_393()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_393 > 1):
+          join move_thread_han_393
+          $ 394 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 395 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 396 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+      $ 397 "Call Quitar_broca"
+      Quitar_broca()
+      $ 398 "Call Poner_broca"
+      Poner_broca()
+    end
+    $ 399 "CD"
+    $ 400 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 401 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+    global bajada_broca=p[0,0,-0.012,0,0,0]
+    $ 402 "barrenos_menos1≔8"
+    global barrenos_menos1=8
+    $ 403 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 404 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 405 "Perforacion"
+      $ 406 "MoveL"
+      $ 407 "internos≔interpolate_pose(Linea2_C, Linea2_D, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea2_C_p, Linea2_D_p, barreno_actual/barrenos_menos1)
+      $ 408 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 409 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 410 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+      global bajada_broca=p[0,0,-0.012,0,0,0]
+      $ 411 "bajada≔p[0,0,0.012,0,0,0]"
+      global bajada=p[0,0,0.012,0,0,0]
+      $ 412 "Direction: Base Z-"
+      global move_thread_flag_412=0
+      thread move_thread_412():
+        enter_critical
+        move_thread_flag_412 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.054)
+        movel(towardsPos, a=0.015, v=0.02)
+        move_thread_flag_412 = 2
+        exit_critical
+      end
+      move_thread_flag_412 = 0
+      move_thread_han_412 = run move_thread_412()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_412 > 1):
+          join move_thread_han_412
+          $ 413 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 414 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 415 "Direction: Base Z+"
+      global move_thread_flag_415=0
+      thread move_thread_415():
+        enter_critical
+        move_thread_flag_415 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.002)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_415 = 2
+        exit_critical
+      end
+      move_thread_flag_415 = 0
+      move_thread_han_415 = run move_thread_415()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_415 > 1):
+          join move_thread_han_415
+          $ 416 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 417 "Wait: 0.3"
+      sleep(0.3)
+      $ 418 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 419 "Wait: 0.3"
+      sleep(0.3)
+      $ 420 "Loop 2 times"
+      Loop_36 = 0
+      while (Loop_36 < 2):
+        $ 421 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 422 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 423 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 424 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.005)
+        $ 425 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_36 = Loop_36 + 1
+      end
+      $ 426 "Direction: Base Z+"
+      global move_thread_flag_426=0
+      thread move_thread_426():
+        enter_critical
+        move_thread_flag_426 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_426 = 2
+        exit_critical
+      end
+      move_thread_flag_426 = 0
+      move_thread_han_426 = run move_thread_426()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_426 > 1):
+          join move_thread_han_426
+          $ 427 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 428 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 429 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+      $ 430 "Call Quitar_broca"
+      Quitar_broca()
+      $ 431 "Call Poner_broca"
+      Poner_broca()
+    end
+    $ 432 "EF"
+    $ 433 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 434 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+    global bajada_broca=p[0,0,-0.012,0,0,0]
+    $ 435 "barrenos_menos1≔9"
+    global barrenos_menos1=9
+    $ 436 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 437 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 438 "Perforacion"
+      $ 439 "MoveL"
+      $ 440 "internos≔interpolate_pose(Linea2_E, Linea2_F, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea2_E_p, Linea2_F_p, barreno_actual/barrenos_menos1)
+      $ 441 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 442 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 443 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+      global bajada_broca=p[0,0,-0.012,0,0,0]
+      $ 444 "bajada≔p[0,0,0.012,0,0,0]"
+      global bajada=p[0,0,0.012,0,0,0]
+      $ 445 "Direction: Base Z-"
+      global move_thread_flag_445=0
+      thread move_thread_445():
+        enter_critical
+        move_thread_flag_445 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.054)
+        movel(towardsPos, a=0.015, v=0.02)
+        move_thread_flag_445 = 2
+        exit_critical
+      end
+      move_thread_flag_445 = 0
+      move_thread_han_445 = run move_thread_445()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_445 > 1):
+          join move_thread_han_445
+          $ 446 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 447 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 448 "Direction: Base Z+"
+      global move_thread_flag_448=0
+      thread move_thread_448():
+        enter_critical
+        move_thread_flag_448 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.002)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_448 = 2
+        exit_critical
+      end
+      move_thread_flag_448 = 0
+      move_thread_han_448 = run move_thread_448()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_448 > 1):
+          join move_thread_han_448
+          $ 449 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 450 "Wait: 0.3"
+      sleep(0.3)
+      $ 451 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 452 "Wait: 0.3"
+      sleep(0.3)
+      $ 453 "Loop 2 times"
+      Loop_38 = 0
+      while (Loop_38 < 2):
+        $ 454 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 455 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 456 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 457 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.005)
+        $ 458 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_38 = Loop_38 + 1
+      end
+      $ 459 "Direction: Base Z+"
+      global move_thread_flag_459=0
+      thread move_thread_459():
+        enter_critical
+        move_thread_flag_459 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_459 = 2
+        exit_critical
+      end
+      move_thread_flag_459 = 0
+      move_thread_han_459 = run move_thread_459()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_459 > 1):
+          join move_thread_han_459
+          $ 460 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 461 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 462 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+      $ 463 "If barreno_actual>barrenos_menos1"
+      if (barreno_actual>barrenos_menos1):
+        $ 464 "cambiar_broca≔ True "
+        global cambiar_broca=  True  
+      end
+      $ 465 "Call Quitar_broca"
+      Quitar_broca()
+      $ 466 "Call Poner_broca"
+      Poner_broca()
+    end
+    $ 467 "Popup: Linea2 con media Terminada!"
+    popup("Linea2 con media Terminada!", "Mensaje", False, False, blocking=True)
+    $ 468 "Broca_3"
+    $ 469 "Linea1"
+    $ 470 "Marcar_puntos"
+    $ 471 "MoveL"
+    $ 472 "punto_inicio1" "breakAfter"
+    movel(punto_inicio1_p, a=0.5, v=0.1)
+    $ 473 "Linea1_A" "breakAfter"
+    movel(Linea1_A_p, a=0.5, v=0.1)
+    $ 474 "Linea1_B" "breakAfter"
+    movel(Linea1_B_p, a=0.5, v=0.1)
+    $ 475 "Linea1_C" "breakAfter"
+    movel(Linea1_C_p, a=0.5, v=0.1)
+    $ 476 "Linea1_D" "breakAfter"
+    movel(Linea1_D_p, a=0.5, v=0.1)
+    $ 477 "Linea1_E" "breakAfter"
+    movel(Linea1_E_p, a=0.5, v=0.1)
+    $ 478 "Linea1_F" "breakAfter"
+    movel(Linea1_F_p, a=0.5, v=0.1)
+    $ 479 "AB"
+    $ 480 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 481 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+    global bajada_broca=p[0,0,-0.012,0,0,0]
+    $ 482 "barrenos_menos1≔8"
+    global barrenos_menos1=8
+    $ 483 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 484 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 485 "Perforacion"
+      $ 486 "MoveL"
+      $ 487 "internos≔interpolate_pose(Linea1_A, Linea1_B, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea1_A_p, Linea1_B_p, barreno_actual/barrenos_menos1)
+      $ 488 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 489 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 490 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+      global bajada_broca=p[0,0,-0.012,0,0,0]
+      $ 491 "bajada≔p[0,0,0.012,0,0,0]"
+      global bajada=p[0,0,0.012,0,0,0]
+      $ 492 "Direction: Base Z-"
+      global move_thread_flag_492=0
+      thread move_thread_492():
+        enter_critical
+        move_thread_flag_492 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.055)
+        movel(towardsPos, a=0.015, v=0.02)
+        move_thread_flag_492 = 2
+        exit_critical
+      end
+      move_thread_flag_492 = 0
+      move_thread_han_492 = run move_thread_492()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_492 > 1):
+          join move_thread_han_492
+          $ 493 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 494 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 495 "Direction: Base Z+"
+      global move_thread_flag_495=0
+      thread move_thread_495():
+        enter_critical
+        move_thread_flag_495 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.001)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_495 = 2
+        exit_critical
+      end
+      move_thread_flag_495 = 0
+      move_thread_han_495 = run move_thread_495()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_495 > 1):
+          join move_thread_han_495
+          $ 496 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 497 "Wait: 0.3"
+      sleep(0.3)
+      $ 498 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 499 "Wait: 0.3"
+      sleep(0.3)
+      $ 500 "Loop 2 times"
+      Loop_18 = 0
+      while (Loop_18 < 2):
+        $ 501 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 502 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 503 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 504 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.005)
+        $ 505 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_18 = Loop_18 + 1
+      end
+      $ 506 "Direction: Base Z+"
+      global move_thread_flag_506=0
+      thread move_thread_506():
+        enter_critical
+        move_thread_flag_506 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_506 = 2
+        exit_critical
+      end
+      move_thread_flag_506 = 0
+      move_thread_han_506 = run move_thread_506()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_506 > 1):
+          join move_thread_han_506
+          $ 507 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 508 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 509 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+      $ 510 "Call Quitar_broca"
+      Quitar_broca()
+      $ 511 "Call Poner_broca"
+      Poner_broca()
+    end
+    $ 512 "CD"
+    $ 513 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 514 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+    global bajada_broca=p[0,0,-0.012,0,0,0]
+    $ 515 "barrenos_menos1≔8"
+    global barrenos_menos1=8
+    $ 516 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 517 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 518 "Perforacion"
+      $ 519 "MoveL"
+      $ 520 "internos≔interpolate_pose(Linea1_C, Linea1_D, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea1_C_p, Linea1_D_p, barreno_actual/barrenos_menos1)
+      $ 521 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 522 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 523 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+      global bajada_broca=p[0,0,-0.012,0,0,0]
+      $ 524 "bajada≔p[0,0,0.012,0,0,0]"
+      global bajada=p[0,0,0.012,0,0,0]
+      $ 525 "Direction: Base Z-"
+      global move_thread_flag_525=0
+      thread move_thread_525():
+        enter_critical
+        move_thread_flag_525 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.055)
+        movel(towardsPos, a=0.015, v=0.02)
+        move_thread_flag_525 = 2
+        exit_critical
+      end
+      move_thread_flag_525 = 0
+      move_thread_han_525 = run move_thread_525()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_525 > 1):
+          join move_thread_han_525
+          $ 526 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 527 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 528 "Direction: Base Z+"
+      global move_thread_flag_528=0
+      thread move_thread_528():
+        enter_critical
+        move_thread_flag_528 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.001)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_528 = 2
+        exit_critical
+      end
+      move_thread_flag_528 = 0
+      move_thread_han_528 = run move_thread_528()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_528 > 1):
+          join move_thread_han_528
+          $ 529 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 530 "Wait: 0.3"
+      sleep(0.3)
+      $ 531 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 532 "Wait: 0.3"
+      sleep(0.3)
+      $ 533 "Loop 2 times"
+      Loop_20 = 0
+      while (Loop_20 < 2):
+        $ 534 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 535 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 536 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 537 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.005)
+        $ 538 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_20 = Loop_20 + 1
+      end
+      $ 539 "Direction: Base Z+"
+      global move_thread_flag_539=0
+      thread move_thread_539():
+        enter_critical
+        move_thread_flag_539 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_539 = 2
+        exit_critical
+      end
+      move_thread_flag_539 = 0
+      move_thread_han_539 = run move_thread_539()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_539 > 1):
+          join move_thread_han_539
+          $ 540 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 541 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 542 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+      $ 543 "Call Quitar_broca"
+      Quitar_broca()
+      $ 544 "Call Poner_broca"
+      Poner_broca()
+    end
+    $ 545 "EF"
+    $ 546 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 547 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+    global bajada_broca=p[0,0,-0.012,0,0,0]
+    $ 548 "barrenos_menos1≔9"
+    global barrenos_menos1=9
+    $ 549 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 550 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 551 "Perforacion"
+      $ 552 "MoveL"
+      $ 553 "internos≔interpolate_pose(Linea1_E, Linea1_F, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea1_E_p, Linea1_F_p, barreno_actual/barrenos_menos1)
+      $ 554 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 555 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 556 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+      global bajada_broca=p[0,0,-0.012,0,0,0]
+      $ 557 "bajada≔p[0,0,0.012,0,0,0]"
+      global bajada=p[0,0,0.012,0,0,0]
+      $ 558 "Direction: Base Z-"
+      global move_thread_flag_558=0
+      thread move_thread_558():
+        enter_critical
+        move_thread_flag_558 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.055)
+        movel(towardsPos, a=0.015, v=0.02)
+        move_thread_flag_558 = 2
+        exit_critical
+      end
+      move_thread_flag_558 = 0
+      move_thread_han_558 = run move_thread_558()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_558 > 1):
+          join move_thread_han_558
+          $ 559 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 560 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 561 "Direction: Base Z+"
+      global move_thread_flag_561=0
+      thread move_thread_561():
+        enter_critical
+        move_thread_flag_561 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.001)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_561 = 2
+        exit_critical
+      end
+      move_thread_flag_561 = 0
+      move_thread_han_561 = run move_thread_561()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_561 > 1):
+          join move_thread_han_561
+          $ 562 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 563 "Wait: 0.3"
+      sleep(0.3)
+      $ 564 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 565 "Wait: 0.3"
+      sleep(0.3)
+      $ 566 "Loop 2 times"
+      Loop_22 = 0
+      while (Loop_22 < 2):
+        $ 567 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 568 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 569 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 570 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.005)
+        $ 571 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_22 = Loop_22 + 1
+      end
+      $ 572 "Direction: Base Z+"
+      global move_thread_flag_572=0
+      thread move_thread_572():
+        enter_critical
+        move_thread_flag_572 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_572 = 2
+        exit_critical
+      end
+      move_thread_flag_572 = 0
+      move_thread_han_572 = run move_thread_572()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_572 > 1):
+          join move_thread_han_572
+          $ 573 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 574 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 575 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+      $ 576 "Call Quitar_broca"
+      Quitar_broca()
+      $ 577 "Call Poner_broca"
+      Poner_broca()
+    end
+    $ 578 "Popup: Linea1 con full Terminada!"
+    popup("Linea1 con full Terminada!", "Mensaje", False, False, blocking=True)
+    $ 579 "Linea2"
+    $ 580 "Marcar_puntos"
+    $ 581 "MoveL"
+    $ 582 "punto_inicio1" "breakAfter"
+    movel(punto_inicio1_p, a=0.5, v=0.1)
+    $ 583 "Linea2_A" "breakAfter"
+    movel(Linea2_A_p, a=0.5, v=0.1)
+    $ 584 "Linea2_B" "breakAfter"
+    movel(Linea2_B_p, a=0.5, v=0.1)
+    $ 585 "Linea2_C" "breakAfter"
+    movel(Linea2_C_p, a=0.5, v=0.1)
+    $ 586 "Linea2_D" "breakAfter"
+    movel(Linea2_D_p, a=0.5, v=0.1)
+    $ 587 "Linea2_E" "breakAfter"
+    movel(Linea2_E_p, a=0.5, v=0.1)
+    $ 588 "Linea2_F" "breakAfter"
+    movel(Linea2_F_p, a=0.5, v=0.1)
+    $ 589 "AB"
+    $ 590 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 591 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+    global bajada_broca=p[0,0,-0.012,0,0,0]
+    $ 592 "barrenos_menos1≔8"
+    global barrenos_menos1=8
+    $ 593 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 594 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 595 "Perforacion"
+      $ 596 "MoveL"
+      $ 597 "internos≔interpolate_pose(Linea2_A, Linea2_B, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea2_A_p, Linea2_B_p, barreno_actual/barrenos_menos1)
+      $ 598 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 599 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 600 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+      global bajada_broca=p[0,0,-0.012,0,0,0]
+      $ 601 "bajada≔p[0,0,0.012,0,0,0]"
+      global bajada=p[0,0,0.012,0,0,0]
+      $ 602 "Direction: Base Z-"
+      global move_thread_flag_602=0
+      thread move_thread_602():
+        enter_critical
+        move_thread_flag_602 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.055)
+        movel(towardsPos, a=0.015, v=0.02)
+        move_thread_flag_602 = 2
+        exit_critical
+      end
+      move_thread_flag_602 = 0
+      move_thread_han_602 = run move_thread_602()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_602 > 1):
+          join move_thread_han_602
+          $ 603 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 604 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 605 "Direction: Base Z+"
+      global move_thread_flag_605=0
+      thread move_thread_605():
+        enter_critical
+        move_thread_flag_605 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.001)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_605 = 2
+        exit_critical
+      end
+      move_thread_flag_605 = 0
+      move_thread_han_605 = run move_thread_605()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_605 > 1):
+          join move_thread_han_605
+          $ 606 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 607 "Wait: 0.3"
+      sleep(0.3)
+      $ 608 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 609 "Wait: 0.3"
+      sleep(0.3)
+      $ 610 "Loop 2 times"
+      Loop_40 = 0
+      while (Loop_40 < 2):
+        $ 611 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 612 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 613 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 614 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.005)
+        $ 615 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_40 = Loop_40 + 1
+      end
+      $ 616 "Direction: Base Z+"
+      global move_thread_flag_616=0
+      thread move_thread_616():
+        enter_critical
+        move_thread_flag_616 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_616 = 2
+        exit_critical
+      end
+      move_thread_flag_616 = 0
+      move_thread_han_616 = run move_thread_616()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_616 > 1):
+          join move_thread_han_616
+          $ 617 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 618 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 619 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+      $ 620 "Call Quitar_broca"
+      Quitar_broca()
+      $ 621 "Call Poner_broca"
+      Poner_broca()
+    end
+    $ 622 "CD"
+    $ 623 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 624 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+    global bajada_broca=p[0,0,-0.012,0,0,0]
+    $ 625 "barrenos_menos1≔8"
+    global barrenos_menos1=8
+    $ 626 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 627 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 628 "Perforacion"
+      $ 629 "MoveL"
+      $ 630 "internos≔interpolate_pose(Linea2_C, Linea2_D, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea2_C_p, Linea2_D_p, barreno_actual/barrenos_menos1)
+      $ 631 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 632 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 633 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+      global bajada_broca=p[0,0,-0.012,0,0,0]
+      $ 634 "bajada≔p[0,0,0.012,0,0,0]"
+      global bajada=p[0,0,0.012,0,0,0]
+      $ 635 "Direction: Base Z-"
+      global move_thread_flag_635=0
+      thread move_thread_635():
+        enter_critical
+        move_thread_flag_635 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.055)
+        movel(towardsPos, a=0.025, v=0.02)
+        move_thread_flag_635 = 2
+        exit_critical
+      end
+      move_thread_flag_635 = 0
+      move_thread_han_635 = run move_thread_635()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_635 > 1):
+          join move_thread_han_635
+          $ 636 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 637 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 638 "Direction: Base Z+"
+      global move_thread_flag_638=0
+      thread move_thread_638():
+        enter_critical
+        move_thread_flag_638 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.001)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_638 = 2
+        exit_critical
+      end
+      move_thread_flag_638 = 0
+      move_thread_han_638 = run move_thread_638()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_638 > 1):
+          join move_thread_han_638
+          $ 639 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 640 "Wait: 0.3"
+      sleep(0.3)
+      $ 641 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 642 "Wait: 0.3"
+      sleep(0.3)
+      $ 643 "Loop 2 times"
+      Loop_42 = 0
+      while (Loop_42 < 2):
+        $ 644 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 645 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 646 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 647 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.005)
+        $ 648 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_42 = Loop_42 + 1
+      end
+      $ 649 "Direction: Base Z+"
+      global move_thread_flag_649=0
+      thread move_thread_649():
+        enter_critical
+        move_thread_flag_649 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_649 = 2
+        exit_critical
+      end
+      move_thread_flag_649 = 0
+      move_thread_han_649 = run move_thread_649()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_649 > 1):
+          join move_thread_han_649
+          $ 650 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 651 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 652 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+      $ 653 "Call Quitar_broca"
+      Quitar_broca()
+      $ 654 "Call Poner_broca"
+      Poner_broca()
+    end
+    $ 655 "EF"
+    $ 656 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 657 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+    global bajada_broca=p[0,0,-0.012,0,0,0]
+    $ 658 "barrenos_menos1≔9"
+    global barrenos_menos1=9
+    $ 659 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 660 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 661 "Perforacion"
+      $ 662 "MoveL"
+      $ 663 "internos≔interpolate_pose(Linea2_E, Linea2_F, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea2_E_p, Linea2_F_p, barreno_actual/barrenos_menos1)
+      $ 664 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 665 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 666 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+      global bajada_broca=p[0,0,-0.012,0,0,0]
+      $ 667 "bajada≔p[0,0,0.012,0,0,0]"
+      global bajada=p[0,0,0.012,0,0,0]
+      $ 668 "Direction: Base Z-"
+      global move_thread_flag_668=0
+      thread move_thread_668():
+        enter_critical
+        move_thread_flag_668 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.055)
+        movel(towardsPos, a=0.025, v=0.02)
+        move_thread_flag_668 = 2
+        exit_critical
+      end
+      move_thread_flag_668 = 0
+      move_thread_han_668 = run move_thread_668()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_668 > 1):
+          join move_thread_han_668
+          $ 669 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 670 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 671 "Direction: Base Z+"
+      global move_thread_flag_671=0
+      thread move_thread_671():
+        enter_critical
+        move_thread_flag_671 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.001)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_671 = 2
+        exit_critical
+      end
+      move_thread_flag_671 = 0
+      move_thread_han_671 = run move_thread_671()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_671 > 1):
+          join move_thread_han_671
+          $ 672 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 673 "Wait: 0.3"
+      sleep(0.3)
+      $ 674 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 675 "Wait: 0.3"
+      sleep(0.3)
+      $ 676 "Loop 2 times"
+      Loop_44 = 0
+      while (Loop_44 < 2):
+        $ 677 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 678 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 679 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 680 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.005)
+        $ 681 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_44 = Loop_44 + 1
+      end
+      $ 682 "Direction: Base Z+"
+      global move_thread_flag_682=0
+      thread move_thread_682():
+        enter_critical
+        move_thread_flag_682 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_682 = 2
+        exit_critical
+      end
+      move_thread_flag_682 = 0
+      move_thread_han_682 = run move_thread_682()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_682 > 1):
+          join move_thread_han_682
+          $ 683 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 684 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 685 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+      $ 686 "If barreno_actual>barrenos_menos1"
+      if (barreno_actual>barrenos_menos1):
+        $ 687 "cambiar_broca≔ True "
+        global cambiar_broca=  True  
+      end
+      $ 688 "Call Quitar_broca"
+      Quitar_broca()
+      $ 689 "Call Poner_broca"
+      Poner_broca()
+    end
+    $ 690 "Popup: Linea2 con full Terminada!"
+    popup("Linea2 con full Terminada!", "Mensaje", False, False, blocking=True)
+    $ 691 "Posicion3"
+    $ 692 "eje7≔3"
+    global eje7=3
+    $ 693 "Broca_1"
+    $ 694 "Linea3"
+    $ 695 "Marcar_puntos"
+    $ 696 "MoveL"
+    $ 697 "punto_inicio1" "breakAfter"
+    movel(punto_inicio1_p, a=0.5, v=0.1)
+    $ 698 "Linea3_A" "breakAfter"
+    movel(Linea3_A_p, a=0.5, v=0.1)
+    $ 699 "Linea3_B" "breakAfter"
+    movel(Linea3_B_p, a=0.5, v=0.1)
+    $ 700 "Linea3_C" "breakAfter"
+    movel(Linea3_C_p, a=0.5, v=0.1)
+    $ 701 "Linea3_D" "breakAfter"
+    movel(Linea3_D_p, a=0.5, v=0.1)
+    $ 702 "Linea3_E" "breakAfter"
+    movel(Linea3_E_p, a=0.5, v=0.1)
+    $ 703 "Linea3_F" "breakAfter"
+    movel(Linea3_F_p, a=0.5, v=0.1)
+    $ 704 "AB"
+    $ 705 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 706 "bajada_broca≔p[0,0,-0.008,0,0,0]"
+    global bajada_broca=p[0,0,-0.008,0,0,0]
+    $ 707 "barrenos_menos1≔8"
+    global barrenos_menos1=8
+    $ 708 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 709 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 710 "Perforacion"
+      $ 711 "MoveL"
+      $ 712 "internos≔interpolate_pose(Linea3_A, Linea3_B, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea3_A_p, Linea3_B_p, barreno_actual/barrenos_menos1)
+      $ 713 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 714 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 715 "bajada_broca≔p[0,0,-0.008,0,0,0]"
+      global bajada_broca=p[0,0,-0.008,0,0,0]
+      $ 716 "bajada≔p[0,0,0.008,0,0,0]"
+      global bajada=p[0,0,0.008,0,0,0]
+      $ 717 "Direction: Base Z-"
+      global move_thread_flag_717=0
+      thread move_thread_717():
+        enter_critical
+        move_thread_flag_717 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.055)
+        movel(towardsPos, a=0.015, v=0.02)
+        move_thread_flag_717 = 2
+        exit_critical
+      end
+      move_thread_flag_717 = 0
+      move_thread_han_717 = run move_thread_717()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_717 > 1):
+          join move_thread_han_717
+          $ 718 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 719 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 720 "Direction: Base Z+"
+      global move_thread_flag_720=0
+      thread move_thread_720():
+        enter_critical
+        move_thread_flag_720 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.001)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_720 = 2
+        exit_critical
+      end
+      move_thread_flag_720 = 0
+      move_thread_han_720 = run move_thread_720()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_720 > 1):
+          join move_thread_han_720
+          $ 721 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 722 "Wait: 0.3"
+      sleep(0.3)
+      $ 723 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 724 "Wait: 0.3"
+      sleep(0.3)
+      $ 725 "Loop 3 times"
+      Loop_26 = 0
+      while (Loop_26 < 3):
+        $ 726 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 727 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 728 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 729 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.005)
+        $ 730 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_26 = Loop_26 + 1
+      end
+      $ 731 "Direction: Base Z+"
+      global move_thread_flag_731=0
+      thread move_thread_731():
+        enter_critical
+        move_thread_flag_731 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_731 = 2
+        exit_critical
+      end
+      move_thread_flag_731 = 0
+      move_thread_han_731 = run move_thread_731()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_731 > 1):
+          join move_thread_han_731
+          $ 732 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 733 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 734 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+      $ 735 "Call Quitar_broca"
+      Quitar_broca()
+      $ 736 "Call Poner_broca"
+      Poner_broca()
+    end
+    $ 737 "CD"
+    $ 738 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 739 "bajada_broca≔p[0,0,-0.008,0,0,0]"
+    global bajada_broca=p[0,0,-0.008,0,0,0]
+    $ 740 "barrenos_menos1≔8"
+    global barrenos_menos1=8
+    $ 741 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 742 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 743 "Perforacion"
+      $ 744 "MoveL"
+      $ 745 "internos≔interpolate_pose(Linea3_C, Linea3_D, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea3_C_p, Linea3_D_p, barreno_actual/barrenos_menos1)
+      $ 746 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 747 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 748 "bajada_broca≔p[0,0,-0.008,0,0,0]"
+      global bajada_broca=p[0,0,-0.008,0,0,0]
+      $ 749 "bajada≔p[0,0,0.008,0,0,0]"
+      global bajada=p[0,0,0.008,0,0,0]
+      $ 750 "Direction: Base Z-"
+      global move_thread_flag_750=0
+      thread move_thread_750():
+        enter_critical
+        move_thread_flag_750 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.055)
+        movel(towardsPos, a=0.02, v=0.015)
+        move_thread_flag_750 = 2
+        exit_critical
+      end
+      move_thread_flag_750 = 0
+      move_thread_han_750 = run move_thread_750()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_750 > 1):
+          join move_thread_han_750
+          $ 751 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 752 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 753 "Direction: Base Z+"
+      global move_thread_flag_753=0
+      thread move_thread_753():
+        enter_critical
+        move_thread_flag_753 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.001)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_753 = 2
+        exit_critical
+      end
+      move_thread_flag_753 = 0
+      move_thread_han_753 = run move_thread_753()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_753 > 1):
+          join move_thread_han_753
+          $ 754 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 755 "Wait: 0.3"
+      sleep(0.3)
+      $ 756 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 757 "Wait: 0.3"
+      sleep(0.3)
+      $ 758 "Loop 3 times"
+      Loop_28 = 0
+      while (Loop_28 < 3):
+        $ 759 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 760 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 761 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 762 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.005)
+        $ 763 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_28 = Loop_28 + 1
+      end
+      $ 764 "Direction: Base Z+"
+      global move_thread_flag_764=0
+      thread move_thread_764():
+        enter_critical
+        move_thread_flag_764 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_764 = 2
+        exit_critical
+      end
+      move_thread_flag_764 = 0
+      move_thread_han_764 = run move_thread_764()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_764 > 1):
+          join move_thread_han_764
+          $ 765 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 766 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 767 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+      $ 768 "Call Quitar_broca"
+      Quitar_broca()
+      $ 769 "Call Poner_broca"
+      Poner_broca()
+    end
+    $ 770 "EF"
+    $ 771 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 772 "bajada_broca≔p[0,0,-0.008,0,0,0]"
+    global bajada_broca=p[0,0,-0.008,0,0,0]
+    $ 773 "barrenos_menos1≔9"
+    global barrenos_menos1=9
+    $ 774 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 775 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 776 "Perforacion"
+      $ 777 "MoveL"
+      $ 778 "internos≔interpolate_pose(Linea3_E, Linea3_F, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea3_E_p, Linea3_F_p, barreno_actual/barrenos_menos1)
+      $ 779 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 780 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 781 "bajada_broca≔p[0,0,-0.008,0,0,0]"
+      global bajada_broca=p[0,0,-0.008,0,0,0]
+      $ 782 "bajada≔p[0,0,0.008,0,0,0]"
+      global bajada=p[0,0,0.008,0,0,0]
+      $ 783 "Direction: Base Z-"
+      global move_thread_flag_783=0
+      thread move_thread_783():
+        enter_critical
+        move_thread_flag_783 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.055)
+        movel(towardsPos, a=0.015, v=0.02)
+        move_thread_flag_783 = 2
+        exit_critical
+      end
+      move_thread_flag_783 = 0
+      move_thread_han_783 = run move_thread_783()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_783 > 1):
+          join move_thread_han_783
+          $ 784 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 785 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 786 "Direction: Base Z+"
+      global move_thread_flag_786=0
+      thread move_thread_786():
+        enter_critical
+        move_thread_flag_786 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.001)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_786 = 2
+        exit_critical
+      end
+      move_thread_flag_786 = 0
+      move_thread_han_786 = run move_thread_786()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_786 > 1):
+          join move_thread_han_786
+          $ 787 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 788 "Wait: 0.3"
+      sleep(0.3)
+      $ 789 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 790 "Wait: 0.3"
+      sleep(0.3)
+      $ 791 "Loop 3 times"
+      Loop_30 = 0
+      while (Loop_30 < 3):
+        $ 792 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 793 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 794 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 795 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.005)
+        $ 796 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_30 = Loop_30 + 1
+      end
+      $ 797 "Direction: Base Z+"
+      global move_thread_flag_797=0
+      thread move_thread_797():
+        enter_critical
+        move_thread_flag_797 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_797 = 2
+        exit_critical
+      end
+      move_thread_flag_797 = 0
+      move_thread_han_797 = run move_thread_797()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_797 > 1):
+          join move_thread_han_797
+          $ 798 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 799 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 800 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+      $ 801 "Call Quitar_broca"
+      Quitar_broca()
+      $ 802 "Call Poner_broca"
+      Poner_broca()
+    end
+    $ 803 "Popup: Linea1 con chica Terminada!"
+    popup("Linea1 con chica Terminada!", "Mensaje", False, False, blocking=True)
+    $ 804 "Linea4"
+    $ 805 "Marcar_puntos"
+    $ 806 "MoveL"
+    $ 807 "punto_inicio1" "breakAfter"
+    movel(punto_inicio1_p, a=0.5, v=0.1)
+    $ 808 "Linea4_A" "breakAfter"
+    movel(Linea4_A_p, a=0.5, v=0.1)
+    $ 809 "Linea4_B" "breakAfter"
+    movel(Linea4_B_p, a=0.5, v=0.1)
+    $ 810 "Linea4_C" "breakAfter"
+    movel(Linea4_C_p, a=0.5, v=0.1)
+    $ 811 "Linea4_D" "breakAfter"
+    movel(Linea4_D_p, a=0.5, v=0.1)
+    $ 812 "Linea4_E" "breakAfter"
+    movel(Linea4_E_p, a=0.5, v=0.1)
+    $ 813 "Linea4_F" "breakAfter"
+    movel(Linea4_F_p, a=0.5, v=0.1)
+    $ 814 "AB"
+    $ 815 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 816 "bajada_broca≔p[0,0,-0.008,0,0,0]"
+    global bajada_broca=p[0,0,-0.008,0,0,0]
+    $ 817 "barrenos_menos1≔8"
+    global barrenos_menos1=8
+    $ 818 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 819 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 820 "Perforacion"
+      $ 821 "MoveL"
+      $ 822 "internos≔interpolate_pose(Linea4_A, Linea4_B, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea4_A_p, Linea4_B_p, barreno_actual/barrenos_menos1)
+      $ 823 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 824 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 825 "bajada_broca≔p[0,0,-0.008,0,0,0]"
+      global bajada_broca=p[0,0,-0.008,0,0,0]
+      $ 826 "bajada≔p[0,0,0.008,0,0,0]"
+      global bajada=p[0,0,0.008,0,0,0]
+      $ 827 "Direction: Base Z-"
+      global move_thread_flag_827=0
+      thread move_thread_827():
+        enter_critical
+        move_thread_flag_827 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.055)
+        movel(towardsPos, a=0.015, v=0.02)
+        move_thread_flag_827 = 2
+        exit_critical
+      end
+      move_thread_flag_827 = 0
+      move_thread_han_827 = run move_thread_827()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_827 > 1):
+          join move_thread_han_827
+          $ 828 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 829 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 830 "Direction: Base Z+"
+      global move_thread_flag_830=0
+      thread move_thread_830():
+        enter_critical
+        move_thread_flag_830 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.002)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_830 = 2
+        exit_critical
+      end
+      move_thread_flag_830 = 0
+      move_thread_han_830 = run move_thread_830()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_830 > 1):
+          join move_thread_han_830
+          $ 831 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 832 "Wait: 0.3"
+      sleep(0.3)
+      $ 833 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 834 "Wait: 0.3"
+      sleep(0.3)
+      $ 835 "Loop 3 times"
+      Loop_32 = 0
+      while (Loop_32 < 3):
+        $ 836 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 837 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 838 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 839 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.005)
+        $ 840 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_32 = Loop_32 + 1
+      end
+      $ 841 "Direction: Base Z+"
+      global move_thread_flag_841=0
+      thread move_thread_841():
+        enter_critical
+        move_thread_flag_841 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_841 = 2
+        exit_critical
+      end
+      move_thread_flag_841 = 0
+      move_thread_han_841 = run move_thread_841()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_841 > 1):
+          join move_thread_han_841
+          $ 842 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 843 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 844 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+    end
+    $ 847 "CD"
+    $ 848 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 849 "bajada_broca≔p[0,0,-0.008,0,0,0]"
+    global bajada_broca=p[0,0,-0.008,0,0,0]
+    $ 850 "barrenos_menos1≔8"
+    global barrenos_menos1=8
+    $ 851 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 852 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 853 "Perforacion"
+      $ 854 "MoveL"
+      $ 855 "internos≔interpolate_pose(Linea4_C, Linea4_D, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea4_C_p, Linea4_D_p, barreno_actual/barrenos_menos1)
+      $ 856 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 857 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 858 "bajada_broca≔p[0,0,-0.008,0,0,0]"
+      global bajada_broca=p[0,0,-0.008,0,0,0]
+      $ 859 "bajada≔p[0,0,0.008,0,0,0]"
+      global bajada=p[0,0,0.008,0,0,0]
+      $ 860 "Direction: Base Z-"
+      global move_thread_flag_860=0
+      thread move_thread_860():
+        enter_critical
+        move_thread_flag_860 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.055)
+        movel(towardsPos, a=0.015, v=0.02)
+        move_thread_flag_860 = 2
+        exit_critical
+      end
+      move_thread_flag_860 = 0
+      move_thread_han_860 = run move_thread_860()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_860 > 1):
+          join move_thread_han_860
+          $ 861 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 862 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 863 "Direction: Base Z+"
+      global move_thread_flag_863=0
+      thread move_thread_863():
+        enter_critical
+        move_thread_flag_863 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.002)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_863 = 2
+        exit_critical
+      end
+      move_thread_flag_863 = 0
+      move_thread_han_863 = run move_thread_863()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_863 > 1):
+          join move_thread_han_863
+          $ 864 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 865 "Wait: 0.3"
+      sleep(0.3)
+      $ 866 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 867 "Wait: 0.3"
+      sleep(0.3)
+      $ 868 "Loop 3 times"
+      Loop_35 = 0
+      while (Loop_35 < 3):
+        $ 869 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 870 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 871 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 872 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.005)
+        $ 873 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_35 = Loop_35 + 1
+      end
+      $ 874 "Direction: Base Z+"
+      global move_thread_flag_874=0
+      thread move_thread_874():
+        enter_critical
+        move_thread_flag_874 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_874 = 2
+        exit_critical
+      end
+      move_thread_flag_874 = 0
+      move_thread_han_874 = run move_thread_874()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_874 > 1):
+          join move_thread_han_874
+          $ 875 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 876 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 877 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+    end
+    $ 880 "EF"
+    $ 881 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 882 "bajada_broca≔p[0,0,-0.008,0,0,0]"
+    global bajada_broca=p[0,0,-0.008,0,0,0]
+    $ 883 "barrenos_menos1≔9"
+    global barrenos_menos1=9
+    $ 884 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 885 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 886 "Perforacion"
+      $ 887 "MoveL"
+      $ 888 "internos≔interpolate_pose(Linea4_E, Linea4_F, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea4_E_p, Linea4_F_p, barreno_actual/barrenos_menos1)
+      $ 889 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 890 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 891 "bajada_broca≔p[0,0,-0.008,0,0,0]"
+      global bajada_broca=p[0,0,-0.008,0,0,0]
+      $ 892 "bajada≔p[0,0,0.008,0,0,0]"
+      global bajada=p[0,0,0.008,0,0,0]
+      $ 893 "Direction: Base Z-"
+      global move_thread_flag_893=0
+      thread move_thread_893():
+        enter_critical
+        move_thread_flag_893 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.055)
+        movel(towardsPos, a=0.015, v=0.02)
+        move_thread_flag_893 = 2
+        exit_critical
+      end
+      move_thread_flag_893 = 0
+      move_thread_han_893 = run move_thread_893()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_893 > 1):
+          join move_thread_han_893
+          $ 894 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 895 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 896 "Direction: Base Z+"
+      global move_thread_flag_896=0
+      thread move_thread_896():
+        enter_critical
+        move_thread_flag_896 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.002)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_896 = 2
+        exit_critical
+      end
+      move_thread_flag_896 = 0
+      move_thread_han_896 = run move_thread_896()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_896 > 1):
+          join move_thread_han_896
+          $ 897 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 898 "Wait: 0.3"
+      sleep(0.3)
+      $ 899 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 900 "Wait: 0.3"
+      sleep(0.3)
+      $ 901 "Loop 3 times"
+      Loop_39 = 0
+      while (Loop_39 < 3):
+        $ 902 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 903 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 904 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 905 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.005)
+        $ 906 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_39 = Loop_39 + 1
+      end
+      $ 907 "Direction: Base Z+"
+      global move_thread_flag_907=0
+      thread move_thread_907():
+        enter_critical
+        move_thread_flag_907 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_907 = 2
+        exit_critical
+      end
+      move_thread_flag_907 = 0
+      move_thread_han_907 = run move_thread_907()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_907 > 1):
+          join move_thread_han_907
+          $ 908 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 909 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 910 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+      $ 911 "If barreno_actual>barrenos_menos1"
+      if (barreno_actual>barrenos_menos1):
+        $ 912 "cambiar_broca≔ True "
+        global cambiar_broca=  True  
+      end
+    end
+    $ 915 "Popup: Linea2 con chica Terminada!"
+    popup("Linea2 con chica Terminada!", "Mensaje", False, False, blocking=True)
+    $ 916 "Broca_2"
+    $ 917 "Linea3"
+    $ 918 "Marcar_puntos"
+    $ 919 "MoveL"
+    $ 920 "punto_inicio1" "breakAfter"
+    movel(punto_inicio1_p, a=0.5, v=0.1)
+    $ 921 "Linea3_A" "breakAfter"
+    movel(Linea3_A_p, a=0.5, v=0.1)
+    $ 922 "Linea3_B" "breakAfter"
+    movel(Linea3_B_p, a=0.5, v=0.1)
+    $ 923 "Linea3_C" "breakAfter"
+    movel(Linea3_C_p, a=0.5, v=0.1)
+    $ 924 "Linea3_D" "breakAfter"
+    movel(Linea3_D_p, a=0.5, v=0.1)
+    $ 925 "Linea3_E" "breakAfter"
+    movel(Linea3_E_p, a=0.5, v=0.1)
+    $ 926 "Linea3_F" "breakAfter"
+    movel(Linea3_F_p, a=0.5, v=0.1)
+    $ 927 "AB"
+    $ 928 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 929 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+    global bajada_broca=p[0,0,-0.012,0,0,0]
+    $ 930 "barrenos_menos1≔8"
+    global barrenos_menos1=8
+    $ 931 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 932 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 933 "Perforacion"
+      $ 934 "MoveL"
+      $ 935 "internos≔interpolate_pose(Linea3_A, Linea3_B, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea3_A_p, Linea3_B_p, barreno_actual/barrenos_menos1)
+      $ 936 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 937 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 938 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+      global bajada_broca=p[0,0,-0.012,0,0,0]
+      $ 939 "bajada≔p[0,0,0.012,0,0,0]"
+      global bajada=p[0,0,0.012,0,0,0]
+      $ 940 "Direction: Base Z-"
+      global move_thread_flag_940=0
+      thread move_thread_940():
+        enter_critical
+        move_thread_flag_940 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.055)
+        movel(towardsPos, a=0.015, v=0.02)
+        move_thread_flag_940 = 2
+        exit_critical
+      end
+      move_thread_flag_940 = 0
+      move_thread_han_940 = run move_thread_940()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_940 > 1):
+          join move_thread_han_940
+          $ 941 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 942 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 943 "Direction: Base Z+"
+      global move_thread_flag_943=0
+      thread move_thread_943():
+        enter_critical
+        move_thread_flag_943 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.002)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_943 = 2
+        exit_critical
+      end
+      move_thread_flag_943 = 0
+      move_thread_han_943 = run move_thread_943()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_943 > 1):
+          join move_thread_han_943
+          $ 944 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 945 "Wait: 0.3"
+      sleep(0.3)
+      $ 946 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 947 "Wait: 0.3"
+      sleep(0.3)
+      $ 948 "Loop 2 times"
+      Loop_70 = 0
+      while (Loop_70 < 2):
+        $ 949 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 950 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 951 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 952 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.005)
+        $ 953 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_70 = Loop_70 + 1
+      end
+      $ 954 "Direction: Base Z+"
+      global move_thread_flag_954=0
+      thread move_thread_954():
+        enter_critical
+        move_thread_flag_954 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_954 = 2
+        exit_critical
+      end
+      move_thread_flag_954 = 0
+      move_thread_han_954 = run move_thread_954()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_954 > 1):
+          join move_thread_han_954
+          $ 955 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 956 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 957 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+    end
+    $ 960 "CD"
+    $ 961 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 962 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+    global bajada_broca=p[0,0,-0.012,0,0,0]
+    $ 963 "barrenos_menos1≔8"
+    global barrenos_menos1=8
+    $ 964 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 965 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 966 "Perforacion"
+      $ 967 "MoveL"
+      $ 968 "internos≔interpolate_pose(Linea3_C, Linea3_D, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea3_C_p, Linea3_D_p, barreno_actual/barrenos_menos1)
+      $ 969 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 970 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 971 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+      global bajada_broca=p[0,0,-0.012,0,0,0]
+      $ 972 "bajada≔p[0,0,0.012,0,0,0]"
+      global bajada=p[0,0,0.012,0,0,0]
+      $ 973 "Direction: Base Z-"
+      global move_thread_flag_973=0
+      thread move_thread_973():
+        enter_critical
+        move_thread_flag_973 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.055)
+        movel(towardsPos, a=0.02, v=0.015)
+        move_thread_flag_973 = 2
+        exit_critical
+      end
+      move_thread_flag_973 = 0
+      move_thread_han_973 = run move_thread_973()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_973 > 1):
+          join move_thread_han_973
+          $ 974 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 975 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 976 "Direction: Base Z+"
+      global move_thread_flag_976=0
+      thread move_thread_976():
+        enter_critical
+        move_thread_flag_976 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.002)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_976 = 2
+        exit_critical
+      end
+      move_thread_flag_976 = 0
+      move_thread_han_976 = run move_thread_976()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_976 > 1):
+          join move_thread_han_976
+          $ 977 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 978 "Wait: 0.3"
+      sleep(0.3)
+      $ 979 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 980 "Wait: 0.3"
+      sleep(0.3)
+      $ 981 "Loop 2 times"
+      Loop_72 = 0
+      while (Loop_72 < 2):
+        $ 982 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 983 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 984 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 985 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.005)
+        $ 986 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_72 = Loop_72 + 1
+      end
+      $ 987 "Direction: Base Z+"
+      global move_thread_flag_987=0
+      thread move_thread_987():
+        enter_critical
+        move_thread_flag_987 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_987 = 2
+        exit_critical
+      end
+      move_thread_flag_987 = 0
+      move_thread_han_987 = run move_thread_987()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_987 > 1):
+          join move_thread_han_987
+          $ 988 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 989 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 990 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+    end
+    $ 993 "EF"
+    $ 994 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 995 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+    global bajada_broca=p[0,0,-0.012,0,0,0]
+    $ 996 "barrenos_menos1≔9"
+    global barrenos_menos1=9
+    $ 997 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 998 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 999 "Perforacion"
+      $ 1000 "MoveL"
+      $ 1001 "internos≔interpolate_pose(Linea3_E, Linea3_F, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea3_E_p, Linea3_F_p, barreno_actual/barrenos_menos1)
+      $ 1002 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 1003 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 1004 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+      global bajada_broca=p[0,0,-0.012,0,0,0]
+      $ 1005 "bajada≔p[0,0,0.012,0,0,0]"
+      global bajada=p[0,0,0.012,0,0,0]
+      $ 1006 "Direction: Base Z-"
+      global move_thread_flag_1006=0
+      thread move_thread_1006():
+        enter_critical
+        move_thread_flag_1006 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.055)
+        movel(towardsPos, a=0.015, v=0.02)
+        move_thread_flag_1006 = 2
+        exit_critical
+      end
+      move_thread_flag_1006 = 0
+      move_thread_han_1006 = run move_thread_1006()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_1006 > 1):
+          join move_thread_han_1006
+          $ 1007 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 1008 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 1009 "Direction: Base Z+"
+      global move_thread_flag_1009=0
+      thread move_thread_1009():
+        enter_critical
+        move_thread_flag_1009 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.002)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_1009 = 2
+        exit_critical
+      end
+      move_thread_flag_1009 = 0
+      move_thread_han_1009 = run move_thread_1009()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_1009 > 1):
+          join move_thread_han_1009
+          $ 1010 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 1011 "Wait: 0.3"
+      sleep(0.3)
+      $ 1012 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 1013 "Wait: 0.3"
+      sleep(0.3)
+      $ 1014 "Loop 2 times"
+      Loop_74 = 0
+      while (Loop_74 < 2):
+        $ 1015 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 1016 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 1017 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 1018 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.005)
+        $ 1019 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_74 = Loop_74 + 1
+      end
+      $ 1020 "Direction: Base Z+"
+      global move_thread_flag_1020=0
+      thread move_thread_1020():
+        enter_critical
+        move_thread_flag_1020 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_1020 = 2
+        exit_critical
+      end
+      move_thread_flag_1020 = 0
+      move_thread_han_1020 = run move_thread_1020()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_1020 > 1):
+          join move_thread_han_1020
+          $ 1021 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 1022 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 1023 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+    end
+    $ 1026 "Popup: Linea1 con chica Terminada!"
+    popup("Linea1 con chica Terminada!", "Mensaje", False, False, blocking=True)
+    $ 1027 "Linea4"
+    $ 1028 "Marcar_puntos"
+    $ 1029 "MoveL"
+    $ 1030 "punto_inicio1" "breakAfter"
+    movel(punto_inicio1_p, a=0.5, v=0.1)
+    $ 1031 "Linea4_A" "breakAfter"
+    movel(Linea4_A_p, a=0.5, v=0.1)
+    $ 1032 "Linea4_B" "breakAfter"
+    movel(Linea4_B_p, a=0.5, v=0.1)
+    $ 1033 "Linea4_C" "breakAfter"
+    movel(Linea4_C_p, a=0.5, v=0.1)
+    $ 1034 "Linea4_D" "breakAfter"
+    movel(Linea4_D_p, a=0.5, v=0.1)
+    $ 1035 "Linea4_E" "breakAfter"
+    movel(Linea4_E_p, a=0.5, v=0.1)
+    $ 1036 "Linea4_F" "breakAfter"
+    movel(Linea4_F_p, a=0.5, v=0.1)
+    $ 1037 "AB"
+    $ 1038 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 1039 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+    global bajada_broca=p[0,0,-0.012,0,0,0]
+    $ 1040 "barrenos_menos1≔8"
+    global barrenos_menos1=8
+    $ 1041 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 1042 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 1043 "Perforacion"
+      $ 1044 "MoveL"
+      $ 1045 "internos≔interpolate_pose(Linea4_A, Linea4_B, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea4_A_p, Linea4_B_p, barreno_actual/barrenos_menos1)
+      $ 1046 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 1047 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 1048 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+      global bajada_broca=p[0,0,-0.012,0,0,0]
+      $ 1049 "bajada≔p[0,0,0.012,0,0,0]"
+      global bajada=p[0,0,0.012,0,0,0]
+      $ 1050 "Direction: Base Z-"
+      global move_thread_flag_1050=0
+      thread move_thread_1050():
+        enter_critical
+        move_thread_flag_1050 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.055)
+        movel(towardsPos, a=0.015, v=0.02)
+        move_thread_flag_1050 = 2
+        exit_critical
+      end
+      move_thread_flag_1050 = 0
+      move_thread_han_1050 = run move_thread_1050()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_1050 > 1):
+          join move_thread_han_1050
+          $ 1051 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 1052 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 1053 "Direction: Base Z+"
+      global move_thread_flag_1053=0
+      thread move_thread_1053():
+        enter_critical
+        move_thread_flag_1053 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.002)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_1053 = 2
+        exit_critical
+      end
+      move_thread_flag_1053 = 0
+      move_thread_han_1053 = run move_thread_1053()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_1053 > 1):
+          join move_thread_han_1053
+          $ 1054 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 1055 "Wait: 0.3"
+      sleep(0.3)
+      $ 1056 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 1057 "Wait: 0.3"
+      sleep(0.3)
+      $ 1058 "Loop 2 times"
+      Loop_76 = 0
+      while (Loop_76 < 2):
+        $ 1059 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 1060 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 1061 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 1062 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.005)
+        $ 1063 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_76 = Loop_76 + 1
+      end
+      $ 1064 "Direction: Base Z+"
+      global move_thread_flag_1064=0
+      thread move_thread_1064():
+        enter_critical
+        move_thread_flag_1064 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_1064 = 2
+        exit_critical
+      end
+      move_thread_flag_1064 = 0
+      move_thread_han_1064 = run move_thread_1064()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_1064 > 1):
+          join move_thread_han_1064
+          $ 1065 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 1066 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 1067 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+    end
+    $ 1070 "CD"
+    $ 1071 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 1072 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+    global bajada_broca=p[0,0,-0.012,0,0,0]
+    $ 1073 "barrenos_menos1≔8"
+    global barrenos_menos1=8
+    $ 1074 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 1075 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 1076 "Perforacion"
+      $ 1077 "MoveL"
+      $ 1078 "internos≔interpolate_pose(Linea4_C, Linea4_D, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea4_C_p, Linea4_D_p, barreno_actual/barrenos_menos1)
+      $ 1079 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 1080 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 1081 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+      global bajada_broca=p[0,0,-0.012,0,0,0]
+      $ 1082 "bajada≔p[0,0,0.012,0,0,0]"
+      global bajada=p[0,0,0.012,0,0,0]
+      $ 1083 "Direction: Base Z-"
+      global move_thread_flag_1083=0
+      thread move_thread_1083():
+        enter_critical
+        move_thread_flag_1083 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.055)
+        movel(towardsPos, a=0.015, v=0.02)
+        move_thread_flag_1083 = 2
+        exit_critical
+      end
+      move_thread_flag_1083 = 0
+      move_thread_han_1083 = run move_thread_1083()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_1083 > 1):
+          join move_thread_han_1083
+          $ 1084 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 1085 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 1086 "Direction: Base Z+"
+      global move_thread_flag_1086=0
+      thread move_thread_1086():
+        enter_critical
+        move_thread_flag_1086 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.002)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_1086 = 2
+        exit_critical
+      end
+      move_thread_flag_1086 = 0
+      move_thread_han_1086 = run move_thread_1086()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_1086 > 1):
+          join move_thread_han_1086
+          $ 1087 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 1088 "Wait: 0.3"
+      sleep(0.3)
+      $ 1089 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 1090 "Wait: 0.3"
+      sleep(0.3)
+      $ 1091 "Loop 2 times"
+      Loop_78 = 0
+      while (Loop_78 < 2):
+        $ 1092 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 1093 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 1094 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 1095 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.005)
+        $ 1096 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_78 = Loop_78 + 1
+      end
+      $ 1097 "Direction: Base Z+"
+      global move_thread_flag_1097=0
+      thread move_thread_1097():
+        enter_critical
+        move_thread_flag_1097 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_1097 = 2
+        exit_critical
+      end
+      move_thread_flag_1097 = 0
+      move_thread_han_1097 = run move_thread_1097()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_1097 > 1):
+          join move_thread_han_1097
+          $ 1098 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 1099 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 1100 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+    end
+    $ 1103 "EF"
+    $ 1104 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 1105 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+    global bajada_broca=p[0,0,-0.012,0,0,0]
+    $ 1106 "barrenos_menos1≔9"
+    global barrenos_menos1=9
+    $ 1107 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 1108 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 1109 "Perforacion"
+      $ 1110 "MoveL"
+      $ 1111 "internos≔interpolate_pose(Linea4_E, Linea4_F, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea4_E_p, Linea4_F_p, barreno_actual/barrenos_menos1)
+      $ 1112 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 1113 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 1114 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+      global bajada_broca=p[0,0,-0.012,0,0,0]
+      $ 1115 "bajada≔p[0,0,0.012,0,0,0]"
+      global bajada=p[0,0,0.012,0,0,0]
+      $ 1116 "Direction: Base Z-"
+      global move_thread_flag_1116=0
+      thread move_thread_1116():
+        enter_critical
+        move_thread_flag_1116 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.055)
+        movel(towardsPos, a=0.015, v=0.02)
+        move_thread_flag_1116 = 2
+        exit_critical
+      end
+      move_thread_flag_1116 = 0
+      move_thread_han_1116 = run move_thread_1116()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_1116 > 1):
+          join move_thread_han_1116
+          $ 1117 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 1118 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 1119 "Direction: Base Z+"
+      global move_thread_flag_1119=0
+      thread move_thread_1119():
+        enter_critical
+        move_thread_flag_1119 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.002)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_1119 = 2
+        exit_critical
+      end
+      move_thread_flag_1119 = 0
+      move_thread_han_1119 = run move_thread_1119()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_1119 > 1):
+          join move_thread_han_1119
+          $ 1120 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 1121 "Wait: 0.3"
+      sleep(0.3)
+      $ 1122 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 1123 "Wait: 0.3"
+      sleep(0.3)
+      $ 1124 "Loop 2 times"
+      Loop_80 = 0
+      while (Loop_80 < 2):
+        $ 1125 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 1126 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 1127 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 1128 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.005)
+        $ 1129 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_80 = Loop_80 + 1
+      end
+      $ 1130 "Direction: Base Z+"
+      global move_thread_flag_1130=0
+      thread move_thread_1130():
+        enter_critical
+        move_thread_flag_1130 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_1130 = 2
+        exit_critical
+      end
+      move_thread_flag_1130 = 0
+      move_thread_han_1130 = run move_thread_1130()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_1130 > 1):
+          join move_thread_han_1130
+          $ 1131 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 1132 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 1133 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+      $ 1134 "If barreno_actual>barrenos_menos1"
+      if (barreno_actual>barrenos_menos1):
+        $ 1135 "cambiar_broca≔ True "
+        global cambiar_broca=  True  
+      end
+    end
+    $ 1138 "Popup: Linea2 con chica Terminada!"
+    popup("Linea2 con chica Terminada!", "Mensaje", False, False, blocking=True)
+    $ 1139 "Broca_3"
+    $ 1140 "Linea3"
+    $ 1141 "Marcar_puntos"
+    $ 1142 "MoveL"
+    $ 1143 "punto_inicio1" "breakAfter"
+    movel(punto_inicio1_p, a=0.5, v=0.1)
+    $ 1144 "Linea3_A" "breakAfter"
+    movel(Linea3_A_p, a=0.5, v=0.1)
+    $ 1145 "Linea3_B" "breakAfter"
+    movel(Linea3_B_p, a=0.5, v=0.1)
+    $ 1146 "Linea3_C" "breakAfter"
+    movel(Linea3_C_p, a=0.5, v=0.1)
+    $ 1147 "Linea3_D" "breakAfter"
+    movel(Linea3_D_p, a=0.5, v=0.1)
+    $ 1148 "Linea3_E" "breakAfter"
+    movel(Linea3_E_p, a=0.5, v=0.1)
+    $ 1149 "Linea3_F" "breakAfter"
+    movel(Linea3_F_p, a=0.5, v=0.1)
+    $ 1150 "AB"
+    $ 1151 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 1152 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+    global bajada_broca=p[0,0,-0.012,0,0,0]
+    $ 1153 "barrenos_menos1≔8"
+    global barrenos_menos1=8
+    $ 1154 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 1155 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 1156 "Perforacion"
+      $ 1157 "MoveL"
+      $ 1158 "internos≔interpolate_pose(Linea3_A, Linea3_B, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea3_A_p, Linea3_B_p, barreno_actual/barrenos_menos1)
+      $ 1159 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 1160 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 1161 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+      global bajada_broca=p[0,0,-0.012,0,0,0]
+      $ 1162 "bajada≔p[0,0,0.012,0,0,0]"
+      global bajada=p[0,0,0.012,0,0,0]
+      $ 1163 "Direction: Base Z-"
+      global move_thread_flag_1163=0
+      thread move_thread_1163():
+        enter_critical
+        move_thread_flag_1163 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.06)
+        movel(towardsPos, a=0.015, v=0.02)
+        move_thread_flag_1163 = 2
+        exit_critical
+      end
+      move_thread_flag_1163 = 0
+      move_thread_han_1163 = run move_thread_1163()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_1163 > 1):
+          join move_thread_han_1163
+          $ 1164 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 1165 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 1166 "Direction: Base Z+"
+      global move_thread_flag_1166=0
+      thread move_thread_1166():
+        enter_critical
+        move_thread_flag_1166 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.002)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_1166 = 2
+        exit_critical
+      end
+      move_thread_flag_1166 = 0
+      move_thread_han_1166 = run move_thread_1166()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_1166 > 1):
+          join move_thread_han_1166
+          $ 1167 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 1168 "Wait: 0.3"
+      sleep(0.3)
+      $ 1169 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 1170 "Wait: 0.3"
+      sleep(0.3)
+      $ 1171 "Loop 2 times"
+      Loop_82 = 0
+      while (Loop_82 < 2):
+        $ 1172 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 1173 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 1174 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 1175 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.01)
+        $ 1176 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_82 = Loop_82 + 1
+      end
+      $ 1177 "Direction: Base Z+"
+      global move_thread_flag_1177=0
+      thread move_thread_1177():
+        enter_critical
+        move_thread_flag_1177 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_1177 = 2
+        exit_critical
+      end
+      move_thread_flag_1177 = 0
+      move_thread_han_1177 = run move_thread_1177()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_1177 > 1):
+          join move_thread_han_1177
+          $ 1178 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 1179 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 1180 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+    end
+    $ 1183 "CD"
+    $ 1184 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 1185 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+    global bajada_broca=p[0,0,-0.012,0,0,0]
+    $ 1186 "barrenos_menos1≔8"
+    global barrenos_menos1=8
+    $ 1187 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 1188 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 1189 "Perforacion"
+      $ 1190 "MoveL"
+      $ 1191 "internos≔interpolate_pose(Linea3_C, Linea3_D, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea3_C_p, Linea3_D_p, barreno_actual/barrenos_menos1)
+      $ 1192 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 1193 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 1194 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+      global bajada_broca=p[0,0,-0.012,0,0,0]
+      $ 1195 "bajada≔p[0,0,0.012,0,0,0]"
+      global bajada=p[0,0,0.012,0,0,0]
+      $ 1196 "Direction: Base Z-"
+      global move_thread_flag_1196=0
+      thread move_thread_1196():
+        enter_critical
+        move_thread_flag_1196 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.06)
+        movel(towardsPos, a=0.02, v=0.015)
+        move_thread_flag_1196 = 2
+        exit_critical
+      end
+      move_thread_flag_1196 = 0
+      move_thread_han_1196 = run move_thread_1196()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_1196 > 1):
+          join move_thread_han_1196
+          $ 1197 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 1198 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 1199 "Direction: Base Z+"
+      global move_thread_flag_1199=0
+      thread move_thread_1199():
+        enter_critical
+        move_thread_flag_1199 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.002)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_1199 = 2
+        exit_critical
+      end
+      move_thread_flag_1199 = 0
+      move_thread_han_1199 = run move_thread_1199()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_1199 > 1):
+          join move_thread_han_1199
+          $ 1200 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 1201 "Wait: 0.3"
+      sleep(0.3)
+      $ 1202 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 1203 "Wait: 0.3"
+      sleep(0.3)
+      $ 1204 "Loop 2 times"
+      Loop_84 = 0
+      while (Loop_84 < 2):
+        $ 1205 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 1206 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 1207 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 1208 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.01)
+        $ 1209 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_84 = Loop_84 + 1
+      end
+      $ 1210 "Direction: Base Z+"
+      global move_thread_flag_1210=0
+      thread move_thread_1210():
+        enter_critical
+        move_thread_flag_1210 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_1210 = 2
+        exit_critical
+      end
+      move_thread_flag_1210 = 0
+      move_thread_han_1210 = run move_thread_1210()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_1210 > 1):
+          join move_thread_han_1210
+          $ 1211 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 1212 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 1213 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+    end
+    $ 1216 "EF"
+    $ 1217 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 1218 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+    global bajada_broca=p[0,0,-0.012,0,0,0]
+    $ 1219 "barrenos_menos1≔9"
+    global barrenos_menos1=9
+    $ 1220 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 1221 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 1222 "Perforacion"
+      $ 1223 "MoveL"
+      $ 1224 "internos≔interpolate_pose(Linea3_E, Linea3_F, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea3_E_p, Linea3_F_p, barreno_actual/barrenos_menos1)
+      $ 1225 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 1226 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 1227 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+      global bajada_broca=p[0,0,-0.012,0,0,0]
+      $ 1228 "bajada≔p[0,0,0.012,0,0,0]"
+      global bajada=p[0,0,0.012,0,0,0]
+      $ 1229 "Direction: Base Z-"
+      global move_thread_flag_1229=0
+      thread move_thread_1229():
+        enter_critical
+        move_thread_flag_1229 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.06)
+        movel(towardsPos, a=0.015, v=0.02)
+        move_thread_flag_1229 = 2
+        exit_critical
+      end
+      move_thread_flag_1229 = 0
+      move_thread_han_1229 = run move_thread_1229()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_1229 > 1):
+          join move_thread_han_1229
+          $ 1230 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 1231 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 1232 "Direction: Base Z+"
+      global move_thread_flag_1232=0
+      thread move_thread_1232():
+        enter_critical
+        move_thread_flag_1232 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.002)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_1232 = 2
+        exit_critical
+      end
+      move_thread_flag_1232 = 0
+      move_thread_han_1232 = run move_thread_1232()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_1232 > 1):
+          join move_thread_han_1232
+          $ 1233 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 1234 "Wait: 0.3"
+      sleep(0.3)
+      $ 1235 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 1236 "Wait: 0.3"
+      sleep(0.3)
+      $ 1237 "Loop 2 times"
+      Loop_86 = 0
+      while (Loop_86 < 2):
+        $ 1238 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 1239 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 1240 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 1241 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.01)
+        $ 1242 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_86 = Loop_86 + 1
+      end
+      $ 1243 "Direction: Base Z+"
+      global move_thread_flag_1243=0
+      thread move_thread_1243():
+        enter_critical
+        move_thread_flag_1243 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_1243 = 2
+        exit_critical
+      end
+      move_thread_flag_1243 = 0
+      move_thread_han_1243 = run move_thread_1243()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_1243 > 1):
+          join move_thread_han_1243
+          $ 1244 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 1245 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 1246 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+    end
+    $ 1249 "Popup: Linea1 con chica Terminada!"
+    popup("Linea1 con chica Terminada!", "Mensaje", False, False, blocking=True)
+    $ 1250 "Linea4"
+    $ 1251 "Marcar_puntos"
+    $ 1252 "MoveL"
+    $ 1253 "punto_inicio1" "breakAfter"
+    movel(punto_inicio1_p, a=0.5, v=0.1)
+    $ 1254 "Linea4_A" "breakAfter"
+    movel(Linea4_A_p, a=0.5, v=0.1)
+    $ 1255 "Linea4_B" "breakAfter"
+    movel(Linea4_B_p, a=0.5, v=0.1)
+    $ 1256 "Linea4_C" "breakAfter"
+    movel(Linea4_C_p, a=0.5, v=0.1)
+    $ 1257 "Linea4_D" "breakAfter"
+    movel(Linea4_D_p, a=0.5, v=0.1)
+    $ 1258 "Linea4_E" "breakAfter"
+    movel(Linea4_E_p, a=0.5, v=0.1)
+    $ 1259 "Linea4_F" "breakAfter"
+    movel(Linea4_F_p, a=0.5, v=0.1)
+    $ 1260 "AB"
+    $ 1261 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 1262 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+    global bajada_broca=p[0,0,-0.012,0,0,0]
+    $ 1263 "barrenos_menos1≔8"
+    global barrenos_menos1=8
+    $ 1264 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 1265 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 1266 "Perforacion"
+      $ 1267 "MoveL"
+      $ 1268 "internos≔interpolate_pose(Linea4_A, Linea4_B, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea4_A_p, Linea4_B_p, barreno_actual/barrenos_menos1)
+      $ 1269 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 1270 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 1271 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+      global bajada_broca=p[0,0,-0.012,0,0,0]
+      $ 1272 "bajada≔p[0,0,0.012,0,0,0]"
+      global bajada=p[0,0,0.012,0,0,0]
+      $ 1273 "Direction: Base Z-"
+      global move_thread_flag_1273=0
+      thread move_thread_1273():
+        enter_critical
+        move_thread_flag_1273 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.06)
+        movel(towardsPos, a=0.015, v=0.02)
+        move_thread_flag_1273 = 2
+        exit_critical
+      end
+      move_thread_flag_1273 = 0
+      move_thread_han_1273 = run move_thread_1273()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_1273 > 1):
+          join move_thread_han_1273
+          $ 1274 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 1275 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 1276 "Direction: Base Z+"
+      global move_thread_flag_1276=0
+      thread move_thread_1276():
+        enter_critical
+        move_thread_flag_1276 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.002)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_1276 = 2
+        exit_critical
+      end
+      move_thread_flag_1276 = 0
+      move_thread_han_1276 = run move_thread_1276()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_1276 > 1):
+          join move_thread_han_1276
+          $ 1277 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 1278 "Wait: 0.3"
+      sleep(0.3)
+      $ 1279 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 1280 "Wait: 0.3"
+      sleep(0.3)
+      $ 1281 "Loop 2 times"
+      Loop_88 = 0
+      while (Loop_88 < 2):
+        $ 1282 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 1283 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 1284 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 1285 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.01)
+        $ 1286 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_88 = Loop_88 + 1
+      end
+      $ 1287 "Direction: Base Z+"
+      global move_thread_flag_1287=0
+      thread move_thread_1287():
+        enter_critical
+        move_thread_flag_1287 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_1287 = 2
+        exit_critical
+      end
+      move_thread_flag_1287 = 0
+      move_thread_han_1287 = run move_thread_1287()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_1287 > 1):
+          join move_thread_han_1287
+          $ 1288 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 1289 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 1290 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+    end
+    $ 1293 "CD"
+    $ 1294 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 1295 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+    global bajada_broca=p[0,0,-0.012,0,0,0]
+    $ 1296 "barrenos_menos1≔8"
+    global barrenos_menos1=8
+    $ 1297 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 1298 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 1299 "Perforacion"
+      $ 1300 "MoveL"
+      $ 1301 "internos≔interpolate_pose(Linea4_C, Linea4_D, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea4_C_p, Linea4_D_p, barreno_actual/barrenos_menos1)
+      $ 1302 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 1303 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 1304 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+      global bajada_broca=p[0,0,-0.012,0,0,0]
+      $ 1305 "bajada≔p[0,0,0.012,0,0,0]"
+      global bajada=p[0,0,0.012,0,0,0]
+      $ 1306 "Direction: Base Z-"
+      global move_thread_flag_1306=0
+      thread move_thread_1306():
+        enter_critical
+        move_thread_flag_1306 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.06)
+        movel(towardsPos, a=0.015, v=0.02)
+        move_thread_flag_1306 = 2
+        exit_critical
+      end
+      move_thread_flag_1306 = 0
+      move_thread_han_1306 = run move_thread_1306()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_1306 > 1):
+          join move_thread_han_1306
+          $ 1307 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 1308 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 1309 "Direction: Base Z+"
+      global move_thread_flag_1309=0
+      thread move_thread_1309():
+        enter_critical
+        move_thread_flag_1309 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.002)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_1309 = 2
+        exit_critical
+      end
+      move_thread_flag_1309 = 0
+      move_thread_han_1309 = run move_thread_1309()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_1309 > 1):
+          join move_thread_han_1309
+          $ 1310 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 1311 "Wait: 0.3"
+      sleep(0.3)
+      $ 1312 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 1313 "Wait: 0.3"
+      sleep(0.3)
+      $ 1314 "Loop 2 times"
+      Loop_90 = 0
+      while (Loop_90 < 2):
+        $ 1315 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 1316 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 1317 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 1318 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.01)
+        $ 1319 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_90 = Loop_90 + 1
+      end
+      $ 1320 "Direction: Base Z+"
+      global move_thread_flag_1320=0
+      thread move_thread_1320():
+        enter_critical
+        move_thread_flag_1320 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_1320 = 2
+        exit_critical
+      end
+      move_thread_flag_1320 = 0
+      move_thread_han_1320 = run move_thread_1320()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_1320 > 1):
+          join move_thread_han_1320
+          $ 1321 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 1322 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 1323 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+    end
+    $ 1326 "EF"
+    $ 1327 "'desbaste_inicial'"
+    # 'desbaste_inicial'
+    $ 1328 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+    global bajada_broca=p[0,0,-0.012,0,0,0]
+    $ 1329 "barrenos_menos1≔9"
+    global barrenos_menos1=9
+    $ 1330 "barreno_actual≔0"
+    global barreno_actual=0
+    $ 1331 "Loop barreno_actual≤barrenos_menos1"
+    while (barreno_actual <= barrenos_menos1):
+      $ 1332 "Perforacion"
+      $ 1333 "MoveL"
+      $ 1334 "internos≔interpolate_pose(Linea4_E, Linea4_F, barreno_actual/barrenos_menos1)"
+      global internos= interpolate_pose (Linea4_E_p, Linea4_F_p, barreno_actual/barrenos_menos1)
+      $ 1335 "internos" "breakAfter"
+      movel(internos, a=0.5, v=0.1)
+      $ 1336 "'desbaste_inicial'"
+      # 'desbaste_inicial'
+      $ 1337 "bajada_broca≔p[0,0,-0.012,0,0,0]"
+      global bajada_broca=p[0,0,-0.012,0,0,0]
+      $ 1338 "bajada≔p[0,0,0.012,0,0,0]"
+      global bajada=p[0,0,0.012,0,0,0]
+      $ 1339 "Direction: Base Z-"
+      global move_thread_flag_1339=0
+      thread move_thread_1339():
+        enter_critical
+        move_thread_flag_1339 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.06)
+        movel(towardsPos, a=0.015, v=0.02)
+        move_thread_flag_1339 = 2
+        exit_critical
+      end
+      move_thread_flag_1339 = 0
+      move_thread_han_1339 = run move_thread_1339()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_1339 > 1):
+          join move_thread_han_1339
+          $ 1340 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 1341 "Popup: punto contacto alanzdo"
+      popup("punto contacto alanzdo", "Mensaje", False, False, blocking=True)
+      $ 1342 "Direction: Base Z+"
+      global move_thread_flag_1342=0
+      thread move_thread_1342():
+        enter_critical
+        move_thread_flag_1342 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.002)
+        movel(towardsPos, a=0.005, v=0.003)
+        move_thread_flag_1342 = 2
+        exit_critical
+      end
+      move_thread_flag_1342 = 0
+      move_thread_han_1342 = run move_thread_1342()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_1342 > 1):
+          join move_thread_han_1342
+          $ 1343 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 1344 "Wait: 0.3"
+      sleep(0.3)
+      $ 1345 "Set CO[1]=Encender"
+      set_configurable_digital_out(1, True)
+      $ 1346 "Wait: 0.3"
+      sleep(0.3)
+      $ 1347 "Loop 2 times"
+      Loop_92 = 0
+      while (Loop_92 < 2):
+        $ 1348 "bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)"
+        global bajar= pose_add ( get_actual_tcp_pose (), bajada_broca)
+        $ 1349 "bajar" "breakAfter"
+        movel(bajar, a=0.005, v=0.001)
+        $ 1350 "subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)"
+        global subir= pose_sub ( get_actual_tcp_pose (), bajada_broca)
+        $ 1351 "subir" "breakAfter"
+        movel(subir, a=0.01, v=0.01)
+        $ 1352 "bajada_broca≔pose_sub(bajada_broca, bajada)"
+        global bajada_broca= pose_sub (bajada_broca, bajada)
+        Loop_92 = Loop_92 + 1
+      end
+      $ 1353 "Direction: Base Z+"
+      global move_thread_flag_1353=0
+      thread move_thread_1353():
+        enter_critical
+        move_thread_flag_1353 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.06)
+        movel(towardsPos, a=0.035, v=0.03)
+        move_thread_flag_1353 = 2
+        exit_critical
+      end
+      move_thread_flag_1353 = 0
+      move_thread_han_1353 = run move_thread_1353()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_1353 > 1):
+          join move_thread_han_1353
+          $ 1354 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 1355 "Set CO[1]=Apagar"
+      set_configurable_digital_out(1, False)
+      $ 1356 "barreno_actual≔barreno_actual+1"
+      global barreno_actual=barreno_actual+1
+      $ 1357 "If barreno_actual>barrenos_menos1"
+      if (barreno_actual>barrenos_menos1):
+        $ 1358 "cambiar_broca≔ True "
+        global cambiar_broca=  True  
+      end
+    end
+    $ 1361 "Popup: Linea2 con chica Terminada!"
+    popup("Linea2 con chica Terminada!", "Mensaje", False, False, blocking=True)
+    $ 1808 "'Subprogramas:'"
+    # 'Subprogramas:'
+  end
+end

@@ -1,0 +1,1460 @@
+ Program
+   Robot Program
+     Variables
+       bajada_broca≔p[0,0,-0.008,0,0,0]
+       barrenos_menos1≔0
+       barreno_actual≔0
+       posicion≔p[0,0,300,0,0,0]
+       cambiar_broca≔ False 
+       barrenos_hechos≔0
+       eje7≔3
+       Wait: 0.5
+     Home
+       Wait: 0.3
+       Home
+       'MoveL'
+       Wait: 0.3
+       iniciando_prog≔ True 
+       Call Poner_broca
+     Posicion2
+       eje7≔2
+       Broca_1
+         Linea1
+           Marcar_puntos
+             MoveL
+               Home
+               punto_inicio1
+               Linea1_A
+               Linea1_B
+               Linea1_C
+               Linea1_D
+               Linea1_E
+               Linea1_F
+           AB
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.008,0,0,0]
+             barrenos_menos1≔8
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea1_A, Linea1_B, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.008,0,0,0]
+                   bajada≔p[0,0,0.008,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 3 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   Call Quitar_broca
+                   Call Poner_broca
+           CD
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.008,0,0,0]
+             barrenos_menos1≔8
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea1_C, Linea1_D, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.008,0,0,0]
+                   bajada≔p[0,0,0.008,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 3 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   Call Quitar_broca
+                   Call Poner_broca
+           EF
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.008,0,0,0]
+             barrenos_menos1≔9
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea1_E, Linea1_F, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.008,0,0,0]
+                   bajada≔p[0,0,0.008,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 3 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   Call Quitar_broca
+                   Call Poner_broca
+         Popup: Linea1 con chica Terminada!
+         Linea2
+           Marcar_puntos
+             MoveL
+               punto_inicio1
+               Linea2_A
+               Linea2_B
+               Linea2_C
+               Linea2_D
+               Linea2_E
+               Linea2_F
+           AB
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.008,0,0,0]
+             barrenos_menos1≔8
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea2_A, Linea2_B, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.008,0,0,0]
+                   bajada≔p[0,0,0.008,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 3 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   Call Quitar_broca
+                   Call Poner_broca
+           CD
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.008,0,0,0]
+             barrenos_menos1≔8
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea2_C, Linea2_D, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.008,0,0,0]
+                   bajada≔p[0,0,0.008,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 3 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   Call Quitar_broca
+                   Call Poner_broca
+           EF
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.008,0,0,0]
+             barrenos_menos1≔9
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea2_E, Linea2_F, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.008,0,0,0]
+                   bajada≔p[0,0,0.008,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 3 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   If barreno_actual>barrenos_menos1
+                     cambiar_broca≔ True 
+                   Call Quitar_broca
+                   Call Poner_broca
+         Popup: Linea2 con chica Terminada!
+       Broca_2
+         Linea1
+           Marcar_puntos
+             MoveL
+               punto_inicio1
+               Linea1_A
+               Linea1_B
+               Linea1_C
+               Linea1_D
+               Linea1_E
+               Linea1_F
+           AB
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.012,0,0,0]
+             barrenos_menos1≔8
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea1_A, Linea1_B, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.012,0,0,0]
+                   bajada≔p[0,0,0.012,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 2 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   Call Quitar_broca
+                   Call Poner_broca
+           CD
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.012,0,0,0]
+             barrenos_menos1≔8
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea1_C, Linea1_D, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.012,0,0,0]
+                   bajada≔p[0,0,0.012,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 2 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   Call Quitar_broca
+                   Call Poner_broca
+           EF
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.012,0,0,0]
+             barrenos_menos1≔9
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea1_E, Linea1_F, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.012,0,0,0]
+                   bajada≔p[0,0,0.012,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 2 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   Call Quitar_broca
+                   Call Poner_broca
+         Popup: Linea1 con media Terminada!
+         Linea2
+           Marcar_puntos
+             MoveL
+               punto_inicio1
+               Linea2_A
+               Linea2_B
+               Linea2_C
+               Linea2_D
+               Linea2_E
+               Linea2_F
+           AB
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.012,0,0,0]
+             barrenos_menos1≔8
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea2_A, Linea2_B, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.012,0,0,0]
+                   bajada≔p[0,0,0.012,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 2 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   Call Quitar_broca
+                   Call Poner_broca
+           CD
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.012,0,0,0]
+             barrenos_menos1≔8
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea2_C, Linea2_D, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.012,0,0,0]
+                   bajada≔p[0,0,0.012,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 2 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   Call Quitar_broca
+                   Call Poner_broca
+           EF
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.012,0,0,0]
+             barrenos_menos1≔9
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea2_E, Linea2_F, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.012,0,0,0]
+                   bajada≔p[0,0,0.012,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 2 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   If barreno_actual>barrenos_menos1
+                     cambiar_broca≔ True 
+                   Call Quitar_broca
+                   Call Poner_broca
+         Popup: Linea2 con media Terminada!
+       Broca_3
+         Linea1
+           Marcar_puntos
+             MoveL
+               punto_inicio1
+               Linea1_A
+               Linea1_B
+               Linea1_C
+               Linea1_D
+               Linea1_E
+               Linea1_F
+           AB
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.012,0,0,0]
+             barrenos_menos1≔8
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea1_A, Linea1_B, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.012,0,0,0]
+                   bajada≔p[0,0,0.012,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 2 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   Call Quitar_broca
+                   Call Poner_broca
+           CD
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.012,0,0,0]
+             barrenos_menos1≔8
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea1_C, Linea1_D, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.012,0,0,0]
+                   bajada≔p[0,0,0.012,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 2 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   Call Quitar_broca
+                   Call Poner_broca
+           EF
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.012,0,0,0]
+             barrenos_menos1≔9
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea1_E, Linea1_F, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.012,0,0,0]
+                   bajada≔p[0,0,0.012,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 2 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   Call Quitar_broca
+                   Call Poner_broca
+         Popup: Linea1 con full Terminada!
+         Linea2
+           Marcar_puntos
+             MoveL
+               punto_inicio1
+               Linea2_A
+               Linea2_B
+               Linea2_C
+               Linea2_D
+               Linea2_E
+               Linea2_F
+           AB
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.012,0,0,0]
+             barrenos_menos1≔8
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea2_A, Linea2_B, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.012,0,0,0]
+                   bajada≔p[0,0,0.012,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 2 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   Call Quitar_broca
+                   Call Poner_broca
+           CD
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.012,0,0,0]
+             barrenos_menos1≔8
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea2_C, Linea2_D, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.012,0,0,0]
+                   bajada≔p[0,0,0.012,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 2 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   Call Quitar_broca
+                   Call Poner_broca
+           EF
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.012,0,0,0]
+             barrenos_menos1≔9
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea2_E, Linea2_F, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.012,0,0,0]
+                   bajada≔p[0,0,0.012,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 2 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   If barreno_actual>barrenos_menos1
+                     cambiar_broca≔ True 
+                   Call Quitar_broca
+                   Call Poner_broca
+         Popup: Linea2 con full Terminada!
+     Posicion3
+       eje7≔3
+       Broca_1
+         Linea3
+           Marcar_puntos
+             MoveL
+               punto_inicio1
+               Linea3_A
+               Linea3_B
+               Linea3_C
+               Linea3_D
+               Linea3_E
+               Linea3_F
+           AB
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.008,0,0,0]
+             barrenos_menos1≔8
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea3_A, Linea3_B, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.008,0,0,0]
+                   bajada≔p[0,0,0.008,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 3 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   Call Quitar_broca
+                   Call Poner_broca
+           CD
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.008,0,0,0]
+             barrenos_menos1≔8
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea3_C, Linea3_D, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.008,0,0,0]
+                   bajada≔p[0,0,0.008,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 3 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   Call Quitar_broca
+                   Call Poner_broca
+           EF
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.008,0,0,0]
+             barrenos_menos1≔9
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea3_E, Linea3_F, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.008,0,0,0]
+                   bajada≔p[0,0,0.008,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 3 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   Call Quitar_broca
+                   Call Poner_broca
+         Popup: Linea1 con chica Terminada!
+         Linea4
+           Marcar_puntos
+             MoveL
+               punto_inicio1
+               Linea4_A
+               Linea4_B
+               Linea4_C
+               Linea4_D
+               Linea4_E
+               Linea4_F
+           AB
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.008,0,0,0]
+             barrenos_menos1≔8
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea4_A, Linea4_B, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.008,0,0,0]
+                   bajada≔p[0,0,0.008,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 3 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   'Call Quitar_broca'
+                   'Call Poner_broca'
+           CD
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.008,0,0,0]
+             barrenos_menos1≔8
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea4_C, Linea4_D, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.008,0,0,0]
+                   bajada≔p[0,0,0.008,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 3 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   'Call Quitar_broca'
+                   'Call Poner_broca'
+           EF
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.008,0,0,0]
+             barrenos_menos1≔9
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea4_E, Linea4_F, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.008,0,0,0]
+                   bajada≔p[0,0,0.008,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 3 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   If barreno_actual>barrenos_menos1
+                     cambiar_broca≔ True 
+                   'Call Quitar_broca'
+                   'Call Poner_broca'
+         Popup: Linea2 con chica Terminada!
+       Broca_2
+         Linea3
+           Marcar_puntos
+             MoveL
+               punto_inicio1
+               Linea3_A
+               Linea3_B
+               Linea3_C
+               Linea3_D
+               Linea3_E
+               Linea3_F
+           AB
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.012,0,0,0]
+             barrenos_menos1≔8
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea3_A, Linea3_B, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.012,0,0,0]
+                   bajada≔p[0,0,0.012,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 2 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   'Call Quitar_broca'
+                   'Call Poner_broca'
+           CD
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.012,0,0,0]
+             barrenos_menos1≔8
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea3_C, Linea3_D, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.012,0,0,0]
+                   bajada≔p[0,0,0.012,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 2 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   'Call Quitar_broca'
+                   'Call Poner_broca'
+           EF
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.012,0,0,0]
+             barrenos_menos1≔9
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea3_E, Linea3_F, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.012,0,0,0]
+                   bajada≔p[0,0,0.012,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 2 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   'Call Quitar_broca'
+                   'Call Poner_broca'
+         Popup: Linea1 con chica Terminada!
+         Linea4
+           Marcar_puntos
+             MoveL
+               punto_inicio1
+               Linea4_A
+               Linea4_B
+               Linea4_C
+               Linea4_D
+               Linea4_E
+               Linea4_F
+           AB
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.012,0,0,0]
+             barrenos_menos1≔8
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea4_A, Linea4_B, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.012,0,0,0]
+                   bajada≔p[0,0,0.012,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 2 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   'Call Quitar_broca'
+                   'Call Poner_broca'
+           CD
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.012,0,0,0]
+             barrenos_menos1≔8
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea4_C, Linea4_D, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.012,0,0,0]
+                   bajada≔p[0,0,0.012,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 2 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   'Call Quitar_broca'
+                   'Call Poner_broca'
+           EF
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.012,0,0,0]
+             barrenos_menos1≔9
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea4_E, Linea4_F, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.012,0,0,0]
+                   bajada≔p[0,0,0.012,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 2 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   If barreno_actual>barrenos_menos1
+                     cambiar_broca≔ True 
+                   'Call Quitar_broca'
+                   'Call Poner_broca'
+         Popup: Linea2 con chica Terminada!
+       Broca_3
+         Linea3
+           Marcar_puntos
+             MoveL
+               punto_inicio1
+               Linea3_A
+               Linea3_B
+               Linea3_C
+               Linea3_D
+               Linea3_E
+               Linea3_F
+           AB
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.012,0,0,0]
+             barrenos_menos1≔8
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea3_A, Linea3_B, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.012,0,0,0]
+                   bajada≔p[0,0,0.012,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 2 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   'Call Quitar_broca'
+                   'Call Poner_broca'
+           CD
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.012,0,0,0]
+             barrenos_menos1≔8
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea3_C, Linea3_D, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.012,0,0,0]
+                   bajada≔p[0,0,0.012,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 2 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   'Call Quitar_broca'
+                   'Call Poner_broca'
+           EF
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.012,0,0,0]
+             barrenos_menos1≔9
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea3_E, Linea3_F, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.012,0,0,0]
+                   bajada≔p[0,0,0.012,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 2 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   'Call Quitar_broca'
+                   'Call Poner_broca'
+         Popup: Linea1 con chica Terminada!
+         Linea4
+           Marcar_puntos
+             MoveL
+               punto_inicio1
+               Linea4_A
+               Linea4_B
+               Linea4_C
+               Linea4_D
+               Linea4_E
+               Linea4_F
+           AB
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.012,0,0,0]
+             barrenos_menos1≔8
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea4_A, Linea4_B, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.012,0,0,0]
+                   bajada≔p[0,0,0.012,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 2 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   'Call Quitar_broca'
+                   'Call Poner_broca'
+           CD
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.012,0,0,0]
+             barrenos_menos1≔8
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea4_C, Linea4_D, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.012,0,0,0]
+                   bajada≔p[0,0,0.012,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 2 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   'Call Quitar_broca'
+                   'Call Poner_broca'
+           EF
+             'desbaste_inicial'
+             bajada_broca≔p[0,0,-0.012,0,0,0]
+             barrenos_menos1≔9
+             barreno_actual≔0
+             Loop barreno_actual≤barrenos_menos1
+               Perforacion
+                 MoveL
+                   internos≔interpolate_pose(Linea4_E, Linea4_F, barreno_actual/barrenos_menos1)
+                   internos
+                   'desbaste_inicial'
+                   bajada_broca≔p[0,0,-0.012,0,0,0]
+                   bajada≔p[0,0,0.012,0,0,0]
+                   Direction: Base Z-
+                     Until (distance)
+                   Popup: punto contacto alanzdo
+                   Direction: Base Z+
+                     Until (distance)
+                   Wait: 0.3
+                   Set CO[1]=Encender
+                   Wait: 0.3
+                   Loop 2 times
+                     bajar≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                     bajar
+                     subir≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                     subir
+                     bajada_broca≔pose_sub(bajada_broca, bajada)
+                   Direction: Base Z+
+                     Until (distance)
+                   Set CO[1]=Apagar
+                   barreno_actual≔barreno_actual+1
+                   If barreno_actual>barrenos_menos1
+                     cambiar_broca≔ True 
+                   'Call Quitar_broca'
+                   'Call Poner_broca'
+         Popup: Linea2 con chica Terminada!
+       'Broca_2'
+       'Broca_3'
+     'Subprogramas:'
+   Quitar_broca
+     Quitar_broca
+       barrenos_hechos≔barrenos_hechos+1
+       If barrenos_hechos≟14 or cambiar_broca≟ True 
+         'Codigo de quitar broca'
+         MoveL
+           Direction: Base Z+
+             Until (distance)
+           If eje7≟3
+             punto_inicio1
+             precambio_broc2
+             precambio_broc3
+           Precambio_broca
+           Dejar_broca
+         Set outputbroc_m291=Encender
+         Wait: 4.0
+         Set outputbroc_m291=Apagar
+         Wait: 0.5
+         Wait fciclocarr_m292=LO
+         Wait: 0.5
+         MoveL
+           Precambio_broca
+         Set avancarrusel_m7=Encender
+         Wait: 1.0
+         Set avancarrusel_m7=Apagar
+         Wait: 0.1
+   Poner_broca
+     Poner_broca
+       If cambiar_broca≟ True  or iniciando_prog≟ True 
+         'Codigo de poner broca'
+         Set ini_cambro_m289=Apagar
+         MoveL
+           If eje7≟3 and iniciando_prog≟ True 
+             punto_inicio1
+             precambio_broc2
+             precambio_broc3
+           Precambio_broca
+           Popup: Cambia a las siguientes brocas
+           Dejar_broca
+         Set ini_cambro_m289=Encender
+         Wait: 4.0
+         Set ini_cambro_m289=Apagar
+         Wait: 0.5
+         Wait fciclocarr_m292=LO
+         Wait: 0.5
+         MoveL
+           Precambio_broca
+           If eje7≟3
+             precambio_broc3
+             precambio_broc2
+             punto_inicio1
+         barrenos_hechos≔0
+         iniciando_prog≔ False 
+         cambiar_broca≔ False 
+       If barrenos_hechos≟14
+         If cambiar_broca≟ False 
+           'Codigo de poner broca'
+           Set ini_cambro_m289=Apagar
+           MoveL
+             Precambio_broca
+             Dejar_broca
+           Set ini_cambro_m289=Encender
+           Wait: 4.0
+           Set ini_cambro_m289=Apagar
+           Wait: 0.5
+           Wait fciclocarr_m292=LO
+           Wait: 0.5
+           MoveL
+             Precambio_broca
+             If eje7≟3
+               precambio_broc3
+               precambio_broc2
+               punto_inicio1
+           barrenos_hechos≔0
+         Else
+           'Codigo de poner broca'
+           Set ini_cambro_m289=Apagar
+           MoveL
+             Precambio_broca
+             Popup: Cambia a las siguientes brocas
+             Dejar_broca
+           Set ini_cambro_m289=Encender
+           Wait: 4.0
+           Set ini_cambro_m289=Apagar
+           Wait: 0.5
+           Wait fciclocarr_m292=LO
+           Wait: 0.5
+           MoveL
+             Precambio_broca
+             If eje7≟3
+               precambio_broc3
+               precambio_broc2
+               punto_inicio1
+           barrenos_hechos≔0
+           iniciando_prog≔ False 
+           cambiar_broca≔ False 

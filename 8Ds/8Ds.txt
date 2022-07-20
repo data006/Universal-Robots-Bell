@@ -1,0 +1,21 @@
+ Program
+   Robot Program
+     MoveL
+       alpha≔6
+       Loop
+         'Waypoint_3'
+         casa
+         Waypoint_1
+         Waypoint_2
+         Waypoint_4
+         Waypoint_5
+         Loop 10 times
+           internos≔interpolate_pose(Waypoint_4, Waypoint_5, alpha)
+           internos
+           Direction: Base Z-
+             Until (tool_contact_detection)
+           Wait: 1.0
+           Popup: kokl
+           Direction: Base Z+
+             Until (distance)
+           alpha≔alpha+1

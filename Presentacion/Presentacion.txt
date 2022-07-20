@@ -1,0 +1,812 @@
+ Program
+   Robot Program
+     MoveJ
+       Apagado
+       Mantenimiento
+     Variables
+       muestras≔3
+       muestrasTomadas≔0
+       alpha≔0
+       P1≔p[0,0,0,0,0,0]
+       P2≔p[0,0,0,0,0,0]
+       P3≔p[0,0,0,0,0,0]
+       P4≔p[0,0,0,0,0,0]
+       Coordenada≔p[0,0,0,0,0,0]
+       MoveJ
+         Loop
+           Waypoint_1
+           Waypoint_2
+           var_7≔pose_dist(Waypoint_1, Waypoint_2)
+         Waypoint_1
+         Waypoint_2
+       pch_atual≔get_actual_tcp_pose()
+       Popup: hi
+     Movimiento eje 7
+       MoveL
+         Transporte
+         Set postrnas_m187=Encender
+         'Set pos_2_mw3=2'
+         num_barreno≔str_cat("Barreno: ",1)
+         var_6≔get_actual_tcp_pose()
+         X_actual≔str_cat("     X: ",var_6[0])
+         Y_actual≔str_cat("     Y: ",var_6[1])
+         pos_barreno≔str_cat(X_actual,Y_actual)
+         textmsg("------------------DAS LOG------------------")
+         textmsg(num_barreno,pos_barreno)
+         Popup: hsjd
+     Saludos
+       MoveL
+         Transporte
+         Set postrnas_m187=Encender
+         'MoveJ'
+         MoveJ
+           'Waypoint_1'
+           Set postrnas_m187=Apagar
+           Waypoint_3
+           'Waypoint_5'
+         Loop 15 times
+           MoveL
+             'Waypoint_1'
+             'Waypoint_2'
+             Waypoint_3
+             Waypoint_4
+             'Waypoint_5'
+             'Waypoint_6'
+           'Waypoint_1'
+           'Waypoint_2'
+         Popup: arranquesito
+     'Popup: opsjd'
+     'Paro_Emergencia'
+     Cambio_Brocas
+       Loop 1 times
+         MoveJ
+           'Transporte'
+           'Casa'
+           'Pre_Casa'
+           'Waypoint_7'
+           PreCambio_Broca
+           'Loop 50 times'
+           Call Poner_Broca
+     Barrenado
+       alpha≔0
+       Loop
+         MoveJ
+           casa
+           Call Calibracion
+           Call GoNoGo
+           MoveL
+             Barreno1
+             Barreno2
+             Loop 2 times
+               If alpha≤16
+                 internos≔interpolate_pose(Barreno1, Barreno2, alpha)
+                 bajada≔p[0,0,-0.024,0,0,0]
+                 subida≔p[0,0,0.024,0,0,0]
+                 internos
+                 Direction: Base Z-
+                   Until (distance)
+                 Direction: Base Z-
+                   Until (tool_contact_detection)
+                 Wait: 0.3
+                 Set CO[1]=Encender
+                 Wait: 0.5
+                 Set CO[1]=Apagar
+                 Direction: Base Z+
+                   Until (distance)
+                 Wait: 0.5
+                 Set CO[1]=Encender
+                 Wait: 0.3
+                 Loop 1 times
+                   bajar≔pose_add(get_actual_tcp_pose(), bajada)
+                   bajar
+                   subir≔pose_add(get_actual_tcp_pose(), subida)
+                   subir
+                   bajada≔pose_add(bajada, p[0,0,-0.008,0,0,0])
+                   subida≔pose_add(subida, p[0,0,0.008,0,0,0])
+                 Set CO[1]=Apagar
+                 Direction: Base Z+
+                   Until (distance)
+                 alpha≔alpha+1
+               Else
+                 Popup: linea barrenada
+                 Call Quitar_Broca_Chida
+                 Popup: fin
+           Call Quitar_Broca_Chida
+           Call Poner_Broca
+   Poner_Broca
+     Poner_Broca
+       Set ini_cambro_m289=Apagar
+       MoveL
+         PreCambio_Broca
+         Dejar_Broca
+       Set ini_cambro_m289=Encender
+       Wait: 3.8
+       Set ini_cambro_m289=Apagar
+       Wait: 0.5
+       Wait fciclocarr_m292=LO
+       Wait: 0.5
+       MoveL
+         PreCambio_Broca
+         'MoveJ'
+       'Popup: kon'
+   Quitar_Broca_Chida
+     Quitar_Broca
+       MoveJ
+         'casa'
+         Loop 1 times
+           MoveL
+             'MoveJ'
+             Direction: Base Z+
+               Until (distance)
+             MoveJ
+               PreCambio_Broca
+             Dejar_Broca
+             Set outputbroc_m291=Encender
+             Wait: 0.5
+             Set outputbroc_m291=Apagar
+             Wait: 0.5
+             Wait fciclocarr_m292=LO
+             Wait: 0.5
+             'Direction: Z+'
+             PreCambio_Broca
+             Set avancarrusel_m7=Encender
+             Wait: 1.1
+             Set avancarrusel_m7=Apagar
+             'Popup: kon'
+   Calibracion
+     Calibracion
+       Subvariables
+         muestras≔1
+         muestrasTomadas≔0
+         P1≔p[0,0,0,0,0,0]
+         P2≔p[0,0,0,0,0,0]
+         P3≔p[0,0,0,0,0,0]
+         P4≔p[0,0,0,0,0,0]
+         rotaciones≔p[0,0,0,0,0,0]
+         PosFinal≔p[0,0,0,0,0,0]
+         m1≔0
+         m2≔0
+         b1≔0
+         b2≔0
+         Xd≔0
+         Yd≔0
+         Xp≔0
+         Yp≔0
+         Xfin≔0
+         Yfin≔0
+       'plano mod'
+       Nivelacion
+         'MoveL'
+         P5≔p[-0.41462,-0.36474,-0.00863,0,0,0]
+         P6≔p[-1.17399,-0.36726,-0.00032,0,0,0]
+         P7≔p[-0.38926,-0.09906,-0.00906,0,0,0]
+         PQ≔pose_sub(P6, P5)
+         PR≔pose_sub(P7, P5)
+         n≔p[(PQ[1]*PR[2])-(PQ[2]*PR[1]),(-1)*((PQ[0]*PR[2])-(PQ[2]*PR[0])),(PQ[0]*PR[1])-(PQ[1]*PR[0]),0,0,0]
+         var_8≔get_actual_tcp_pose()
+         textmsg(Plane_5_const)
+         Popup
+       MoveL
+         Direction: Plane_5 Z+
+           Until (distance)
+         MoveJ
+           casa
+         MoveL
+           MoveJ
+             Casa2
+           P1
+             Loop muestrasTomadas<muestras
+               MoveJ
+                 Sacar_P1
+               Wait: 0.5
+               Direction: Base Y+
+                 Until (tool_contact_detection)
+               Wait: 2.0
+               P1≔pose_add(get_actual_tcp_pose(), P1)
+               muestrasTomadas≔muestrasTomadas+1
+             muestrasTomadas≔0
+             var_1≔(P1[0])/muestras
+             var_2≔(P1[1])/muestras
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             P1≔p[var_1,var_2,-0.37,var_3,var_4,var_5]
+           MoveJ
+             Casa2
+           P2
+             Loop muestrasTomadas<muestras
+               MoveJ
+                 Sacar_P2
+               Wait: 0.5
+               Direction: Base Y+
+                 Until (tool_contact_detection)
+               Wait: 2.0
+               P2≔pose_add(get_actual_tcp_pose(), P2)
+               muestrasTomadas≔muestrasTomadas+1
+             muestrasTomadas≔0
+             var_1≔(P2[0])/muestras
+             var_2≔(P2[1])/muestras
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             P2≔p[var_1,var_2,-0.37,var_3,var_4,var_5]
+           MoveJ
+             Casa2
+           m1
+             var_1≔(P1[0])
+             var_2≔(P1[1])
+             var_3≔(P2[0])
+             var_4≔(P2[1])
+             m1≔(var_4-var_2)/(var_3-var_1)
+           b1
+             b1≔((m1*var_1)-var_2)*(-1)
+           MoveJ
+             Casa1
+           P3
+             Loop muestrasTomadas<muestras
+               MoveJ
+                 Sacar_P3
+               Wait: 0.5
+               Direction: Base X+
+                 Until (tool_contact_detection)
+               Wait: 2.0
+               P3≔pose_add(get_actual_tcp_pose(), P3)
+               muestrasTomadas≔muestrasTomadas+1
+             muestrasTomadas≔0
+             var_1≔(P3[0])/muestras
+             var_2≔(P3[1])/muestras
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             P3≔p[var_1,var_2,-0.37,var_3,var_4,var_5]
+           MoveJ
+             Casa1
+           P4
+             Loop muestrasTomadas<muestras
+               MoveJ
+                 Sacar_P4
+               Wait: 0.5
+               Direction: Base X+
+                 Until (tool_contact_detection)
+               Wait: 2.0
+               P4≔pose_add(get_actual_tcp_pose(), P4)
+               muestrasTomadas≔muestrasTomadas+1
+             muestrasTomadas≔0
+             var_1≔(P4[0])/muestras
+             var_2≔(P4[1])/muestras
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             P4≔p[var_1,var_2,-0.37,var_3,var_4,var_5]
+           MoveJ
+             Casa1
+           m2
+             var_1≔(P3[0])
+             var_2≔(P3[1])
+             var_3≔(P4[0])
+             var_4≔(P4[1])
+             m2≔(var_4-var_2)/(var_3-var_1)
+           b2
+             b2≔((m2*var_1)-var_2)*(-1)
+           Xd y Yd
+             Xd≔(b2-b1)/(m1-m2)
+             Yd≔(m1*Xd)+b1
+           Xp y Yp
+             Xp≔(1)/(sqrt((m1*m1)+1))
+             Yp≔(m2)/(sqrt((m2*m2)+1))
+           Origen
+             Xfin≔((0*Xp)-(Xd)-(0*(1/m2)))*(-1)
+             Yfin≔((0*Yp)-(Yd)+(0*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,0.11,var_3,var_4,var_5]
+             origen≔PosFinal
+           MoveJ
+             PosFinal
+           Direction: Base Z+
+             Until (distance)
+           MoveJ
+             Casa2
+           Linea1
+             'Buje1'
+             'Buje2'
+             'Buje3'
+             'Buje4'
+             'Buje5'
+             'Buje6'
+             'Buje7'
+             'Buje8'
+             'Buje9'
+             'Buje10'
+             'Buje11'
+             'Buje12'
+             'Buje13'
+             'Buje14'
+             'Buje15'
+             'Buje16'
+             'Buje17'
+             'Buje18'
+             'Buje19'
+             'Buje20'
+             'Buje21'
+             'Buje22'
+             'Buje23'
+             'Buje24'
+             'Buje25'
+             'Buje26'
+             Buje27
+               Xfin≔((0.75565*Xp)-(Xd)-(-0.0127*(1/m2)))*(-1)
+               Yfin≔((-0.0127*Yp)-(Yd)+(0.75565*m1))*(-1)
+               rotaciones≔get_actual_tcp_pose()
+               var_3≔rotaciones[3]
+               var_4≔rotaciones[4]
+               var_5≔rotaciones[5]
+               PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,0.03,var_3,var_4,var_5]
+               MoveL
+                 MoveJ
+                   PosFinal
+                 Direction: Base Z-
+                   Until (distance)
+                 Direction: Base Z+
+                   Until (distance)
+             Popup: oi
+           MoveJ
+             Casa1
+           Buje1
+             Xfin≔((0.09525*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+             Yfin≔((0.3937*Yp)-(Yd)+(0.09525*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+             MoveL
+               MoveJ
+                 PosFinal
+               Direction: Base Z-
+                 Until (distance)
+               Direction: Base Z+
+                 Until (distance)
+           Buje2
+             Xfin≔((0.12065*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+             Yfin≔((0.3937*Yp)-(Yd)+(0.12065*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+             MoveL
+               MoveJ
+                 PosFinal
+               Direction: Base Z-
+                 Until (distance)
+               Direction: Base Z+
+                 Until (distance)
+           Buje3
+             Xfin≔((0.14605*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+             Yfin≔((0.3937*Yp)-(Yd)+(0.14605*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.440,var_3,var_4,var_5]
+             MoveL
+               MoveJ
+                 PosFinal
+               Direction: Base Z-
+                 Until (distance)
+               Direction: Base Z+
+                 Until (distance)
+           Buje4
+             Xfin≔((0.17145*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+             Yfin≔((0.3937*Yp)-(Yd)+(0.17145*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+             MoveL
+               MoveJ
+                 PosFinal
+               Direction: Base Z-
+                 Until (distance)
+               Direction: Base Z+
+                 Until (distance)
+           Buje5
+             Xfin≔((0.19685*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+             Yfin≔((0.3937*Yp)-(Yd)+(0.19685*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+             MoveL
+               MoveJ
+                 PosFinal
+               Direction: Base Z-
+                 Until (distance)
+               Direction: Base Z+
+                 Until (distance)
+           Buje6
+             Xfin≔((0.22225*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+             Yfin≔((0.3937*Yp)-(Yd)+(0.22225*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+             MoveL
+               MoveJ
+                 PosFinal
+               Direction: Base Z-
+                 Until (distance)
+               Direction: Base Z+
+                 Until (distance)
+           Buje7
+             Xfin≔((0.24765*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+             Yfin≔((0.3937*Yp)-(Yd)+(0.24765*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+             MoveL
+               MoveJ
+                 PosFinal
+               Direction: Base Z-
+                 Until (distance)
+               Direction: Base Z+
+                 Until (distance)
+           Buje8
+             Xfin≔((0.27305*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+             Yfin≔((0.3937*Yp)-(Yd)+(0.27305*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+             MoveL
+               MoveJ
+                 PosFinal
+               Direction: Base Z-
+                 Until (distance)
+               Direction: Base Z+
+                 Until (distance)
+           Buje9
+             Xfin≔((0.29845*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+             Yfin≔((0.3937*Yp)-(Yd)+(0.29845*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+             MoveL
+               MoveJ
+                 PosFinal
+               Direction: Base Z-
+                 Until (distance)
+               Direction: Base Z+
+                 Until (distance)
+           Buje10
+             Xfin≔((0.32385*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+             Yfin≔((0.3937*Yp)-(Yd)+(0.32385*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+             MoveL
+               MoveJ
+                 PosFinal
+               Direction: Base Z-
+                 Until (distance)
+               Direction: Base Z+
+                 Until (distance)
+           Buje11
+             Xfin≔((0.34925*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+             Yfin≔((0.3937*Yp)-(Yd)+(0.34925*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+             MoveL
+               MoveJ
+                 PosFinal
+               Direction: Base Z-
+                 Until (distance)
+               Direction: Base Z+
+                 Until (distance)
+           Buje12
+             Xfin≔((0.37465*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+             Yfin≔((0.3937*Yp)-(Yd)+(0.37465*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+             MoveL
+               MoveJ
+                 PosFinal
+               Direction: Base Z-
+                 Until (distance)
+               Direction: Base Z+
+                 Until (distance)
+           Buje13
+             Xfin≔((0.40005*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+             Yfin≔((0.3937*Yp)-(Yd)+(0.40005*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+             MoveL
+               MoveJ
+                 PosFinal
+               Direction: Base Z-
+                 Until (distance)
+               Direction: Base Z+
+                 Until (distance)
+           Buje14
+             Xfin≔((0.42545*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+             Yfin≔((0.3937*Yp)-(Yd)+(0.42545*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+             MoveL
+               MoveJ
+                 PosFinal
+               Direction: Base Z-
+                 Until (distance)
+               Direction: Base Z+
+                 Until (distance)
+           Buje15
+             Xfin≔((0.45085*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+             Yfin≔((0.3937*Yp)-(Yd)+(0.45085*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+             MoveL
+               MoveJ
+                 PosFinal
+               Direction: Base Z-
+                 Until (distance)
+               Direction: Base Z+
+                 Until (distance)
+           Buje16
+             Xfin≔((0.47625*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+             Yfin≔((0.3937*Yp)-(Yd)+(0.47625*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+             MoveL
+               MoveJ
+                 PosFinal
+               Direction: Base Z-
+                 Until (distance)
+               Direction: Base Z+
+                 Until (distance)
+           Buje17
+             Xfin≔((0.50165*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+             Yfin≔((0.3937*Yp)-(Yd)+(0.50165*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+             MoveL
+               MoveJ
+                 PosFinal
+               Direction: Base Z-
+                 Until (distance)
+               Direction: Base Z+
+                 Until (distance)
+           Buje18
+             Xfin≔((0.52705*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+             Yfin≔((0.3937*Yp)-(Yd)+(0.52705*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+             MoveL
+               MoveJ
+                 PosFinal
+               Direction: Base Z-
+                 Until (distance)
+               Direction: Base Z+
+                 Until (distance)
+           Buje19
+             Xfin≔((0.55245*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+             Yfin≔((0.3937*Yp)-(Yd)+(0.55245*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+             MoveL
+               MoveJ
+                 PosFinal
+               Direction: Base Z-
+                 Until (distance)
+               Direction: Base Z+
+                 Until (distance)
+           Buje20
+             Xfin≔((0.57785*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+             Yfin≔((0.3937*Yp)-(Yd)+(0.57785*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+             MoveL
+               MoveJ
+                 PosFinal
+               Direction: Base Z-
+                 Until (distance)
+               Direction: Base Z+
+                 Until (distance)
+           Buje21
+             Xfin≔((0.60325*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+             Yfin≔((0.3937*Yp)-(Yd)+(0.60325*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+             MoveL
+               MoveJ
+                 PosFinal
+               Direction: Base Z-
+                 Until (distance)
+               Direction: Base Z+
+                 Until (distance)
+           Buje22
+             Xfin≔((0.62865*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+             Yfin≔((0.3937*Yp)-(Yd)+(0.62865*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+             MoveL
+               MoveJ
+                 PosFinal
+               Direction: Base Z-
+                 Until (distance)
+               Direction: Base Z+
+                 Until (distance)
+           Buje23
+             Xfin≔((0.65405*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+             Yfin≔((0.3937*Yp)-(Yd)+(0.65405*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+             MoveL
+               MoveJ
+                 PosFinal
+               Direction: Base Z-
+                 Until (distance)
+               Direction: Base Z+
+                 Until (distance)
+           Buje24
+             Xfin≔((0.67945*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+             Yfin≔((0.3937*Yp)-(Yd)+(0.67945*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+             MoveL
+               MoveJ
+                 PosFinal
+               Direction: Base Z-
+                 Until (distance)
+               Direction: Base Z+
+                 Until (distance)
+           Buje25
+             Xfin≔((0.70485*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+             Yfin≔((0.3937*Yp)-(Yd)+(0.70485*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+             MoveL
+               MoveJ
+                 PosFinal
+               Direction: Base Z-
+                 Until (distance)
+               Direction: Base Z+
+                 Until (distance)
+           Buje26
+             Xfin≔((0.73025*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+             Yfin≔((0.3937*Yp)-(Yd)+(0.73025*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+             MoveL
+               MoveJ
+                 PosFinal
+               Direction: Base Z-
+                 Until (distance)
+               Direction: Base Z+
+                 Until (distance)
+           Buje27
+             Xfin≔((0.75565*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+             Yfin≔((0.3937*Yp)-(Yd)+(0.75565*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+             MoveL
+               MoveJ
+                 PosFinal
+               Direction: Base Z-
+                 Until (distance)
+               Direction: Base Z+
+                 Until (distance)
+   GoNoGo
+     GoNoGo
+       Buje1
+         Xfin≔((0.09525*Xp)-(Xd)-(-0.0127*(1/m2)))*(-1)
+         Yfin≔((-0.0127*Yp)-(Yd)+(0.09525*m1))*(-1)
+         rotaciones≔get_actual_tcp_pose()
+         var_3≔rotaciones[3]
+         var_4≔rotaciones[4]
+         var_5≔rotaciones[5]
+         PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,0.11,var_3,var_4,var_5]
+         MoveL
+           MoveJ
+             PosFinal
+           Direction: Base Z-
+             Until (distance)
+           Direction: Base Z+
+             Until (distance)
+       Buje2
+         Xfin≔((0.12065*Xp)-(Xd)-(-0.0127*(1/m2)))*(-1)
+         Yfin≔((-0.0127*Yp)-(Yd)+(0.12065*m1))*(-1)
+         rotaciones≔get_actual_tcp_pose()
+         var_3≔rotaciones[3]
+         var_4≔rotaciones[4]
+         var_5≔rotaciones[5]
+         PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,0.11,var_3,var_4,var_5]
+         MoveL
+           MoveJ
+             PosFinal
+           Direction: Base Z-
+             Until (distance)
+           Direction: Base Z+
+             Until (distance)
+       Buje3
+         Xfin≔((0.14605*Xp)-(Xd)-(-0.0127*(1/m2)))*(-1)
+         Yfin≔((-0.0127*Yp)-(Yd)+(0.14605*m1))*(-1)
+         rotaciones≔get_actual_tcp_pose()
+         var_3≔rotaciones[3]
+         var_4≔rotaciones[4]
+         var_5≔rotaciones[5]
+         PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,0.11,var_3,var_4,var_5]
+         MoveL
+           MoveJ
+             PosFinal
+           Direction: Base Z-
+             Until (distance)
+           Direction: Base Z+
+             Until (distance)

@@ -1,0 +1,4 @@
+textmsg("INFORME:")
+textmsg("_______________________________________________")
+textmsg("Posicion: ", get_actual_tcp_pose())
+textmsg("Barreno: 20")

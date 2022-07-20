@@ -1,0 +1,269 @@
+def P8Ds():
+  set_safety_mode_transition_hardness(1)
+  set_gravity([0.0, 0.0, 9.82])
+  set_tool_communication(False, 115200, 0, 1, 1.5, 3.5)
+  set_tool_output_mode(0)
+  set_tool_digital_output_mode(0, 1)
+  set_tool_digital_output_mode(1, 1)
+  set_tool_voltage(0)
+  set_standard_analog_input_domain(0, 1)
+  set_standard_analog_input_domain(1, 1)
+  set_tool_analog_input_domain(0, 1)
+  set_tool_analog_input_domain(1, 1)
+  set_analog_outputdomain(0, 0)
+  set_analog_outputdomain(1, 0)
+  set_input_actions_to_default()
+  set_runstate_standard_digital_outputs([2])
+  set_runstate_configurable_digital_outputs([1])
+  set_runstate_standard_digital_output_to_value(2, 1)
+  set_runstate_configurable_digital_output_to_value(1, 1)
+  set_tcp(p[4.109330471764039E-4,-0.21829828276152607,0.037994196120996,1.5580092985761962,-0.12546870791316503,0.12120248426608284])
+  set_payload(1.5)
+  step_count_c5608419_31be_4f2d_bd0e_8f35e246f005 = 0
+  thread Step_Counter_Thread_51e948a4_f17c_49f0_87e9_338eeee9fef2():
+    while (True):
+      step_count_c5608419_31be_4f2d_bd0e_8f35e246f005 = step_count_c5608419_31be_4f2d_bd0e_8f35e246f005 + 1
+      sync()
+    end
+  end
+  run Step_Counter_Thread_51e948a4_f17c_49f0_87e9_338eeee9fef2()
+  modbus_add_signal("192.168.10.45", 255, 187, 1, "postrnas_m187", False)
+  modbus_set_signal_update_frequency("postrnas_m187", 10)
+  modbus_add_signal("192.168.10.45", 255, 289, 1, "ini_cambro_m289", False)
+  modbus_set_signal_update_frequency("ini_cambro_m289", 10)
+  modbus_add_signal("192.168.10.45", 255, 290, 0, "fin_cambro_m290", False)
+  modbus_set_signal_update_frequency("fin_cambro_m290", 10)
+  modbus_add_signal("192.168.10.45", 255, 291, 1, "outputbroc_m291", False)
+  modbus_set_signal_update_frequency("outputbroc_m291", 10)
+  modbus_add_signal("192.168.10.45", 255, 292, 0, "fciclocarr_m292", False)
+  modbus_set_signal_update_frequency("fciclocarr_m292", 10)
+  modbus_add_signal("192.168.10.45", 255, 7, 1, "avancarrusel_m7", False)
+  modbus_set_signal_update_frequency("avancarrusel_m7", 10)
+  modbus_add_signal("192.168.10.45", 255, 252, 1, "pose2_m252", False)
+  modbus_set_signal_update_frequency("pose2_m252", 10)
+  modbus_add_signal("192.168.10.45", 255, 253, 1, "pose3_m253", False)
+  modbus_set_signal_update_frequency("pose3_m253", 10)
+  modbus_add_signal("192.168.10.45", 255, 254, 1, "pose4_m254", False)
+  modbus_set_signal_update_frequency("pose4_m254", 10)
+  modbus_add_signal("192.168.10.45", 255, 441, 1, "finciclo_m441", False)
+  modbus_set_signal_update_frequency("finciclo_m441", 10)
+  modbus_add_signal("192.168.10.45", 255, 442, 1, "finciclo_m442", False)
+  modbus_set_signal_update_frequency("finciclo_m442", 10)
+  modbus_add_signal("192.168.10.45", 255, 443, 1, "finciclo_m443", False)
+  modbus_set_signal_update_frequency("finciclo_m443", 10)
+  modbus_add_signal("192.168.10.45", 255, 503, 0, "homecobot_m503", False)
+  modbus_set_signal_update_frequency("homecobot_m503", 10)
+  modbus_add_signal("192.168.10.45", 255, 288, 1, "cargar_run_m288", False)
+  modbus_set_signal_update_frequency("cargar_run_m288", 10)
+  modbus_add_signal("192.168.10.45", 255, 287, 0, "desactiver_m288", False)
+  modbus_set_signal_update_frequency("desactiver_m288", 10)
+  modbus_add_signal("192.168.10.45", 255, 183, 0, "eje7home_m183", False)
+  modbus_set_signal_update_frequency("eje7home_m183", 10)
+  modbus_add_signal("192.168.10.45", 255, 444, 1, "finciclo_m444", False)
+  modbus_set_signal_update_frequency("finciclo_m444", 10)
+  modbus_add_signal("192.168.10.45", 255, 381, 0, "pat1_m381", False)
+  modbus_set_signal_update_frequency("pat1_m381", 10)
+  modbus_add_signal("192.168.10.45", 255, 382, 0, "pat2_m382", False)
+  modbus_set_signal_update_frequency("pat2_m382", 10)
+  modbus_add_signal("192.168.10.45", 255, 383, 0, "pat3_m383", False)
+  modbus_set_signal_update_frequency("pat3_m383", 10)
+  modbus_add_signal("192.168.10.45", 255, 384, 0, "pat4_m384", False)
+  modbus_set_signal_update_frequency("pat4_m384", 10)
+  modbus_add_signal("192.168.10.45", 255, 385, 0, "pat5_m385", False)
+  modbus_set_signal_update_frequency("pat5_m385", 10)
+  modbus_add_signal("192.168.10.45", 255, 386, 0, "pat6_m386", False)
+  modbus_set_signal_update_frequency("pat6_m386", 10)
+  modbus_add_signal("192.168.10.45", 255, 387, 0, "pat7_m387", False)
+  modbus_set_signal_update_frequency("pat7_m387", 10)
+  modbus_add_signal("192.168.10.45", 255, 388, 0, "pat8_m388", False)
+  modbus_set_signal_update_frequency("pat8_m388", 10)
+  modbus_add_signal("192.168.10.45", 255, 389, 0, "pat9_m389", False)
+  modbus_set_signal_update_frequency("pat9_m389", 10)
+  modbus_add_signal("192.168.10.45", 255, 390, 0, "pat10_m390", False)
+  modbus_set_signal_update_frequency("pat10_m390", 10)
+  modbus_add_signal("192.168.10.45", 255, 391, 0, "pat11_m391", False)
+  modbus_set_signal_update_frequency("pat11_m391", 10)
+  modbus_add_signal("192.168.10.45", 255, 392, 0, "pat12_m392", False)
+  modbus_set_signal_update_frequency("pat12_m392", 10)
+  modbus_add_signal("192.168.10.45", 255, 401, 0, "inipat1_m401", False)
+  modbus_set_signal_update_frequency("inipat1_m401", 10)
+  modbus_add_signal("192.168.10.45", 255, 402, 0, "inipat2_m402", False)
+  modbus_set_signal_update_frequency("inipat2_m402", 10)
+  modbus_add_signal("192.168.10.45", 255, 403, 0, "inipat3_m403", False)
+  modbus_set_signal_update_frequency("inipat3_m403", 10)
+  modbus_add_signal("192.168.10.45", 255, 404, 0, "inipat4_m404", False)
+  modbus_set_signal_update_frequency("inipat4_m404", 10)
+  modbus_add_signal("192.168.10.45", 255, 405, 0, "inipat5_m405", False)
+  modbus_set_signal_update_frequency("inipat5_m405", 10)
+  modbus_add_signal("192.168.10.45", 255, 406, 0, "inipat6_m406", False)
+  modbus_set_signal_update_frequency("inipat6_m406", 10)
+  modbus_add_signal("192.168.10.45", 255, 407, 0, "inipat7_m407", False)
+  modbus_set_signal_update_frequency("inipat7_m407", 10)
+  modbus_add_signal("192.168.10.45", 255, 408, 0, "inipat8_m408", False)
+  modbus_set_signal_update_frequency("inipat8_m408", 10)
+  modbus_add_signal("192.168.10.45", 255, 409, 0, "inipat9_m409", False)
+  modbus_set_signal_update_frequency("inipat9_m409", 10)
+  modbus_add_signal("192.168.10.45", 255, 410, 0, "inipat10_m410", False)
+  modbus_set_signal_update_frequency("inipat10_m410", 10)
+  modbus_add_signal("192.168.10.45", 255, 411, 0, "inipat11_m411", False)
+  modbus_set_signal_update_frequency("inipat11_m411", 10)
+  modbus_add_signal("192.168.10.45", 255, 412, 0, "inipat12_m412", False)
+  modbus_set_signal_update_frequency("inipat12_m412", 10)
+  modbus_add_signal("192.168.10.45", 255, 430, 0, "modeloDer_m430", False)
+  modbus_set_signal_update_frequency("modeloDer_m430", 10)
+  modbus_add_signal("192.168.10.45", 255, 380, 1, "mensaje_m380", False)
+  modbus_set_signal_update_frequency("mensaje_m380", 10)
+  modbus_add_signal("192.168.10.45", 255, 379, 0, "respues_m379", False)
+  modbus_set_signal_update_frequency("respues_m379", 10)
+  modbus_add_signal("192.168.10.45", 255, 251, 1, "pose1_m251", False)
+  modbus_set_signal_update_frequency("pose1_m251", 10)
+  modbus_add_signal("192.168.10.45", 255, 3, 3, "pos_2_mw3", False)
+  modbus_set_signal_update_frequency("pos_2_mw3", 10)
+  modbus_add_signal("192.168.10.45", 255, 4, 2, "pasofin_mw4", False)
+  modbus_set_signal_update_frequency("pasofin_mw4", 10)
+  modbus_set_runstate_dependent_choice("postrnas_m187",0)
+  modbus_set_runstate_dependent_choice("ini_cambro_m289",0)
+  modbus_set_runstate_dependent_choice("outputbroc_m291",0)
+  modbus_set_runstate_dependent_choice("avancarrusel_m7",0)
+  modbus_set_runstate_dependent_choice("pose2_m252",0)
+  modbus_set_runstate_dependent_choice("pose3_m253",0)
+  modbus_set_runstate_dependent_choice("pose4_m254",0)
+  modbus_set_runstate_dependent_choice("finciclo_m441",0)
+  modbus_set_runstate_dependent_choice("finciclo_m442",0)
+  modbus_set_runstate_dependent_choice("finciclo_m443",0)
+  modbus_set_runstate_dependent_choice("cargar_run_m288",0)
+  modbus_set_runstate_dependent_choice("finciclo_m444",0)
+  modbus_set_runstate_dependent_choice("mensaje_m380",0)
+  modbus_set_runstate_dependent_choice("pose1_m251",0)
+  modbus_set_runstate_dependent_choice("pos_2_mw3",0)
+  global contador=0
+  global i_var_1=0
+  global Pallet_1_cnt_1=1
+  global Pallet_1_cnt=1
+  global Line_1=p[0.0,0.0,0.0,0.0,0.0,0.0]
+  global Line_2=p[0.0,0.0,0.0,0.0,0.0,0.0]
+  global Line_3=p[0.0,0.0,0.0,0.0,0.0,0.0]
+  global Line_4=p[-0.2932874787951964,0.3932288129452105,0.013749459185886714,0.019478391032120013,-0.0350876085014595,1.5300278925331599]
+  global Line_5=p[0.0,0.0,0.0,0.0,0.0,0.0]
+  global Line_6=p[-0.8534043480453131,0.702447272711755,-0.28895464606575716,2.5692512849242175,-1.7952327304622913,0.016877746986721606]
+  global Plane_1=p[-0.4357649673792705,0.3571224276764373,-0.011331751409534768,-0.03455953496512708,-0.012487423981114925,3.103751116092306]
+  global Plane_2=p[-0.4823864034329737,0.3302516442079689,0.014283714098506706,0.017125077458443067,0.05770060098903715,-2.9134709732588786]
+  global Plane_3=p[0.003678615545088639,0.4082921331082374,0.10477407557236007,-2.072177303174012E-4,7.379081343290108E-4,-6.424400645467977E-4]
+  global Plane_4=p[-0.4500206307677429,-0.2823718146925442,-0.4767416657426552,0.013278190059218174,0.013334473770785706,1.8479691991032237]
+  global Plano_patron1=p[-0.7699005610122596,0.304894434078545,0.0420369514744936,-0.0031270356010209216,1.7180543614697593E-4,-3.508888786211572E-5]
+  global Point_13=p[0.0,0.0,0.0,0.0,0.0,0.0]
+  global Point_3=p[0.0,0.0,0.0,0.0,0.0,0.0]
+  global Point_8=p[0.0,0.0,0.0,0.0,0.0,0.0]
+  global Punto_prot_1=p[0.0,0.0,0.0,0.0,0.0,0.0]
+  global Punto_seg_der=p[0.23741638234469645,0.3587772222537799,0.42419077585740217,0.818517054876345,1.4216436941132238,1.005041187710707]
+  global pisp_958=p[-0.41395442210486977,-0.2082168853247176,0.041553466664982,0.014014788518713659,0.01101911827984854,1.569193423241601]
+  rtde_set_watchdog("speed_slider_mask", 10.0, "ignore")
+  global casa_p=p[-.744966497674, .025974953027, .455169352892, 1.693053586797, -2.640622957764, -.011754352802]
+  global casa_q=[-0.2718147625923457, -1.5708691082396449, 1.570814434682029, -8.881784197001252E-16, 1.5707963267948966, 5.827586677109586E-19]
+  global Waypoint_1_p=p[-1.271558110594, -.010798497298, -.034999997198, 1.693074294891, -2.640664156423, -.011753181135]
+  global Waypoint_1_q=[-0.10972014577420719, -0.43228741045351793, 0.6694369169780933, -0.23731865932136564, 1.7325223965219607, 0.0010931479389164173]
+  global Waypoint_2_p=p[-1.246185766543, -.010792761217, -.035000000199, 1.693104968892, -2.640585680582, -.011769091255]
+  global Waypoint_2_q=[-0.11226571553746112, -0.49301274501487846, 0.7905568655096328, -0.2977460999855275, 1.729766793296451, 0.001152903839822928]
+  global Waypoint_4_p=p[-1.273448211853, .070144457591, -.034999997199, 1.693074295187, -2.640664155069, -.011753178056]
+  global Waypoint_4_q=[-0.18151611684670677, -0.4293988372127586, 0.6636555022249735, -0.23436039589625324, 1.6607346038686066, 0.001101428475498878]
+  global Waypoint_5_p=p[-1.248049997691, .070124329746, -.034981490154, 1.693091226739, -2.640647339554, -.011771337712]
+  global Waypoint_5_q=[-0.18568713806944093, -0.49061972650151375, 0.7857582560987827, -0.2952472721277273, 1.6563807050383006, 0.0011323439776645165]
+  def calculate_point_to_move_towards(feature, direction, position_distance):
+    local posDir=[direction[0], direction[1], direction[2]]
+    if (norm(posDir) < 1e-6):
+      return get_target_waypoint()
+    end
+    local direction_vector_normalized=normalize(posDir)
+    local displacement_pose=p[direction_vector_normalized[0] * position_distance,direction_vector_normalized[1] * position_distance,direction_vector_normalized[2] * position_distance,0,0,0]
+    local wanted_displacement_in_base_frame=pose_sub(pose_trans(feature, displacement_pose), feature)
+    return pose_add(get_target_waypoint(), wanted_displacement_in_base_frame)
+  end
+  while (True):
+    $ 1 "Robot Program"
+    $ 2 "MoveL"
+    $ 3 "alpha≔6"
+    global alpha=6
+    $ 4 "Loop"
+    while (True):
+      $ 6 "casa" "breakAfter"
+      movel(casa_p, a=1.2, v=0.25)
+      $ 7 "Waypoint_1" "breakAfter"
+      movel(Waypoint_1_p, a=1.2, v=0.25)
+      $ 8 "Waypoint_2" "breakAfter"
+      movel(Waypoint_2_p, a=1.2, v=0.25)
+      $ 9 "Waypoint_4" "breakAfter"
+      movel(Waypoint_4_p, a=1.2, v=0.25)
+      $ 10 "Waypoint_5" "breakAfter"
+      movel(Waypoint_5_p, a=1.2, v=0.25)
+      $ 11 "Loop 10 times"
+      Loop_2 = 0
+      while (Loop_2 < 10):
+        $ 12 "internos≔interpolate_pose(Waypoint_4, Waypoint_5, alpha)"
+        global internos= interpolate_pose (Waypoint_4_p, Waypoint_5_p, alpha)
+        $ 13 "internos" "breakAfter"
+        movel(internos, a=1.2, v=0.25)
+        $ 14 "Direction: Base Z-"
+        global move_thread_flag_14=0
+        thread move_thread_14():
+          enter_critical
+          move_thread_flag_14 = 1
+          local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 1000.0)
+          movel(towardsPos, a=0.005, v=0.0015)
+          move_thread_flag_14 = 2
+          exit_critical
+        end
+        move_thread_flag_14 = 0
+        move_thread_han_14 = run move_thread_14()
+        while (True):
+          local targetTcpDirection=get_target_tcp_speed()
+          local stepsToRetract=tool_contact(direction=targetTcpDirection)
+          if (stepsToRetract > 0):
+            kill move_thread_han_14
+            stopl(9.0)
+            local backTrackMovement=get_actual_joint_positions_history(stepsToRetract)
+            local contactPose=get_forward_kin(backTrackMovement)
+            local posDir=[targetTcpDirection[0],targetTcpDirection[1],targetTcpDirection[2]]
+            local retractTo=contactPose
+            if (norm(posDir) > 1e-6):
+              local normalizedPosDir=normalize(posDir)
+              local additionalRetraction=p[normalizedPosDir[0] * 0.0, normalizedPosDir[1] * 0.0, normalizedPosDir[2] * 0.0, 0, 0, 0]
+              retractTo = pose_sub(contactPose, additionalRetraction)
+            end
+            movel(retractTo, a=9.0, v=0.1)
+            $ 15 "Until (tool_contact_detection)"
+            break
+          end
+          sync()
+        end
+        $ 16 "Wait: 1.0"
+        sleep(1.0)
+        $ 17 "Popup: kokl"
+        popup("kokl", "Mensaje", False, False, blocking=True)
+        $ 18 "Direction: Base Z+"
+        global move_thread_flag_18=0
+        thread move_thread_18():
+          enter_critical
+          move_thread_flag_18 = 1
+          local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.05)
+          movel(towardsPos, a=1.2, v=0.25)
+          move_thread_flag_18 = 2
+          exit_critical
+        end
+        move_thread_flag_18 = 0
+        move_thread_han_18 = run move_thread_18()
+        while (True):
+          sleep(1.0E-10)
+          if (move_thread_flag_18 > 1):
+            join move_thread_han_18
+            $ 19 "Until (distance)"
+            break
+          end
+          sync()
+        end
+        $ 20 "alpha≔alpha+1"
+        global alpha=alpha+1
+        Loop_2 = Loop_2 + 1
+      end
+    end
+  end
+end

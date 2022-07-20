@@ -1,0 +1,2915 @@
+def Presentacion():
+  set_standard_analog_input_domain(0, 1)
+  set_standard_analog_input_domain(1, 1)
+  set_tool_analog_input_domain(0, 1)
+  set_tool_analog_input_domain(1, 1)
+  set_analog_outputdomain(0, 0)
+  set_analog_outputdomain(1, 0)
+  set_input_actions_to_default()
+  set_runstate_standard_digital_outputs([2])
+  set_runstate_configurable_digital_outputs([1])
+  set_runstate_standard_digital_output_to_value(2, 1)
+  set_runstate_configurable_digital_output_to_value(1, 1)
+  set_tool_communication(False, 115200, 0, 1, 1.5, 3.5)
+  set_tool_output_mode(0)
+  set_tool_digital_output_mode(0, 1)
+  set_tool_digital_output_mode(1, 1)
+  set_tool_voltage(0)
+  set_safety_mode_transition_hardness(1)
+  set_tcp(p[4.109330471764039E-4,-0.21829828276152607,0.037994196120996,1.5580092985761962,-0.12546870791316503,0.12120248426608284])
+  set_payload(1.5)
+  set_gravity([0.0, 0.0, 9.82])
+  modbus_add_signal("192.168.10.45", 255, 187, 1, "postrnas_m187", False)
+  modbus_set_signal_update_frequency("postrnas_m187", 10)
+  modbus_add_signal("192.168.10.45", 255, 289, 1, "ini_cambro_m289", False)
+  modbus_set_signal_update_frequency("ini_cambro_m289", 10)
+  modbus_add_signal("192.168.10.45", 255, 290, 0, "fin_cambro_m290", False)
+  modbus_set_signal_update_frequency("fin_cambro_m290", 10)
+  modbus_add_signal("192.168.10.45", 255, 291, 1, "outputbroc_m291", False)
+  modbus_set_signal_update_frequency("outputbroc_m291", 10)
+  modbus_add_signal("192.168.10.45", 255, 292, 0, "fciclocarr_m292", False)
+  modbus_set_signal_update_frequency("fciclocarr_m292", 10)
+  modbus_add_signal("192.168.10.45", 255, 7, 1, "avancarrusel_m7", False)
+  modbus_set_signal_update_frequency("avancarrusel_m7", 10)
+  modbus_add_signal("192.168.10.45", 255, 252, 1, "pose2_m252", False)
+  modbus_set_signal_update_frequency("pose2_m252", 10)
+  modbus_add_signal("192.168.10.45", 255, 253, 1, "pose3_m253", False)
+  modbus_set_signal_update_frequency("pose3_m253", 10)
+  modbus_add_signal("192.168.10.45", 255, 254, 1, "pose4_m254", False)
+  modbus_set_signal_update_frequency("pose4_m254", 10)
+  modbus_add_signal("192.168.10.45", 255, 441, 1, "finciclo_m441", False)
+  modbus_set_signal_update_frequency("finciclo_m441", 10)
+  modbus_add_signal("192.168.10.45", 255, 442, 1, "finciclo_m442", False)
+  modbus_set_signal_update_frequency("finciclo_m442", 10)
+  modbus_add_signal("192.168.10.45", 255, 443, 1, "finciclo_m443", False)
+  modbus_set_signal_update_frequency("finciclo_m443", 10)
+  modbus_add_signal("192.168.10.45", 255, 503, 0, "homecobot_m503", False)
+  modbus_set_signal_update_frequency("homecobot_m503", 10)
+  modbus_add_signal("192.168.10.45", 255, 288, 1, "cargar_run_m288", False)
+  modbus_set_signal_update_frequency("cargar_run_m288", 10)
+  modbus_add_signal("192.168.10.45", 255, 287, 0, "desactiver_m288", False)
+  modbus_set_signal_update_frequency("desactiver_m288", 10)
+  modbus_add_signal("192.168.10.45", 255, 183, 0, "eje7home_m183", False)
+  modbus_set_signal_update_frequency("eje7home_m183", 10)
+  modbus_add_signal("192.168.10.45", 255, 444, 1, "finciclo_m444", False)
+  modbus_set_signal_update_frequency("finciclo_m444", 10)
+  modbus_add_signal("192.168.10.45", 255, 381, 0, "pat1_m381", False)
+  modbus_set_signal_update_frequency("pat1_m381", 10)
+  modbus_add_signal("192.168.10.45", 255, 382, 0, "pat2_m382", False)
+  modbus_set_signal_update_frequency("pat2_m382", 10)
+  modbus_add_signal("192.168.10.45", 255, 383, 0, "pat3_m383", False)
+  modbus_set_signal_update_frequency("pat3_m383", 10)
+  modbus_add_signal("192.168.10.45", 255, 384, 0, "pat4_m384", False)
+  modbus_set_signal_update_frequency("pat4_m384", 10)
+  modbus_add_signal("192.168.10.45", 255, 385, 0, "pat5_m385", False)
+  modbus_set_signal_update_frequency("pat5_m385", 10)
+  modbus_add_signal("192.168.10.45", 255, 386, 0, "pat6_m386", False)
+  modbus_set_signal_update_frequency("pat6_m386", 10)
+  modbus_add_signal("192.168.10.45", 255, 387, 0, "pat7_m387", False)
+  modbus_set_signal_update_frequency("pat7_m387", 10)
+  modbus_add_signal("192.168.10.45", 255, 388, 0, "pat8_m388", False)
+  modbus_set_signal_update_frequency("pat8_m388", 10)
+  modbus_add_signal("192.168.10.45", 255, 389, 0, "pat9_m389", False)
+  modbus_set_signal_update_frequency("pat9_m389", 10)
+  modbus_add_signal("192.168.10.45", 255, 390, 0, "pat10_m390", False)
+  modbus_set_signal_update_frequency("pat10_m390", 10)
+  modbus_add_signal("192.168.10.45", 255, 391, 0, "pat11_m391", False)
+  modbus_set_signal_update_frequency("pat11_m391", 10)
+  modbus_add_signal("192.168.10.45", 255, 392, 0, "pat12_m392", False)
+  modbus_set_signal_update_frequency("pat12_m392", 10)
+  modbus_add_signal("192.168.10.45", 255, 401, 0, "inipat1_m401", False)
+  modbus_set_signal_update_frequency("inipat1_m401", 10)
+  modbus_add_signal("192.168.10.45", 255, 402, 0, "inipat2_m402", False)
+  modbus_set_signal_update_frequency("inipat2_m402", 10)
+  modbus_add_signal("192.168.10.45", 255, 403, 0, "inipat3_m403", False)
+  modbus_set_signal_update_frequency("inipat3_m403", 10)
+  modbus_add_signal("192.168.10.45", 255, 404, 0, "inipat4_m404", False)
+  modbus_set_signal_update_frequency("inipat4_m404", 10)
+  modbus_add_signal("192.168.10.45", 255, 405, 0, "inipat5_m405", False)
+  modbus_set_signal_update_frequency("inipat5_m405", 10)
+  modbus_add_signal("192.168.10.45", 255, 406, 0, "inipat6_m406", False)
+  modbus_set_signal_update_frequency("inipat6_m406", 10)
+  modbus_add_signal("192.168.10.45", 255, 407, 0, "inipat7_m407", False)
+  modbus_set_signal_update_frequency("inipat7_m407", 10)
+  modbus_add_signal("192.168.10.45", 255, 408, 0, "inipat8_m408", False)
+  modbus_set_signal_update_frequency("inipat8_m408", 10)
+  modbus_add_signal("192.168.10.45", 255, 409, 0, "inipat9_m409", False)
+  modbus_set_signal_update_frequency("inipat9_m409", 10)
+  modbus_add_signal("192.168.10.45", 255, 410, 0, "inipat10_m410", False)
+  modbus_set_signal_update_frequency("inipat10_m410", 10)
+  modbus_add_signal("192.168.10.45", 255, 411, 0, "inipat11_m411", False)
+  modbus_set_signal_update_frequency("inipat11_m411", 10)
+  modbus_add_signal("192.168.10.45", 255, 412, 0, "inipat12_m412", False)
+  modbus_set_signal_update_frequency("inipat12_m412", 10)
+  modbus_add_signal("192.168.10.45", 255, 430, 0, "modeloDer_m430", False)
+  modbus_set_signal_update_frequency("modeloDer_m430", 10)
+  modbus_add_signal("192.168.10.45", 255, 380, 1, "mensaje_m380", False)
+  modbus_set_signal_update_frequency("mensaje_m380", 10)
+  modbus_add_signal("192.168.10.45", 255, 379, 0, "respues_m379", False)
+  modbus_set_signal_update_frequency("respues_m379", 10)
+  modbus_add_signal("192.168.10.45", 255, 251, 1, "pose1_m251", False)
+  modbus_set_signal_update_frequency("pose1_m251", 10)
+  modbus_add_signal("192.168.10.45", 255, 3, 3, "pos_2_mw3", False)
+  modbus_set_signal_update_frequency("pos_2_mw3", 10)
+  modbus_add_signal("192.168.10.45", 255, 4, 2, "pasofin_mw4", False)
+  modbus_set_signal_update_frequency("pasofin_mw4", 10)
+  modbus_set_runstate_dependent_choice("postrnas_m187",0)
+  modbus_set_runstate_dependent_choice("ini_cambro_m289",0)
+  modbus_set_runstate_dependent_choice("outputbroc_m291",0)
+  modbus_set_runstate_dependent_choice("avancarrusel_m7",0)
+  modbus_set_runstate_dependent_choice("pose2_m252",0)
+  modbus_set_runstate_dependent_choice("pose3_m253",0)
+  modbus_set_runstate_dependent_choice("pose4_m254",0)
+  modbus_set_runstate_dependent_choice("finciclo_m441",0)
+  modbus_set_runstate_dependent_choice("finciclo_m442",0)
+  modbus_set_runstate_dependent_choice("finciclo_m443",0)
+  modbus_set_runstate_dependent_choice("cargar_run_m288",0)
+  modbus_set_runstate_dependent_choice("finciclo_m444",0)
+  modbus_set_runstate_dependent_choice("mensaje_m380",0)
+  modbus_set_runstate_dependent_choice("pose1_m251",0)
+  modbus_set_runstate_dependent_choice("pos_2_mw3",0)
+  step_count_a9b1e8f4_ef48_4f99_a4ac_d6de60cf476a = 0
+  thread Step_Counter_Thread_cb5f5a01_2193_4064_a72d_0fc2b3c73f25():
+    while (True):
+      step_count_a9b1e8f4_ef48_4f99_a4ac_d6de60cf476a = step_count_a9b1e8f4_ef48_4f99_a4ac_d6de60cf476a + 1
+      sync()
+    end
+  end
+  run Step_Counter_Thread_cb5f5a01_2193_4064_a72d_0fc2b3c73f25()
+  global contador=0
+  global i_var_1=0
+  global Pallet_1_cnt_1=1
+  global Pallet_1_cnt=1
+  global P1_plano=p[0, 0, 0, 0, 0, 0]
+  global Line_1=p[0.0,0.0,0.0,0.0,0.0,0.0]
+  global Line_2=p[0.0,0.0,0.0,0.0,0.0,0.0]
+  global Line_3=p[0.0,0.0,0.0,0.0,0.0,0.0]
+  global Line_4=p[-0.2932874787951964,0.3932288129452105,0.013749459185886714,0.019478391032120013,-0.0350876085014595,1.5300278925331599]
+  global Line_5=p[0.0,0.0,0.0,0.0,0.0,0.0]
+  global Line_6=p[-0.8534043480453131,0.702447272711755,-0.28895464606575716,2.5692512849242175,-1.7952327304622913,0.016877746986721606]
+  global Plane_1=p[-0.4357649673792705,0.3571224276764373,-0.011331751409534768,-0.03455953496512708,-0.012487423981114925,3.103751116092306]
+  global Plane_2=p[-0.4823864034329737,0.3302516442079689,0.014283714098506706,0.017125077458443067,0.05770060098903715,-2.9134709732588786]
+  global Plane_3=p[0.003678615545088639,0.4082921331082374,0.10477407557236007,-2.072177303174012E-4,7.379081343290108E-4,-6.424400645467977E-4]
+  global Plane_4=p[-0.4500206307677429,-0.2823718146925442,-0.4767416657426552,0.013278190059218174,0.013334473770785706,1.8479691991032237]
+  global Plane_5=p[-0.41463155496548926,-0.36477068260681855,-0.008600875771562433,0.005091590071719368,-3.1306630971044838,9.935069716473452E-4]
+  global Plano_patron1=p[-0.7699005610122596,0.304894434078545,0.0420369514744936,-0.0031270356010209216,1.7180543614697593E-4,-3.508888786211572E-5]
+  global Point_13=p[0.0,0.0,0.0,0.0,0.0,0.0]
+  global Point_3=p[0.0,0.0,0.0,0.0,0.0,0.0]
+  global Point_8=p[0.0,0.0,0.0,0.0,0.0,0.0]
+  global Punto_prot_1=p[0.0,0.0,0.0,0.0,0.0,0.0]
+  global Punto_seg_der=p[0.23741638234469645,0.3587772222537799,0.42419077585740217,0.818517054876345,1.4216436941132238,1.005041187710707]
+  global pisp_958=p[-0.41395442210486977,-0.2082168853247176,0.041553466664982,0.014014788518713659,0.01101911827984854,1.569193423241601]
+  rtde_set_watchdog("speed_slider_mask", 10.0, "ignore")
+  global Apagado_p=p[.175752938595, .046674513511, .064304038838, -1.774724461431, .139579895308, .113945492922]
+  global Apagado_q=[1.5708270072937012, -1.5708328686156214, 2.6805692682704914, 0.26179938779914935, 1.5707750320434568, 4.1484832763671875E-5]
+  global Mantenimiento_p=p[.176922881014, -.302819695448, .155559070548, .357880474329, -.029927532935, .145469974637]
+  global Mantenimiento_q=[1.5732483863830564, -0.16891844690356272, 2.2502120176898406, 1.427887248149369, 1.5620577968444804, -0.0024264494525354507]
+  global Waypoint_1_p=p[-.604791683064, -.374482656206, -.015265168224, 2.007474192036, -2.399931216892, -.019807991288]
+  global Waypoint_1_q=[0.3960317351144198, -1.248132101121433, 2.1273231848287715, -0.8893608914690168, 1.9840061875504809, -0.0022231803769034997]
+  global Waypoint_2_p=p[-.604919999946, -.374479697842, -.015280102383, 2.007439124196, -2.399960425209, -.019789727408]
+  global Waypoint_2_q=[0.3959416117744774, -1.2479828337041274, 2.127132130023468, -0.889310609482342, 1.983945316965454, -0.0022099804344275498]
+  global Transporte_p=p[.174983642311, -.724589887981, .455169352892, 3.122860242794, -.248351296107, -.001109944261]
+  global Transporte_q=[1.570791244506836, -1.5708691082396449, 1.5708144346820276, 1.1102230246251565E-16, 1.5707963267948966, 0.0]
+  global Waypoint_3_p=p[.173453095903, -.827061905418, .946895575948, 1.480515597961, -.616776416080, .610821729355]
+  global Waypoint_3_q=[1.7124815275677678, -1.6551389736151192, 1.617769736182625, -1.6266641408617684, 2.1904255416846006, -0.16749907490490745]
+  global Waypoint_4_p=p[.173444245530, -.827100786776, .946816988917, 1.483675842800, .611192475734, -.616946583943]
+  global Waypoint_4_q=[1.3653154119779667, -1.737856946169405, 1.6621364585789897, -1.7534374768034544, 0.6503784110102475, 0.33100640958929967]
+  global PreCambio_Broca_p=p[.000945745584, .461694461410, .449999999973, -.278716072917, -3.129201088272, .000009581275]
+  global PreCambio_Broca_q=[2.1723278622196873, -1.0433758502509223, -1.957156967524619, -3.2911595235523774, -0.9487832494674926, 0.005842140423485024]
+  global casa_p=p[-.727761001999, -.161287646180, .455169352892, 2.012033984675, -2.405280348109, -.010707463685]
+  global casa_q=[-0.018864973869909818, -1.5708691082396449, 1.5708144346820276, 0.0, 1.5707963267948961, 6.938893903907228E-18]
+  global Barreno1_p=p[-.683897174373, -.425831170615, .110040043563, 3.097825179276, -.447104466007, -.012218697188]
+  global Barreno1_q=[3.7783673876983386, -1.9273667286380292, -1.780048676512159, -2.574327220782599, -2.3768158090272387, -0.005220177963903616]
+  global Barreno2_p=p[-.709309999626, -.425851594258, .110051823425, 3.097801022397, -.447089687223, -.012274896796]
+  global Barreno2_q=[3.7573488195496396, -1.9615479413838157, -1.7300903057532082, -2.5900765252300517, -2.397783370737376, -0.005170381323975626]
+  def calculate_point_to_move_towards(feature, direction, position_distance):
+    local posDir=[direction[0], direction[1], direction[2]]
+    if (norm(posDir) < 1e-6):
+      return get_target_waypoint()
+    end
+    local direction_vector_normalized=normalize(posDir)
+    local displacement_pose=p[direction_vector_normalized[0] * position_distance,direction_vector_normalized[1] * position_distance,direction_vector_normalized[2] * position_distance,0,0,0]
+    local wanted_displacement_in_base_frame=pose_sub(pose_trans(feature, displacement_pose), feature)
+    return pose_add(get_target_waypoint(), wanted_displacement_in_base_frame)
+  end
+  global Dejar_Broca_p=p[.000945746317, .461694460342, .013784328853, -.278715997837, -3.129201204484, .000009440349]
+  global Dejar_Broca_q=[2.1715938393592875, -1.3712560422729858, -2.6148964506050962, -2.3058966497970683, -0.9518703796239016, 0.006445853851861407]
+  global Casa2_p=p[-.771144296637, -.432919474365, .130535671017, 2.010050616283, -2.402914180746, -.010195315230]
+  global Casa2_q=[0.38070335870776273, -1.1768456771696645, 1.6849063999848732, -0.5108772581832666, 1.9691928733539248, 0.002211960467653474]
+  global Sacar_P1_p=p[-.414573176134, -.364711118374, -.006995003993, 2.010067013474, -2.402900521737, -.010195409342]
+  global Sacar_P1_q=[0.5543555349290246, -1.4521680042441352, 2.382220694810447, -0.9329346656773456, 2.142272162538184, 0.002360230979685492]
+  global Sacar_P2_p=p[-1.173973163870, -.367220992708, .003617827345, 2.009358445608, -2.402059951115, -.012874304954]
+  global Sacar_P2_q=[0.18609167848051378, -0.5513225377240278, 0.8359938925180375, -0.2890681320841839, 1.7751874205765716, 0.0019432696262897092]
+  global Casa1_p=p[-.416708871555, -.228229979500, .081827019389, 2.012034023528, -2.405280304659, -.010707479806]
+  global Casa1_q=[0.19699697627975715, -1.8074204921280312, 2.4806184887022957, -0.6735388013185206, 1.7853848328568855, 6.941509273081792E-4]
+  global Sacar_P3_p=p[-.387702379695, -.099027197770, -.005944898569, 2.010014242594, -2.402944479794, -.010195106504]
+  global Sacar_P3_q=[-0.3479641194712233, -1.8861297562480068, 2.7412459442164816, -0.8570816925536384, 1.2402479800602153, 0.004029075381599689]
+  global Sacar_P4_p=p[-.386693700322, -.336623606123, -.004009384933, 2.010063593619, -2.402903370719, -.010195389345]
+  global Sacar_P4_q=[0.52964335709825, -1.5208959756967388, 2.452603747284624, -0.9345670922601244, 2.117578664272828, 0.0023803908821999897]
+  def Poner_Broca():
+    $ 124 "Poner_Broca" "noBreak"
+    $ 125 "Poner_Broca"
+    $ 126 "Set ini_cambro_m289=Apagar"
+    modbus_set_output_signal("ini_cambro_m289", False)
+    $ 127 "MoveL"
+    $ 128 "PreCambio_Broca" "breakAfter"
+    movel(PreCambio_Broca_p, a=1.2, v=0.25)
+    $ 129 "Dejar_Broca" "breakAfter"
+    movel(Dejar_Broca_p, a=1.2, v=0.25)
+    $ 130 "Set ini_cambro_m289=Encender"
+    modbus_set_output_signal("ini_cambro_m289", True)
+    $ 131 "Wait: 3.8"
+    sleep(3.8)
+    $ 132 "Set ini_cambro_m289=Apagar"
+    modbus_set_output_signal("ini_cambro_m289", False)
+    $ 133 "Wait: 0.5"
+    sleep(0.5)
+    $ 134 "Wait fciclocarr_m292=LO"
+    while (modbus_get_signal_status("fciclocarr_m292") == True):
+      sync()
+    end
+    $ 135 "Wait: 0.5"
+    sleep(0.5)
+    $ 136 "MoveL"
+    $ 137 "PreCambio_Broca" "breakAfter"
+    movel(PreCambio_Broca_p, a=1.2, v=0.25)
+  end
+  def Quitar_Broca_Chida():
+    $ 141 "Quitar_Broca_Chida" "noBreak"
+    $ 142 "Quitar_Broca"
+    $ 143 "MoveJ"
+    $ 145 "Loop 1 times"
+    Loop_3 = 0
+    while (Loop_3 < 1):
+      $ 146 "MoveL"
+      $ 149 "Direction: Base Z+"
+      global move_thread_flag_149=0
+      thread move_thread_149():
+        enter_critical
+        move_thread_flag_149 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.1)
+        movel(towardsPos, a=1.2, v=0.25)
+        move_thread_flag_149 = 2
+        exit_critical
+      end
+      move_thread_flag_149 = 0
+      move_thread_han_149 = run move_thread_149()
+      while (True):
+        sleep(1.0E-10)
+        if (move_thread_flag_149 > 1):
+          join move_thread_han_149
+          $ 150 "Until (distance)"
+          break
+        end
+        sync()
+      end
+      $ 151 "MoveJ"
+      $ 152 "PreCambio_Broca" "breakAfter"
+      movej(get_inverse_kin(PreCambio_Broca_p, qnear=PreCambio_Broca_q), a=1.3962634015954636, v=1.0471975511965976)
+      $ 153 "Dejar_Broca" "breakAfter"
+      movel(Dejar_Broca_p, a=0.2, v=0.15)
+      $ 154 "Set outputbroc_m291=Encender"
+      modbus_set_output_signal("outputbroc_m291", True)
+      $ 155 "Wait: 0.5"
+      sleep(0.5)
+      $ 156 "Set outputbroc_m291=Apagar"
+      modbus_set_output_signal("outputbroc_m291", False)
+      $ 157 "Wait: 0.5"
+      sleep(0.5)
+      $ 158 "Wait fciclocarr_m292=LO"
+      while (modbus_get_signal_status("fciclocarr_m292") == True):
+        sync()
+      end
+      $ 159 "Wait: 0.5"
+      sleep(0.5)
+      $ 162 "PreCambio_Broca" "breakAfter"
+      movel(PreCambio_Broca_p, a=1.2, v=0.25)
+      $ 163 "Set avancarrusel_m7=Encender"
+      modbus_set_output_signal("avancarrusel_m7", True)
+      $ 164 "Wait: 1.1"
+      sleep(1.1)
+      $ 165 "Set avancarrusel_m7=Apagar"
+      modbus_set_output_signal("avancarrusel_m7", False)
+      Loop_3 = Loop_3 + 1
+    end
+  end
+  def Calibracion():
+    $ 167 "Calibracion" "noBreak"
+    $ 168 "Calibracion"
+    $ 169 "Subvariables"
+    $ 170 "muestras≔1"
+    global muestras=1
+    $ 171 "muestrasTomadas≔0"
+    global muestrasTomadas=0
+    $ 172 "P1≔p[0,0,0,0,0,0]"
+    global P1=p[0,0,0,0,0,0]
+    $ 173 "P2≔p[0,0,0,0,0,0]"
+    global P2=p[0,0,0,0,0,0]
+    $ 174 "P3≔p[0,0,0,0,0,0]"
+    global P3=p[0,0,0,0,0,0]
+    $ 175 "P4≔p[0,0,0,0,0,0]"
+    global P4=p[0,0,0,0,0,0]
+    $ 176 "rotaciones≔p[0,0,0,0,0,0]"
+    global rotaciones=p[0,0,0,0,0,0]
+    $ 177 "PosFinal≔p[0,0,0,0,0,0]"
+    global PosFinal=p[0,0,0,0,0,0]
+    $ 178 "m1≔0"
+    global m1=0
+    $ 179 "m2≔0"
+    global m2=0
+    $ 180 "b1≔0"
+    global b1=0
+    $ 181 "b2≔0"
+    global b2=0
+    $ 182 "Xd≔0"
+    global Xd=0
+    $ 183 "Yd≔0"
+    global Yd=0
+    $ 184 "Xp≔0"
+    global Xp=0
+    $ 185 "Yp≔0"
+    global Yp=0
+    $ 186 "Xfin≔0"
+    global Xfin=0
+    $ 187 "Yfin≔0"
+    global Yfin=0
+    $ 199 "Nivelacion"
+    $ 1144 "P5≔p[-0.41462,-0.36474,-0.00863,0,0,0]"
+    global P5=p[-0.41462,-0.36474,-0.00863,0,0,0]
+    $ 1145 "P6≔p[-1.17399,-0.36726,-0.00032,0,0,0]"
+    global P6=p[-1.17399,-0.36726,-0.00032,0,0,0]
+    $ 1146 "P7≔p[-0.38926,-0.09906,-0.00906,0,0,0]"
+    global P7=p[-0.38926,-0.09906,-0.00906,0,0,0]
+    $ 1147 "PQ≔pose_sub(P6, P5)"
+    global PQ= pose_sub (P6, P5)
+    $ 1148 "PR≔pose_sub(P7, P5)"
+    global PR= pose_sub (P7, P5)
+    $ 1149 "n≔p[(PQ[1]*PR[2])-(PQ[2]*PR[1]),(-1)*((PQ[0]*PR[2])-(PQ[2]*PR[0])),(PQ[0]*PR[1])-(PQ[1]*PR[0]),0,0,0]"
+    global n=p[(PQ[1]*PR[2])-(PQ[2]*PR[1]),(-1)*((PQ[0]*PR[2])-(PQ[2]*PR[0])),(PQ[0]*PR[1])-(PQ[1]*PR[0]),0,0,0]
+    $ 1150 "var_8≔get_actual_tcp_pose()"
+    global var_8= get_actual_tcp_pose ()
+    $ 1151 "textmsg(Plane_5_const)"
+    textmsg(p[-0.41463155496548926,-0.36477068260681855,-0.008600875771562433,0.005091590071719368,-3.1306630971044838,9.935069716473452E-4])
+    $ 1152 "Popup"
+    popup(str_cat("",var_8), "Mensaje", False, False, blocking=True)
+    $ 1153 "MoveL"
+    $ 1154 "Direction: Plane_5 Z+"
+    global move_thread_flag_1154=0
+    thread move_thread_1154():
+      enter_critical
+      move_thread_flag_1154 = 1
+      local towardsPos=calculate_point_to_move_towards(p[-0.41463155496548926,-0.36477068260681855,-0.008600875771562433,0.005091590071719368,-3.1306630971044838,9.935069716473452E-4], [0.0,0.0,1.0], 0.1)
+      movel(towardsPos, a=1.2, v=0.25)
+      move_thread_flag_1154 = 2
+      exit_critical
+    end
+    move_thread_flag_1154 = 0
+    move_thread_han_1154 = run move_thread_1154()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1154 > 1):
+        join move_thread_han_1154
+        $ 1155 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1156 "MoveJ"
+    $ 1157 "casa" "breakAfter"
+    movej(get_inverse_kin(casa_p, qnear=casa_q), a=1.3962634015954636, v=1.0471975511965976)
+    $ 1158 "MoveL"
+    $ 1159 "MoveJ"
+    $ 1160 "Casa2" "breakAfter"
+    movej(get_inverse_kin(Casa2_p, qnear=Casa2_q), a=1.3962634015954636, v=1.0471975511965976)
+    $ 1161 "P1"
+    $ 1162 "Loop muestrasTomadas<muestras"
+    while (muestrasTomadas<muestras):
+      $ 1163 "MoveJ"
+      $ 1164 "Sacar_P1" "breakAfter"
+      movej(get_inverse_kin(Sacar_P1_p, qnear=Sacar_P1_q), a=1.3962634015954636, v=1.0471975511965976)
+      $ 1165 "Wait: 0.5"
+      sleep(0.5)
+      $ 1166 "Direction: Base Y+"
+      global move_thread_flag_1166=0
+      thread move_thread_1166():
+        enter_critical
+        move_thread_flag_1166 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,1.0,0.0], 1000.0)
+        movel(towardsPos, a=2.0E-4, v=0.0013)
+        move_thread_flag_1166 = 2
+        exit_critical
+      end
+      move_thread_flag_1166 = 0
+      move_thread_han_1166 = run move_thread_1166()
+      while (True):
+        local targetTcpDirection=get_target_tcp_speed()
+        local stepsToRetract=tool_contact(direction=targetTcpDirection)
+        if (stepsToRetract > 0):
+          kill move_thread_han_1166
+          stopl(9.0)
+          local backTrackMovement=get_actual_joint_positions_history(stepsToRetract)
+          local contactPose=get_forward_kin(backTrackMovement)
+          local posDir=[targetTcpDirection[0],targetTcpDirection[1],targetTcpDirection[2]]
+          local retractTo=contactPose
+          if (norm(posDir) > 1e-6):
+            local normalizedPosDir=normalize(posDir)
+            local additionalRetraction=p[normalizedPosDir[0] * 0.0, normalizedPosDir[1] * 0.0, normalizedPosDir[2] * 0.0, 0, 0, 0]
+            retractTo = pose_sub(contactPose, additionalRetraction)
+          end
+          movel(retractTo, a=9.0, v=0.1)
+          $ 1167 "Until (tool_contact_detection)"
+          break
+        end
+        sync()
+      end
+      $ 1168 "Wait: 2.0"
+      sleep(2.0)
+      $ 1169 "P1≔pose_add(get_actual_tcp_pose(), P1)"
+      global P1= pose_add ( get_actual_tcp_pose (), P1)
+      $ 1170 "muestrasTomadas≔muestrasTomadas+1"
+      global muestrasTomadas=muestrasTomadas+1
+    end
+    $ 1171 "muestrasTomadas≔0"
+    global muestrasTomadas=0
+    $ 1172 "var_1≔(P1[0])/muestras"
+    global var_1=(P1[0])/muestras
+    $ 1173 "var_2≔(P1[1])/muestras"
+    global var_2=(P1[1])/muestras
+    $ 1174 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 1175 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 1176 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 1177 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 1178 "P1≔p[var_1,var_2,-0.37,var_3,var_4,var_5]"
+    global P1=p[var_1,var_2,-0.37,var_3,var_4,var_5]
+    $ 1179 "MoveJ"
+    $ 1180 "Casa2" "breakAfter"
+    movej(get_inverse_kin(Casa2_p, qnear=Casa2_q), a=1.3962634015954636, v=1.0471975511965976)
+    $ 1181 "P2"
+    $ 1182 "Loop muestrasTomadas<muestras"
+    while (muestrasTomadas<muestras):
+      $ 1183 "MoveJ"
+      $ 1184 "Sacar_P2" "breakAfter"
+      movej(get_inverse_kin(Sacar_P2_p, qnear=Sacar_P2_q), a=1.3962634015954636, v=1.0471975511965976)
+      $ 1185 "Wait: 0.5"
+      sleep(0.5)
+      $ 1186 "Direction: Base Y+"
+      global move_thread_flag_1186=0
+      thread move_thread_1186():
+        enter_critical
+        move_thread_flag_1186 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,1.0,0.0], 1000.0)
+        movel(towardsPos, a=2.0E-4, v=0.0013)
+        move_thread_flag_1186 = 2
+        exit_critical
+      end
+      move_thread_flag_1186 = 0
+      move_thread_han_1186 = run move_thread_1186()
+      while (True):
+        local targetTcpDirection=get_target_tcp_speed()
+        local stepsToRetract=tool_contact(direction=targetTcpDirection)
+        if (stepsToRetract > 0):
+          kill move_thread_han_1186
+          stopl(9.0)
+          local backTrackMovement=get_actual_joint_positions_history(stepsToRetract)
+          local contactPose=get_forward_kin(backTrackMovement)
+          local posDir=[targetTcpDirection[0],targetTcpDirection[1],targetTcpDirection[2]]
+          local retractTo=contactPose
+          if (norm(posDir) > 1e-6):
+            local normalizedPosDir=normalize(posDir)
+            local additionalRetraction=p[normalizedPosDir[0] * 0.0, normalizedPosDir[1] * 0.0, normalizedPosDir[2] * 0.0, 0, 0, 0]
+            retractTo = pose_sub(contactPose, additionalRetraction)
+          end
+          movel(retractTo, a=9.0, v=0.1)
+          $ 1187 "Until (tool_contact_detection)"
+          break
+        end
+        sync()
+      end
+      $ 1188 "Wait: 2.0"
+      sleep(2.0)
+      $ 1189 "P2≔pose_add(get_actual_tcp_pose(), P2)"
+      global P2= pose_add ( get_actual_tcp_pose (), P2)
+      $ 1190 "muestrasTomadas≔muestrasTomadas+1"
+      global muestrasTomadas=muestrasTomadas+1
+    end
+    $ 1191 "muestrasTomadas≔0"
+    global muestrasTomadas=0
+    $ 1192 "var_1≔(P2[0])/muestras"
+    global var_1=(P2[0])/muestras
+    $ 1193 "var_2≔(P2[1])/muestras"
+    global var_2=(P2[1])/muestras
+    $ 1194 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 1195 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 1196 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 1197 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 1198 "P2≔p[var_1,var_2,-0.37,var_3,var_4,var_5]"
+    global P2=p[var_1,var_2,-0.37,var_3,var_4,var_5]
+    $ 1199 "MoveJ"
+    $ 1200 "Casa2" "breakAfter"
+    movej(get_inverse_kin(Casa2_p, qnear=Casa2_q), a=1.3962634015954636, v=1.0471975511965976)
+    $ 1201 "m1"
+    $ 1202 "var_1≔(P1[0])"
+    global var_1=(P1[0])
+    $ 1203 "var_2≔(P1[1])"
+    global var_2=(P1[1])
+    $ 1204 "var_3≔(P2[0])"
+    global var_3=(P2[0])
+    $ 1205 "var_4≔(P2[1])"
+    global var_4=(P2[1])
+    $ 1206 "m1≔(var_4-var_2)/(var_3-var_1)"
+    global m1=(var_4-var_2)/(var_3-var_1)
+    $ 1207 "b1"
+    $ 1208 "b1≔((m1*var_1)-var_2)*(-1)"
+    global b1=((m1*var_1)-var_2)*(-1)
+    $ 1209 "MoveJ"
+    $ 1210 "Casa1" "breakAfter"
+    movej(get_inverse_kin(Casa1_p, qnear=Casa1_q), a=1.3962634015954636, v=1.0471975511965976)
+    $ 1211 "P3"
+    $ 1212 "Loop muestrasTomadas<muestras"
+    while (muestrasTomadas<muestras):
+      $ 1213 "MoveJ"
+      $ 1214 "Sacar_P3" "breakAfter"
+      movej(get_inverse_kin(Sacar_P3_p, qnear=Sacar_P3_q), a=1.3962634015954636, v=1.0471975511965976)
+      $ 1215 "Wait: 0.5"
+      sleep(0.5)
+      $ 1216 "Direction: Base X+"
+      global move_thread_flag_1216=0
+      thread move_thread_1216():
+        enter_critical
+        move_thread_flag_1216 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [1.0,0.0,0.0], 1000.0)
+        movel(towardsPos, a=2.0E-4, v=0.0013)
+        move_thread_flag_1216 = 2
+        exit_critical
+      end
+      move_thread_flag_1216 = 0
+      move_thread_han_1216 = run move_thread_1216()
+      while (True):
+        local targetTcpDirection=get_target_tcp_speed()
+        local stepsToRetract=tool_contact(direction=targetTcpDirection)
+        if (stepsToRetract > 0):
+          kill move_thread_han_1216
+          stopl(9.0)
+          local backTrackMovement=get_actual_joint_positions_history(stepsToRetract)
+          local contactPose=get_forward_kin(backTrackMovement)
+          local posDir=[targetTcpDirection[0],targetTcpDirection[1],targetTcpDirection[2]]
+          local retractTo=contactPose
+          if (norm(posDir) > 1e-6):
+            local normalizedPosDir=normalize(posDir)
+            local additionalRetraction=p[normalizedPosDir[0] * 0.0, normalizedPosDir[1] * 0.0, normalizedPosDir[2] * 0.0, 0, 0, 0]
+            retractTo = pose_sub(contactPose, additionalRetraction)
+          end
+          movel(retractTo, a=9.0, v=0.1)
+          $ 1217 "Until (tool_contact_detection)"
+          break
+        end
+        sync()
+      end
+      $ 1218 "Wait: 2.0"
+      sleep(2.0)
+      $ 1219 "P3≔pose_add(get_actual_tcp_pose(), P3)"
+      global P3= pose_add ( get_actual_tcp_pose (), P3)
+      $ 1220 "muestrasTomadas≔muestrasTomadas+1"
+      global muestrasTomadas=muestrasTomadas+1
+    end
+    $ 1221 "muestrasTomadas≔0"
+    global muestrasTomadas=0
+    $ 1222 "var_1≔(P3[0])/muestras"
+    global var_1=(P3[0])/muestras
+    $ 1223 "var_2≔(P3[1])/muestras"
+    global var_2=(P3[1])/muestras
+    $ 1224 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 1225 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 1226 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 1227 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 1228 "P3≔p[var_1,var_2,-0.37,var_3,var_4,var_5]"
+    global P3=p[var_1,var_2,-0.37,var_3,var_4,var_5]
+    $ 1229 "MoveJ"
+    $ 1230 "Casa1" "breakAfter"
+    movej(get_inverse_kin(Casa1_p, qnear=Casa1_q), a=1.3962634015954636, v=1.0471975511965976)
+    $ 1231 "P4"
+    $ 1232 "Loop muestrasTomadas<muestras"
+    while (muestrasTomadas<muestras):
+      $ 1233 "MoveJ"
+      $ 1234 "Sacar_P4" "breakAfter"
+      movej(get_inverse_kin(Sacar_P4_p, qnear=Sacar_P4_q), a=1.3962634015954636, v=1.0471975511965976)
+      $ 1235 "Wait: 0.5"
+      sleep(0.5)
+      $ 1236 "Direction: Base X+"
+      global move_thread_flag_1236=0
+      thread move_thread_1236():
+        enter_critical
+        move_thread_flag_1236 = 1
+        local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [1.0,0.0,0.0], 1000.0)
+        movel(towardsPos, a=2.0E-4, v=0.0013)
+        move_thread_flag_1236 = 2
+        exit_critical
+      end
+      move_thread_flag_1236 = 0
+      move_thread_han_1236 = run move_thread_1236()
+      while (True):
+        local targetTcpDirection=get_target_tcp_speed()
+        local stepsToRetract=tool_contact(direction=targetTcpDirection)
+        if (stepsToRetract > 0):
+          kill move_thread_han_1236
+          stopl(9.0)
+          local backTrackMovement=get_actual_joint_positions_history(stepsToRetract)
+          local contactPose=get_forward_kin(backTrackMovement)
+          local posDir=[targetTcpDirection[0],targetTcpDirection[1],targetTcpDirection[2]]
+          local retractTo=contactPose
+          if (norm(posDir) > 1e-6):
+            local normalizedPosDir=normalize(posDir)
+            local additionalRetraction=p[normalizedPosDir[0] * 0.0, normalizedPosDir[1] * 0.0, normalizedPosDir[2] * 0.0, 0, 0, 0]
+            retractTo = pose_sub(contactPose, additionalRetraction)
+          end
+          movel(retractTo, a=9.0, v=0.1)
+          $ 1237 "Until (tool_contact_detection)"
+          break
+        end
+        sync()
+      end
+      $ 1238 "Wait: 2.0"
+      sleep(2.0)
+      $ 1239 "P4≔pose_add(get_actual_tcp_pose(), P4)"
+      global P4= pose_add ( get_actual_tcp_pose (), P4)
+      $ 1240 "muestrasTomadas≔muestrasTomadas+1"
+      global muestrasTomadas=muestrasTomadas+1
+    end
+    $ 1241 "muestrasTomadas≔0"
+    global muestrasTomadas=0
+    $ 1242 "var_1≔(P4[0])/muestras"
+    global var_1=(P4[0])/muestras
+    $ 1243 "var_2≔(P4[1])/muestras"
+    global var_2=(P4[1])/muestras
+    $ 1244 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 1245 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 1246 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 1247 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 1248 "P4≔p[var_1,var_2,-0.37,var_3,var_4,var_5]"
+    global P4=p[var_1,var_2,-0.37,var_3,var_4,var_5]
+    $ 1249 "MoveJ"
+    $ 1250 "Casa1" "breakAfter"
+    movej(get_inverse_kin(Casa1_p, qnear=Casa1_q), a=1.3962634015954636, v=1.0471975511965976)
+    $ 1251 "m2"
+    $ 1252 "var_1≔(P3[0])"
+    global var_1=(P3[0])
+    $ 1253 "var_2≔(P3[1])"
+    global var_2=(P3[1])
+    $ 1254 "var_3≔(P4[0])"
+    global var_3=(P4[0])
+    $ 1255 "var_4≔(P4[1])"
+    global var_4=(P4[1])
+    $ 1256 "m2≔(var_4-var_2)/(var_3-var_1)"
+    global m2=(var_4-var_2)/(var_3-var_1)
+    $ 1257 "b2"
+    $ 1258 "b2≔((m2*var_1)-var_2)*(-1)"
+    global b2=((m2*var_1)-var_2)*(-1)
+    $ 1259 "Xd y Yd"
+    $ 1260 "Xd≔(b2-b1)/(m1-m2)"
+    global Xd=(b2-b1)/(m1-m2)
+    $ 1261 "Yd≔(m1*Xd)+b1"
+    global Yd=(m1*Xd)+b1
+    $ 1262 "Xp y Yp"
+    $ 1263 "Xp≔(1)/(sqrt((m1*m1)+1))"
+    global Xp=(1)/(sqrt((m1*m1)+1))
+    $ 1264 "Yp≔(m2)/(sqrt((m2*m2)+1))"
+    global Yp=(m2)/(sqrt((m2*m2)+1))
+    $ 1265 "Origen"
+    $ 1266 "Xfin≔((0*Xp)-(Xd)-(0*(1/m2)))*(-1)"
+    global Xfin=((0*Xp)-(Xd)-(0*(1/m2)))*(-1)
+    $ 1267 "Yfin≔((0*Yp)-(Yd)+(0*m1))*(-1)"
+    global Yfin=((0*Yp)-(Yd)+(0*m1))*(-1)
+    $ 1268 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 1269 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 1270 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 1271 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 1272 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,0.11,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,0.11,var_3,var_4,var_5]
+    $ 1273 "origen≔PosFinal"
+    global origen=PosFinal
+    $ 1274 "MoveJ"
+    $ 1275 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 1276 "Direction: Base Z+"
+    global move_thread_flag_1276=0
+    thread move_thread_1276():
+      enter_critical
+      move_thread_flag_1276 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.1)
+      movel(towardsPos, a=1.2, v=0.25)
+      move_thread_flag_1276 = 2
+      exit_critical
+    end
+    move_thread_flag_1276 = 0
+    move_thread_han_1276 = run move_thread_1276()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1276 > 1):
+        join move_thread_han_1276
+        $ 1277 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1278 "MoveJ"
+    $ 1279 "Casa2" "breakAfter"
+    movej(get_inverse_kin(Casa2_p, qnear=Casa2_q), a=1.3962634015954636, v=1.0471975511965976)
+    $ 1280 "Linea1"
+    $ 1671 "Buje27"
+    $ 1672 "Xfin≔((0.75565*Xp)-(Xd)-(-0.0127*(1/m2)))*(-1)"
+    global Xfin=((0.75565*Xp)-(Xd)-(-0.0127*(1/m2)))*(-1)
+    $ 1673 "Yfin≔((-0.0127*Yp)-(Yd)+(0.75565*m1))*(-1)"
+    global Yfin=((-0.0127*Yp)-(Yd)+(0.75565*m1))*(-1)
+    $ 1674 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 1675 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 1676 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 1677 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 1678 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,0.03,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,0.03,var_3,var_4,var_5]
+    $ 1679 "MoveL"
+    $ 1680 "MoveJ"
+    $ 1681 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 1682 "Direction: Base Z-"
+    global move_thread_flag_1682=0
+    thread move_thread_1682():
+      enter_critical
+      move_thread_flag_1682 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.035)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1682 = 2
+      exit_critical
+    end
+    move_thread_flag_1682 = 0
+    move_thread_han_1682 = run move_thread_1682()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1682 > 1):
+        join move_thread_han_1682
+        $ 1683 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1684 "Direction: Base Z+"
+    global move_thread_flag_1684=0
+    thread move_thread_1684():
+      enter_critical
+      move_thread_flag_1684 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.035)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1684 = 2
+      exit_critical
+    end
+    move_thread_flag_1684 = 0
+    move_thread_han_1684 = run move_thread_1684()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1684 > 1):
+        join move_thread_han_1684
+        $ 1685 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1686 "Popup: oi"
+    popup("oi", "Mensaje", False, False, blocking=True)
+    $ 1687 "MoveJ"
+    $ 1688 "Casa1" "breakAfter"
+    movej(get_inverse_kin(Casa1_p, qnear=Casa1_q), a=1.3962634015954636, v=1.0471975511965976)
+    $ 1689 "Buje1"
+    $ 1690 "Xfin≔((0.09525*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)"
+    global Xfin=((0.09525*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+    $ 1691 "Yfin≔((0.3937*Yp)-(Yd)+(0.09525*m1))*(-1)"
+    global Yfin=((0.3937*Yp)-(Yd)+(0.09525*m1))*(-1)
+    $ 1692 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 1693 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 1694 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 1695 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 1696 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+    $ 1697 "MoveL"
+    $ 1698 "MoveJ"
+    $ 1699 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 1700 "Direction: Base Z-"
+    global move_thread_flag_1700=0
+    thread move_thread_1700():
+      enter_critical
+      move_thread_flag_1700 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1700 = 2
+      exit_critical
+    end
+    move_thread_flag_1700 = 0
+    move_thread_han_1700 = run move_thread_1700()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1700 > 1):
+        join move_thread_han_1700
+        $ 1701 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1702 "Direction: Base Z+"
+    global move_thread_flag_1702=0
+    thread move_thread_1702():
+      enter_critical
+      move_thread_flag_1702 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1702 = 2
+      exit_critical
+    end
+    move_thread_flag_1702 = 0
+    move_thread_han_1702 = run move_thread_1702()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1702 > 1):
+        join move_thread_han_1702
+        $ 1703 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1704 "Buje2"
+    $ 1705 "Xfin≔((0.12065*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)"
+    global Xfin=((0.12065*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+    $ 1706 "Yfin≔((0.3937*Yp)-(Yd)+(0.12065*m1))*(-1)"
+    global Yfin=((0.3937*Yp)-(Yd)+(0.12065*m1))*(-1)
+    $ 1707 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 1708 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 1709 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 1710 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 1711 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+    $ 1712 "MoveL"
+    $ 1713 "MoveJ"
+    $ 1714 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 1715 "Direction: Base Z-"
+    global move_thread_flag_1715=0
+    thread move_thread_1715():
+      enter_critical
+      move_thread_flag_1715 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1715 = 2
+      exit_critical
+    end
+    move_thread_flag_1715 = 0
+    move_thread_han_1715 = run move_thread_1715()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1715 > 1):
+        join move_thread_han_1715
+        $ 1716 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1717 "Direction: Base Z+"
+    global move_thread_flag_1717=0
+    thread move_thread_1717():
+      enter_critical
+      move_thread_flag_1717 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1717 = 2
+      exit_critical
+    end
+    move_thread_flag_1717 = 0
+    move_thread_han_1717 = run move_thread_1717()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1717 > 1):
+        join move_thread_han_1717
+        $ 1718 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1719 "Buje3"
+    $ 1720 "Xfin≔((0.14605*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)"
+    global Xfin=((0.14605*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+    $ 1721 "Yfin≔((0.3937*Yp)-(Yd)+(0.14605*m1))*(-1)"
+    global Yfin=((0.3937*Yp)-(Yd)+(0.14605*m1))*(-1)
+    $ 1722 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 1723 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 1724 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 1725 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 1726 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.440,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,-0.440,var_3,var_4,var_5]
+    $ 1727 "MoveL"
+    $ 1728 "MoveJ"
+    $ 1729 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 1730 "Direction: Base Z-"
+    global move_thread_flag_1730=0
+    thread move_thread_1730():
+      enter_critical
+      move_thread_flag_1730 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1730 = 2
+      exit_critical
+    end
+    move_thread_flag_1730 = 0
+    move_thread_han_1730 = run move_thread_1730()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1730 > 1):
+        join move_thread_han_1730
+        $ 1731 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1732 "Direction: Base Z+"
+    global move_thread_flag_1732=0
+    thread move_thread_1732():
+      enter_critical
+      move_thread_flag_1732 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1732 = 2
+      exit_critical
+    end
+    move_thread_flag_1732 = 0
+    move_thread_han_1732 = run move_thread_1732()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1732 > 1):
+        join move_thread_han_1732
+        $ 1733 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1734 "Buje4"
+    $ 1735 "Xfin≔((0.17145*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)"
+    global Xfin=((0.17145*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+    $ 1736 "Yfin≔((0.3937*Yp)-(Yd)+(0.17145*m1))*(-1)"
+    global Yfin=((0.3937*Yp)-(Yd)+(0.17145*m1))*(-1)
+    $ 1737 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 1738 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 1739 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 1740 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 1741 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+    $ 1742 "MoveL"
+    $ 1743 "MoveJ"
+    $ 1744 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 1745 "Direction: Base Z-"
+    global move_thread_flag_1745=0
+    thread move_thread_1745():
+      enter_critical
+      move_thread_flag_1745 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1745 = 2
+      exit_critical
+    end
+    move_thread_flag_1745 = 0
+    move_thread_han_1745 = run move_thread_1745()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1745 > 1):
+        join move_thread_han_1745
+        $ 1746 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1747 "Direction: Base Z+"
+    global move_thread_flag_1747=0
+    thread move_thread_1747():
+      enter_critical
+      move_thread_flag_1747 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1747 = 2
+      exit_critical
+    end
+    move_thread_flag_1747 = 0
+    move_thread_han_1747 = run move_thread_1747()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1747 > 1):
+        join move_thread_han_1747
+        $ 1748 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1749 "Buje5"
+    $ 1750 "Xfin≔((0.19685*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)"
+    global Xfin=((0.19685*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+    $ 1751 "Yfin≔((0.3937*Yp)-(Yd)+(0.19685*m1))*(-1)"
+    global Yfin=((0.3937*Yp)-(Yd)+(0.19685*m1))*(-1)
+    $ 1752 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 1753 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 1754 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 1755 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 1756 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+    $ 1757 "MoveL"
+    $ 1758 "MoveJ"
+    $ 1759 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 1760 "Direction: Base Z-"
+    global move_thread_flag_1760=0
+    thread move_thread_1760():
+      enter_critical
+      move_thread_flag_1760 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1760 = 2
+      exit_critical
+    end
+    move_thread_flag_1760 = 0
+    move_thread_han_1760 = run move_thread_1760()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1760 > 1):
+        join move_thread_han_1760
+        $ 1761 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1762 "Direction: Base Z+"
+    global move_thread_flag_1762=0
+    thread move_thread_1762():
+      enter_critical
+      move_thread_flag_1762 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1762 = 2
+      exit_critical
+    end
+    move_thread_flag_1762 = 0
+    move_thread_han_1762 = run move_thread_1762()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1762 > 1):
+        join move_thread_han_1762
+        $ 1763 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1764 "Buje6"
+    $ 1765 "Xfin≔((0.22225*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)"
+    global Xfin=((0.22225*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+    $ 1766 "Yfin≔((0.3937*Yp)-(Yd)+(0.22225*m1))*(-1)"
+    global Yfin=((0.3937*Yp)-(Yd)+(0.22225*m1))*(-1)
+    $ 1767 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 1768 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 1769 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 1770 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 1771 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+    $ 1772 "MoveL"
+    $ 1773 "MoveJ"
+    $ 1774 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 1775 "Direction: Base Z-"
+    global move_thread_flag_1775=0
+    thread move_thread_1775():
+      enter_critical
+      move_thread_flag_1775 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1775 = 2
+      exit_critical
+    end
+    move_thread_flag_1775 = 0
+    move_thread_han_1775 = run move_thread_1775()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1775 > 1):
+        join move_thread_han_1775
+        $ 1776 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1777 "Direction: Base Z+"
+    global move_thread_flag_1777=0
+    thread move_thread_1777():
+      enter_critical
+      move_thread_flag_1777 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1777 = 2
+      exit_critical
+    end
+    move_thread_flag_1777 = 0
+    move_thread_han_1777 = run move_thread_1777()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1777 > 1):
+        join move_thread_han_1777
+        $ 1778 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1779 "Buje7"
+    $ 1780 "Xfin≔((0.24765*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)"
+    global Xfin=((0.24765*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+    $ 1781 "Yfin≔((0.3937*Yp)-(Yd)+(0.24765*m1))*(-1)"
+    global Yfin=((0.3937*Yp)-(Yd)+(0.24765*m1))*(-1)
+    $ 1782 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 1783 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 1784 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 1785 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 1786 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+    $ 1787 "MoveL"
+    $ 1788 "MoveJ"
+    $ 1789 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 1790 "Direction: Base Z-"
+    global move_thread_flag_1790=0
+    thread move_thread_1790():
+      enter_critical
+      move_thread_flag_1790 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1790 = 2
+      exit_critical
+    end
+    move_thread_flag_1790 = 0
+    move_thread_han_1790 = run move_thread_1790()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1790 > 1):
+        join move_thread_han_1790
+        $ 1791 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1792 "Direction: Base Z+"
+    global move_thread_flag_1792=0
+    thread move_thread_1792():
+      enter_critical
+      move_thread_flag_1792 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1792 = 2
+      exit_critical
+    end
+    move_thread_flag_1792 = 0
+    move_thread_han_1792 = run move_thread_1792()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1792 > 1):
+        join move_thread_han_1792
+        $ 1793 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1794 "Buje8"
+    $ 1795 "Xfin≔((0.27305*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)"
+    global Xfin=((0.27305*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+    $ 1796 "Yfin≔((0.3937*Yp)-(Yd)+(0.27305*m1))*(-1)"
+    global Yfin=((0.3937*Yp)-(Yd)+(0.27305*m1))*(-1)
+    $ 1797 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 1798 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 1799 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 1800 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 1801 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+    $ 1802 "MoveL"
+    $ 1803 "MoveJ"
+    $ 1804 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 1805 "Direction: Base Z-"
+    global move_thread_flag_1805=0
+    thread move_thread_1805():
+      enter_critical
+      move_thread_flag_1805 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1805 = 2
+      exit_critical
+    end
+    move_thread_flag_1805 = 0
+    move_thread_han_1805 = run move_thread_1805()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1805 > 1):
+        join move_thread_han_1805
+        $ 1806 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1807 "Direction: Base Z+"
+    global move_thread_flag_1807=0
+    thread move_thread_1807():
+      enter_critical
+      move_thread_flag_1807 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1807 = 2
+      exit_critical
+    end
+    move_thread_flag_1807 = 0
+    move_thread_han_1807 = run move_thread_1807()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1807 > 1):
+        join move_thread_han_1807
+        $ 1808 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1809 "Buje9"
+    $ 1810 "Xfin≔((0.29845*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)"
+    global Xfin=((0.29845*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+    $ 1811 "Yfin≔((0.3937*Yp)-(Yd)+(0.29845*m1))*(-1)"
+    global Yfin=((0.3937*Yp)-(Yd)+(0.29845*m1))*(-1)
+    $ 1812 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 1813 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 1814 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 1815 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 1816 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+    $ 1817 "MoveL"
+    $ 1818 "MoveJ"
+    $ 1819 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 1820 "Direction: Base Z-"
+    global move_thread_flag_1820=0
+    thread move_thread_1820():
+      enter_critical
+      move_thread_flag_1820 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1820 = 2
+      exit_critical
+    end
+    move_thread_flag_1820 = 0
+    move_thread_han_1820 = run move_thread_1820()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1820 > 1):
+        join move_thread_han_1820
+        $ 1821 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1822 "Direction: Base Z+"
+    global move_thread_flag_1822=0
+    thread move_thread_1822():
+      enter_critical
+      move_thread_flag_1822 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1822 = 2
+      exit_critical
+    end
+    move_thread_flag_1822 = 0
+    move_thread_han_1822 = run move_thread_1822()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1822 > 1):
+        join move_thread_han_1822
+        $ 1823 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1824 "Buje10"
+    $ 1825 "Xfin≔((0.32385*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)"
+    global Xfin=((0.32385*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+    $ 1826 "Yfin≔((0.3937*Yp)-(Yd)+(0.32385*m1))*(-1)"
+    global Yfin=((0.3937*Yp)-(Yd)+(0.32385*m1))*(-1)
+    $ 1827 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 1828 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 1829 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 1830 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 1831 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+    $ 1832 "MoveL"
+    $ 1833 "MoveJ"
+    $ 1834 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 1835 "Direction: Base Z-"
+    global move_thread_flag_1835=0
+    thread move_thread_1835():
+      enter_critical
+      move_thread_flag_1835 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1835 = 2
+      exit_critical
+    end
+    move_thread_flag_1835 = 0
+    move_thread_han_1835 = run move_thread_1835()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1835 > 1):
+        join move_thread_han_1835
+        $ 1836 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1837 "Direction: Base Z+"
+    global move_thread_flag_1837=0
+    thread move_thread_1837():
+      enter_critical
+      move_thread_flag_1837 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1837 = 2
+      exit_critical
+    end
+    move_thread_flag_1837 = 0
+    move_thread_han_1837 = run move_thread_1837()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1837 > 1):
+        join move_thread_han_1837
+        $ 1838 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1839 "Buje11"
+    $ 1840 "Xfin≔((0.34925*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)"
+    global Xfin=((0.34925*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+    $ 1841 "Yfin≔((0.3937*Yp)-(Yd)+(0.34925*m1))*(-1)"
+    global Yfin=((0.3937*Yp)-(Yd)+(0.34925*m1))*(-1)
+    $ 1842 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 1843 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 1844 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 1845 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 1846 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+    $ 1847 "MoveL"
+    $ 1848 "MoveJ"
+    $ 1849 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 1850 "Direction: Base Z-"
+    global move_thread_flag_1850=0
+    thread move_thread_1850():
+      enter_critical
+      move_thread_flag_1850 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1850 = 2
+      exit_critical
+    end
+    move_thread_flag_1850 = 0
+    move_thread_han_1850 = run move_thread_1850()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1850 > 1):
+        join move_thread_han_1850
+        $ 1851 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1852 "Direction: Base Z+"
+    global move_thread_flag_1852=0
+    thread move_thread_1852():
+      enter_critical
+      move_thread_flag_1852 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1852 = 2
+      exit_critical
+    end
+    move_thread_flag_1852 = 0
+    move_thread_han_1852 = run move_thread_1852()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1852 > 1):
+        join move_thread_han_1852
+        $ 1853 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1854 "Buje12"
+    $ 1855 "Xfin≔((0.37465*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)"
+    global Xfin=((0.37465*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+    $ 1856 "Yfin≔((0.3937*Yp)-(Yd)+(0.37465*m1))*(-1)"
+    global Yfin=((0.3937*Yp)-(Yd)+(0.37465*m1))*(-1)
+    $ 1857 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 1858 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 1859 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 1860 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 1861 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+    $ 1862 "MoveL"
+    $ 1863 "MoveJ"
+    $ 1864 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 1865 "Direction: Base Z-"
+    global move_thread_flag_1865=0
+    thread move_thread_1865():
+      enter_critical
+      move_thread_flag_1865 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1865 = 2
+      exit_critical
+    end
+    move_thread_flag_1865 = 0
+    move_thread_han_1865 = run move_thread_1865()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1865 > 1):
+        join move_thread_han_1865
+        $ 1866 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1867 "Direction: Base Z+"
+    global move_thread_flag_1867=0
+    thread move_thread_1867():
+      enter_critical
+      move_thread_flag_1867 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1867 = 2
+      exit_critical
+    end
+    move_thread_flag_1867 = 0
+    move_thread_han_1867 = run move_thread_1867()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1867 > 1):
+        join move_thread_han_1867
+        $ 1868 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1869 "Buje13"
+    $ 1870 "Xfin≔((0.40005*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)"
+    global Xfin=((0.40005*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+    $ 1871 "Yfin≔((0.3937*Yp)-(Yd)+(0.40005*m1))*(-1)"
+    global Yfin=((0.3937*Yp)-(Yd)+(0.40005*m1))*(-1)
+    $ 1872 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 1873 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 1874 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 1875 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 1876 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+    $ 1877 "MoveL"
+    $ 1878 "MoveJ"
+    $ 1879 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 1880 "Direction: Base Z-"
+    global move_thread_flag_1880=0
+    thread move_thread_1880():
+      enter_critical
+      move_thread_flag_1880 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1880 = 2
+      exit_critical
+    end
+    move_thread_flag_1880 = 0
+    move_thread_han_1880 = run move_thread_1880()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1880 > 1):
+        join move_thread_han_1880
+        $ 1881 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1882 "Direction: Base Z+"
+    global move_thread_flag_1882=0
+    thread move_thread_1882():
+      enter_critical
+      move_thread_flag_1882 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1882 = 2
+      exit_critical
+    end
+    move_thread_flag_1882 = 0
+    move_thread_han_1882 = run move_thread_1882()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1882 > 1):
+        join move_thread_han_1882
+        $ 1883 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1884 "Buje14"
+    $ 1885 "Xfin≔((0.42545*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)"
+    global Xfin=((0.42545*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+    $ 1886 "Yfin≔((0.3937*Yp)-(Yd)+(0.42545*m1))*(-1)"
+    global Yfin=((0.3937*Yp)-(Yd)+(0.42545*m1))*(-1)
+    $ 1887 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 1888 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 1889 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 1890 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 1891 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+    $ 1892 "MoveL"
+    $ 1893 "MoveJ"
+    $ 1894 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 1895 "Direction: Base Z-"
+    global move_thread_flag_1895=0
+    thread move_thread_1895():
+      enter_critical
+      move_thread_flag_1895 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1895 = 2
+      exit_critical
+    end
+    move_thread_flag_1895 = 0
+    move_thread_han_1895 = run move_thread_1895()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1895 > 1):
+        join move_thread_han_1895
+        $ 1896 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1897 "Direction: Base Z+"
+    global move_thread_flag_1897=0
+    thread move_thread_1897():
+      enter_critical
+      move_thread_flag_1897 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1897 = 2
+      exit_critical
+    end
+    move_thread_flag_1897 = 0
+    move_thread_han_1897 = run move_thread_1897()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1897 > 1):
+        join move_thread_han_1897
+        $ 1898 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1899 "Buje15"
+    $ 1900 "Xfin≔((0.45085*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)"
+    global Xfin=((0.45085*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+    $ 1901 "Yfin≔((0.3937*Yp)-(Yd)+(0.45085*m1))*(-1)"
+    global Yfin=((0.3937*Yp)-(Yd)+(0.45085*m1))*(-1)
+    $ 1902 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 1903 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 1904 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 1905 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 1906 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+    $ 1907 "MoveL"
+    $ 1908 "MoveJ"
+    $ 1909 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 1910 "Direction: Base Z-"
+    global move_thread_flag_1910=0
+    thread move_thread_1910():
+      enter_critical
+      move_thread_flag_1910 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1910 = 2
+      exit_critical
+    end
+    move_thread_flag_1910 = 0
+    move_thread_han_1910 = run move_thread_1910()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1910 > 1):
+        join move_thread_han_1910
+        $ 1911 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1912 "Direction: Base Z+"
+    global move_thread_flag_1912=0
+    thread move_thread_1912():
+      enter_critical
+      move_thread_flag_1912 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1912 = 2
+      exit_critical
+    end
+    move_thread_flag_1912 = 0
+    move_thread_han_1912 = run move_thread_1912()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1912 > 1):
+        join move_thread_han_1912
+        $ 1913 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1914 "Buje16"
+    $ 1915 "Xfin≔((0.47625*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)"
+    global Xfin=((0.47625*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+    $ 1916 "Yfin≔((0.3937*Yp)-(Yd)+(0.47625*m1))*(-1)"
+    global Yfin=((0.3937*Yp)-(Yd)+(0.47625*m1))*(-1)
+    $ 1917 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 1918 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 1919 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 1920 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 1921 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+    $ 1922 "MoveL"
+    $ 1923 "MoveJ"
+    $ 1924 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 1925 "Direction: Base Z-"
+    global move_thread_flag_1925=0
+    thread move_thread_1925():
+      enter_critical
+      move_thread_flag_1925 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1925 = 2
+      exit_critical
+    end
+    move_thread_flag_1925 = 0
+    move_thread_han_1925 = run move_thread_1925()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1925 > 1):
+        join move_thread_han_1925
+        $ 1926 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1927 "Direction: Base Z+"
+    global move_thread_flag_1927=0
+    thread move_thread_1927():
+      enter_critical
+      move_thread_flag_1927 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1927 = 2
+      exit_critical
+    end
+    move_thread_flag_1927 = 0
+    move_thread_han_1927 = run move_thread_1927()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1927 > 1):
+        join move_thread_han_1927
+        $ 1928 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1929 "Buje17"
+    $ 1930 "Xfin≔((0.50165*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)"
+    global Xfin=((0.50165*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+    $ 1931 "Yfin≔((0.3937*Yp)-(Yd)+(0.50165*m1))*(-1)"
+    global Yfin=((0.3937*Yp)-(Yd)+(0.50165*m1))*(-1)
+    $ 1932 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 1933 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 1934 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 1935 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 1936 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+    $ 1937 "MoveL"
+    $ 1938 "MoveJ"
+    $ 1939 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 1940 "Direction: Base Z-"
+    global move_thread_flag_1940=0
+    thread move_thread_1940():
+      enter_critical
+      move_thread_flag_1940 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1940 = 2
+      exit_critical
+    end
+    move_thread_flag_1940 = 0
+    move_thread_han_1940 = run move_thread_1940()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1940 > 1):
+        join move_thread_han_1940
+        $ 1941 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1942 "Direction: Base Z+"
+    global move_thread_flag_1942=0
+    thread move_thread_1942():
+      enter_critical
+      move_thread_flag_1942 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1942 = 2
+      exit_critical
+    end
+    move_thread_flag_1942 = 0
+    move_thread_han_1942 = run move_thread_1942()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1942 > 1):
+        join move_thread_han_1942
+        $ 1943 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1944 "Buje18"
+    $ 1945 "Xfin≔((0.52705*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)"
+    global Xfin=((0.52705*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+    $ 1946 "Yfin≔((0.3937*Yp)-(Yd)+(0.52705*m1))*(-1)"
+    global Yfin=((0.3937*Yp)-(Yd)+(0.52705*m1))*(-1)
+    $ 1947 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 1948 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 1949 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 1950 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 1951 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+    $ 1952 "MoveL"
+    $ 1953 "MoveJ"
+    $ 1954 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 1955 "Direction: Base Z-"
+    global move_thread_flag_1955=0
+    thread move_thread_1955():
+      enter_critical
+      move_thread_flag_1955 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1955 = 2
+      exit_critical
+    end
+    move_thread_flag_1955 = 0
+    move_thread_han_1955 = run move_thread_1955()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1955 > 1):
+        join move_thread_han_1955
+        $ 1956 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1957 "Direction: Base Z+"
+    global move_thread_flag_1957=0
+    thread move_thread_1957():
+      enter_critical
+      move_thread_flag_1957 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1957 = 2
+      exit_critical
+    end
+    move_thread_flag_1957 = 0
+    move_thread_han_1957 = run move_thread_1957()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1957 > 1):
+        join move_thread_han_1957
+        $ 1958 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1959 "Buje19"
+    $ 1960 "Xfin≔((0.55245*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)"
+    global Xfin=((0.55245*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+    $ 1961 "Yfin≔((0.3937*Yp)-(Yd)+(0.55245*m1))*(-1)"
+    global Yfin=((0.3937*Yp)-(Yd)+(0.55245*m1))*(-1)
+    $ 1962 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 1963 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 1964 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 1965 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 1966 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+    $ 1967 "MoveL"
+    $ 1968 "MoveJ"
+    $ 1969 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 1970 "Direction: Base Z-"
+    global move_thread_flag_1970=0
+    thread move_thread_1970():
+      enter_critical
+      move_thread_flag_1970 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1970 = 2
+      exit_critical
+    end
+    move_thread_flag_1970 = 0
+    move_thread_han_1970 = run move_thread_1970()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1970 > 1):
+        join move_thread_han_1970
+        $ 1971 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1972 "Direction: Base Z+"
+    global move_thread_flag_1972=0
+    thread move_thread_1972():
+      enter_critical
+      move_thread_flag_1972 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1972 = 2
+      exit_critical
+    end
+    move_thread_flag_1972 = 0
+    move_thread_han_1972 = run move_thread_1972()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1972 > 1):
+        join move_thread_han_1972
+        $ 1973 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1974 "Buje20"
+    $ 1975 "Xfin≔((0.57785*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)"
+    global Xfin=((0.57785*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+    $ 1976 "Yfin≔((0.3937*Yp)-(Yd)+(0.57785*m1))*(-1)"
+    global Yfin=((0.3937*Yp)-(Yd)+(0.57785*m1))*(-1)
+    $ 1977 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 1978 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 1979 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 1980 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 1981 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+    $ 1982 "MoveL"
+    $ 1983 "MoveJ"
+    $ 1984 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 1985 "Direction: Base Z-"
+    global move_thread_flag_1985=0
+    thread move_thread_1985():
+      enter_critical
+      move_thread_flag_1985 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1985 = 2
+      exit_critical
+    end
+    move_thread_flag_1985 = 0
+    move_thread_han_1985 = run move_thread_1985()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1985 > 1):
+        join move_thread_han_1985
+        $ 1986 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1987 "Direction: Base Z+"
+    global move_thread_flag_1987=0
+    thread move_thread_1987():
+      enter_critical
+      move_thread_flag_1987 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_1987 = 2
+      exit_critical
+    end
+    move_thread_flag_1987 = 0
+    move_thread_han_1987 = run move_thread_1987()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_1987 > 1):
+        join move_thread_han_1987
+        $ 1988 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 1989 "Buje21"
+    $ 1990 "Xfin≔((0.60325*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)"
+    global Xfin=((0.60325*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+    $ 1991 "Yfin≔((0.3937*Yp)-(Yd)+(0.60325*m1))*(-1)"
+    global Yfin=((0.3937*Yp)-(Yd)+(0.60325*m1))*(-1)
+    $ 1992 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 1993 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 1994 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 1995 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 1996 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+    $ 1997 "MoveL"
+    $ 1998 "MoveJ"
+    $ 1999 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 2000 "Direction: Base Z-"
+    global move_thread_flag_2000=0
+    thread move_thread_2000():
+      enter_critical
+      move_thread_flag_2000 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_2000 = 2
+      exit_critical
+    end
+    move_thread_flag_2000 = 0
+    move_thread_han_2000 = run move_thread_2000()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_2000 > 1):
+        join move_thread_han_2000
+        $ 2001 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 2002 "Direction: Base Z+"
+    global move_thread_flag_2002=0
+    thread move_thread_2002():
+      enter_critical
+      move_thread_flag_2002 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_2002 = 2
+      exit_critical
+    end
+    move_thread_flag_2002 = 0
+    move_thread_han_2002 = run move_thread_2002()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_2002 > 1):
+        join move_thread_han_2002
+        $ 2003 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 2004 "Buje22"
+    $ 2005 "Xfin≔((0.62865*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)"
+    global Xfin=((0.62865*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+    $ 2006 "Yfin≔((0.3937*Yp)-(Yd)+(0.62865*m1))*(-1)"
+    global Yfin=((0.3937*Yp)-(Yd)+(0.62865*m1))*(-1)
+    $ 2007 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 2008 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 2009 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 2010 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 2011 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+    $ 2012 "MoveL"
+    $ 2013 "MoveJ"
+    $ 2014 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 2015 "Direction: Base Z-"
+    global move_thread_flag_2015=0
+    thread move_thread_2015():
+      enter_critical
+      move_thread_flag_2015 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_2015 = 2
+      exit_critical
+    end
+    move_thread_flag_2015 = 0
+    move_thread_han_2015 = run move_thread_2015()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_2015 > 1):
+        join move_thread_han_2015
+        $ 2016 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 2017 "Direction: Base Z+"
+    global move_thread_flag_2017=0
+    thread move_thread_2017():
+      enter_critical
+      move_thread_flag_2017 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_2017 = 2
+      exit_critical
+    end
+    move_thread_flag_2017 = 0
+    move_thread_han_2017 = run move_thread_2017()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_2017 > 1):
+        join move_thread_han_2017
+        $ 2018 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 2019 "Buje23"
+    $ 2020 "Xfin≔((0.65405*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)"
+    global Xfin=((0.65405*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+    $ 2021 "Yfin≔((0.3937*Yp)-(Yd)+(0.65405*m1))*(-1)"
+    global Yfin=((0.3937*Yp)-(Yd)+(0.65405*m1))*(-1)
+    $ 2022 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 2023 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 2024 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 2025 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 2026 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+    $ 2027 "MoveL"
+    $ 2028 "MoveJ"
+    $ 2029 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 2030 "Direction: Base Z-"
+    global move_thread_flag_2030=0
+    thread move_thread_2030():
+      enter_critical
+      move_thread_flag_2030 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_2030 = 2
+      exit_critical
+    end
+    move_thread_flag_2030 = 0
+    move_thread_han_2030 = run move_thread_2030()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_2030 > 1):
+        join move_thread_han_2030
+        $ 2031 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 2032 "Direction: Base Z+"
+    global move_thread_flag_2032=0
+    thread move_thread_2032():
+      enter_critical
+      move_thread_flag_2032 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_2032 = 2
+      exit_critical
+    end
+    move_thread_flag_2032 = 0
+    move_thread_han_2032 = run move_thread_2032()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_2032 > 1):
+        join move_thread_han_2032
+        $ 2033 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 2034 "Buje24"
+    $ 2035 "Xfin≔((0.67945*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)"
+    global Xfin=((0.67945*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+    $ 2036 "Yfin≔((0.3937*Yp)-(Yd)+(0.67945*m1))*(-1)"
+    global Yfin=((0.3937*Yp)-(Yd)+(0.67945*m1))*(-1)
+    $ 2037 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 2038 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 2039 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 2040 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 2041 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+    $ 2042 "MoveL"
+    $ 2043 "MoveJ"
+    $ 2044 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 2045 "Direction: Base Z-"
+    global move_thread_flag_2045=0
+    thread move_thread_2045():
+      enter_critical
+      move_thread_flag_2045 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_2045 = 2
+      exit_critical
+    end
+    move_thread_flag_2045 = 0
+    move_thread_han_2045 = run move_thread_2045()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_2045 > 1):
+        join move_thread_han_2045
+        $ 2046 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 2047 "Direction: Base Z+"
+    global move_thread_flag_2047=0
+    thread move_thread_2047():
+      enter_critical
+      move_thread_flag_2047 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_2047 = 2
+      exit_critical
+    end
+    move_thread_flag_2047 = 0
+    move_thread_han_2047 = run move_thread_2047()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_2047 > 1):
+        join move_thread_han_2047
+        $ 2048 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 2049 "Buje25"
+    $ 2050 "Xfin≔((0.70485*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)"
+    global Xfin=((0.70485*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+    $ 2051 "Yfin≔((0.3937*Yp)-(Yd)+(0.70485*m1))*(-1)"
+    global Yfin=((0.3937*Yp)-(Yd)+(0.70485*m1))*(-1)
+    $ 2052 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 2053 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 2054 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 2055 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 2056 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+    $ 2057 "MoveL"
+    $ 2058 "MoveJ"
+    $ 2059 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 2060 "Direction: Base Z-"
+    global move_thread_flag_2060=0
+    thread move_thread_2060():
+      enter_critical
+      move_thread_flag_2060 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_2060 = 2
+      exit_critical
+    end
+    move_thread_flag_2060 = 0
+    move_thread_han_2060 = run move_thread_2060()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_2060 > 1):
+        join move_thread_han_2060
+        $ 2061 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 2062 "Direction: Base Z+"
+    global move_thread_flag_2062=0
+    thread move_thread_2062():
+      enter_critical
+      move_thread_flag_2062 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_2062 = 2
+      exit_critical
+    end
+    move_thread_flag_2062 = 0
+    move_thread_han_2062 = run move_thread_2062()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_2062 > 1):
+        join move_thread_han_2062
+        $ 2063 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 2064 "Buje26"
+    $ 2065 "Xfin≔((0.73025*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)"
+    global Xfin=((0.73025*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+    $ 2066 "Yfin≔((0.3937*Yp)-(Yd)+(0.73025*m1))*(-1)"
+    global Yfin=((0.3937*Yp)-(Yd)+(0.73025*m1))*(-1)
+    $ 2067 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 2068 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 2069 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 2070 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 2071 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+    $ 2072 "MoveL"
+    $ 2073 "MoveJ"
+    $ 2074 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 2075 "Direction: Base Z-"
+    global move_thread_flag_2075=0
+    thread move_thread_2075():
+      enter_critical
+      move_thread_flag_2075 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_2075 = 2
+      exit_critical
+    end
+    move_thread_flag_2075 = 0
+    move_thread_han_2075 = run move_thread_2075()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_2075 > 1):
+        join move_thread_han_2075
+        $ 2076 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 2077 "Direction: Base Z+"
+    global move_thread_flag_2077=0
+    thread move_thread_2077():
+      enter_critical
+      move_thread_flag_2077 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_2077 = 2
+      exit_critical
+    end
+    move_thread_flag_2077 = 0
+    move_thread_han_2077 = run move_thread_2077()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_2077 > 1):
+        join move_thread_han_2077
+        $ 2078 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 2079 "Buje27"
+    $ 2080 "Xfin≔((0.75565*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)"
+    global Xfin=((0.75565*Xp)-(Xd)-(0.3937*(1/m2)))*(-1)
+    $ 2081 "Yfin≔((0.3937*Yp)-(Yd)+(0.75565*m1))*(-1)"
+    global Yfin=((0.3937*Yp)-(Yd)+(0.75565*m1))*(-1)
+    $ 2082 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 2083 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 2084 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 2085 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 2086 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,-0.44,var_3,var_4,var_5]
+    $ 2087 "MoveL"
+    $ 2088 "MoveJ"
+    $ 2089 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 2090 "Direction: Base Z-"
+    global move_thread_flag_2090=0
+    thread move_thread_2090():
+      enter_critical
+      move_thread_flag_2090 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_2090 = 2
+      exit_critical
+    end
+    move_thread_flag_2090 = 0
+    move_thread_han_2090 = run move_thread_2090()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_2090 > 1):
+        join move_thread_han_2090
+        $ 2091 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 2092 "Direction: Base Z+"
+    global move_thread_flag_2092=0
+    thread move_thread_2092():
+      enter_critical
+      move_thread_flag_2092 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_2092 = 2
+      exit_critical
+    end
+    move_thread_flag_2092 = 0
+    move_thread_han_2092 = run move_thread_2092()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_2092 > 1):
+        join move_thread_han_2092
+        $ 2093 "Until (distance)"
+        break
+      end
+      sync()
+    end
+  end
+  def GoNoGo():
+    $ 2094 "GoNoGo" "noBreak"
+    $ 2095 "GoNoGo"
+    $ 2096 "Buje1"
+    $ 2097 "Xfin≔((0.09525*Xp)-(Xd)-(-0.0127*(1/m2)))*(-1)"
+    global Xfin=((0.09525*Xp)-(Xd)-(-0.0127*(1/m2)))*(-1)
+    $ 2098 "Yfin≔((-0.0127*Yp)-(Yd)+(0.09525*m1))*(-1)"
+    global Yfin=((-0.0127*Yp)-(Yd)+(0.09525*m1))*(-1)
+    $ 2099 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 2100 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 2101 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 2102 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 2103 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,0.11,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,0.11,var_3,var_4,var_5]
+    $ 2104 "MoveL"
+    $ 2105 "MoveJ"
+    $ 2106 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 2107 "Direction: Base Z-"
+    global move_thread_flag_2107=0
+    thread move_thread_2107():
+      enter_critical
+      move_thread_flag_2107 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_2107 = 2
+      exit_critical
+    end
+    move_thread_flag_2107 = 0
+    move_thread_han_2107 = run move_thread_2107()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_2107 > 1):
+        join move_thread_han_2107
+        $ 2108 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 2109 "Direction: Base Z+"
+    global move_thread_flag_2109=0
+    thread move_thread_2109():
+      enter_critical
+      move_thread_flag_2109 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_2109 = 2
+      exit_critical
+    end
+    move_thread_flag_2109 = 0
+    move_thread_han_2109 = run move_thread_2109()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_2109 > 1):
+        join move_thread_han_2109
+        $ 2110 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 2111 "Buje2"
+    $ 2112 "Xfin≔((0.12065*Xp)-(Xd)-(-0.0127*(1/m2)))*(-1)"
+    global Xfin=((0.12065*Xp)-(Xd)-(-0.0127*(1/m2)))*(-1)
+    $ 2113 "Yfin≔((-0.0127*Yp)-(Yd)+(0.12065*m1))*(-1)"
+    global Yfin=((-0.0127*Yp)-(Yd)+(0.12065*m1))*(-1)
+    $ 2114 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 2115 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 2116 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 2117 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 2118 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,0.11,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,0.11,var_3,var_4,var_5]
+    $ 2119 "MoveL"
+    $ 2120 "MoveJ"
+    $ 2121 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 2122 "Direction: Base Z-"
+    global move_thread_flag_2122=0
+    thread move_thread_2122():
+      enter_critical
+      move_thread_flag_2122 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_2122 = 2
+      exit_critical
+    end
+    move_thread_flag_2122 = 0
+    move_thread_han_2122 = run move_thread_2122()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_2122 > 1):
+        join move_thread_han_2122
+        $ 2123 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 2124 "Direction: Base Z+"
+    global move_thread_flag_2124=0
+    thread move_thread_2124():
+      enter_critical
+      move_thread_flag_2124 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_2124 = 2
+      exit_critical
+    end
+    move_thread_flag_2124 = 0
+    move_thread_han_2124 = run move_thread_2124()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_2124 > 1):
+        join move_thread_han_2124
+        $ 2125 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 2126 "Buje3"
+    $ 2127 "Xfin≔((0.14605*Xp)-(Xd)-(-0.0127*(1/m2)))*(-1)"
+    global Xfin=((0.14605*Xp)-(Xd)-(-0.0127*(1/m2)))*(-1)
+    $ 2128 "Yfin≔((-0.0127*Yp)-(Yd)+(0.14605*m1))*(-1)"
+    global Yfin=((-0.0127*Yp)-(Yd)+(0.14605*m1))*(-1)
+    $ 2129 "rotaciones≔get_actual_tcp_pose()"
+    global rotaciones= get_actual_tcp_pose ()
+    $ 2130 "var_3≔rotaciones[3]"
+    global var_3=rotaciones[3]
+    $ 2131 "var_4≔rotaciones[4]"
+    global var_4=rotaciones[4]
+    $ 2132 "var_5≔rotaciones[5]"
+    global var_5=rotaciones[5]
+    $ 2133 "PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,0.11,var_3,var_4,var_5]"
+    global PosFinal=p[Xfin+0.00208915,Yfin+0.00208915,0.11,var_3,var_4,var_5]
+    $ 2134 "MoveL"
+    $ 2135 "MoveJ"
+    $ 2136 "PosFinal" "breakAfter"
+    movej(PosFinal, a=1.3962634015954636, v=1.0471975511965976)
+    $ 2137 "Direction: Base Z-"
+    global move_thread_flag_2137=0
+    thread move_thread_2137():
+      enter_critical
+      move_thread_flag_2137 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_2137 = 2
+      exit_critical
+    end
+    move_thread_flag_2137 = 0
+    move_thread_han_2137 = run move_thread_2137()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_2137 > 1):
+        join move_thread_han_2137
+        $ 2138 "Until (distance)"
+        break
+      end
+      sync()
+    end
+    $ 2139 "Direction: Base Z+"
+    global move_thread_flag_2139=0
+    thread move_thread_2139():
+      enter_critical
+      move_thread_flag_2139 = 1
+      local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.075)
+      movel(towardsPos, a=0.02, v=0.02)
+      move_thread_flag_2139 = 2
+      exit_critical
+    end
+    move_thread_flag_2139 = 0
+    move_thread_han_2139 = run move_thread_2139()
+    while (True):
+      sleep(1.0E-10)
+      if (move_thread_flag_2139 > 1):
+        join move_thread_han_2139
+        $ 2140 "Until (distance)"
+        break
+      end
+      sync()
+    end
+  end
+  while (True):
+    $ 1 "Robot Program"
+    $ 2 "MoveJ"
+    $ 3 "Apagado" "breakAfter"
+    movej(get_inverse_kin(Apagado_p, qnear=Apagado_q), a=1.3962634015954636, v=1.0471975511965976)
+    $ 4 "Mantenimiento" "breakAfter"
+    movej(get_inverse_kin(Mantenimiento_p, qnear=Mantenimiento_q), a=1.3962634015954636, v=1.0471975511965976)
+    $ 5 "Variables"
+    $ 6 "muestras≔3"
+    global muestras=3
+    $ 7 "muestrasTomadas≔0"
+    global muestrasTomadas=0
+    $ 8 "alpha≔0"
+    global alpha=0
+    $ 9 "P1≔p[0,0,0,0,0,0]"
+    global P1=p[0,0,0,0,0,0]
+    $ 10 "P2≔p[0,0,0,0,0,0]"
+    global P2=p[0,0,0,0,0,0]
+    $ 11 "P3≔p[0,0,0,0,0,0]"
+    global P3=p[0,0,0,0,0,0]
+    $ 12 "P4≔p[0,0,0,0,0,0]"
+    global P4=p[0,0,0,0,0,0]
+    $ 13 "Coordenada≔p[0,0,0,0,0,0]"
+    global Coordenada=p[0,0,0,0,0,0]
+    $ 14 "MoveJ"
+    $ 15 "Loop"
+    while (True):
+      $ 16 "Waypoint_1" "breakAfter"
+      movej(get_inverse_kin(Waypoint_1_p, qnear=Waypoint_1_q), a=1.3962634015954636, v=1.0471975511965976)
+      $ 17 "Waypoint_2" "breakAfter"
+      movej(get_inverse_kin(Waypoint_2_p, qnear=Waypoint_2_q), a=1.3962634015954636, v=1.0471975511965976)
+      $ 18 "var_7≔pose_dist(Waypoint_1, Waypoint_2)"
+      global var_7= pose_dist (Waypoint_1_p, Waypoint_2_p)
+    end
+    $ 19 "Waypoint_1" "breakAfter"
+    movej(get_inverse_kin(Waypoint_1_p, qnear=Waypoint_1_q), a=1.3962634015954636, v=1.0471975511965976)
+    $ 20 "Waypoint_2" "breakAfter"
+    movej(get_inverse_kin(Waypoint_2_p, qnear=Waypoint_2_q), a=1.3962634015954636, v=1.0471975511965976)
+    $ 21 "pch_atual≔get_actual_tcp_pose()"
+    global pch_atual= get_actual_tcp_pose ()
+    $ 22 "Popup: hi"
+    popup(str_cat("",pch_atual), "Mensaje", False, False, blocking=True)
+    $ 23 "Movimiento eje 7"
+    $ 24 "MoveL"
+    $ 25 "Transporte" "breakAfter"
+    movel(Transporte_p, a=1.2, v=0.25)
+    $ 26 "Set postrnas_m187=Encender"
+    modbus_set_output_signal("postrnas_m187", True)
+    $ 28 "num_barreno≔str_cat('Barreno: ',1)"
+    global num_barreno=str_cat("Barreno: ",1)
+    $ 29 "var_6≔get_actual_tcp_pose()"
+    global var_6= get_actual_tcp_pose ()
+    $ 30 "X_actual≔str_cat('     X: ',var_6[0])"
+    global X_actual=str_cat("     X: ",var_6[0])
+    $ 31 "Y_actual≔str_cat('     Y: ',var_6[1])"
+    global Y_actual=str_cat("     Y: ",var_6[1])
+    $ 32 "pos_barreno≔str_cat(X_actual,Y_actual)"
+    global pos_barreno=str_cat(X_actual,Y_actual)
+    $ 33 "textmsg('------------------DAS LOG------------------')"
+    textmsg("------------------DAS LOG------------------")
+    $ 34 "textmsg(num_barreno,pos_barreno)"
+    textmsg(num_barreno,pos_barreno)
+    $ 35 "Popup: hsjd"
+    popup("hsjd", "Advertencia", True, False, blocking=True)
+    $ 36 "Saludos"
+    $ 37 "MoveL"
+    $ 38 "Transporte" "breakAfter"
+    movel(Transporte_p, a=1.2, v=0.25)
+    $ 39 "Set postrnas_m187=Encender"
+    modbus_set_output_signal("postrnas_m187", True)
+    $ 42 "MoveJ"
+    $ 44 "Set postrnas_m187=Apagar"
+    modbus_set_output_signal("postrnas_m187", False)
+    $ 45 "Waypoint_3" "breakAfter"
+    movej(get_inverse_kin(Waypoint_3_p, qnear=Waypoint_3_q), a=1.3962634015954636, v=1.0471975511965976)
+    $ 47 "Loop 15 times"
+    Loop_1 = 0
+    while (Loop_1 < 15):
+      $ 48 "MoveL"
+      $ 51 "Waypoint_3" "breakAfter"
+      movel(Waypoint_3_p, a=2.2, v=1.5)
+      $ 52 "Waypoint_4" "breakAfter"
+      movel(Waypoint_4_p, a=2.2, v=1.5)
+      Loop_1 = Loop_1 + 1
+    end
+    $ 57 "Popup: arranquesito"
+    popup("arranquesito", "Mensaje", False, False, blocking=True)
+    $ 66 "Cambio_Brocas"
+    $ 67 "Loop 1 times"
+    Loop_1 = 0
+    while (Loop_1 < 1):
+      $ 68 "MoveJ"
+      $ 73 "PreCambio_Broca" "breakAfter"
+      movej(get_inverse_kin(PreCambio_Broca_p, qnear=PreCambio_Broca_q), a=1.3962634015954636, v=1.0471975511965976)
+      $ 77 "Call Poner_Broca"
+      Poner_Broca()
+      Loop_1 = Loop_1 + 1
+    end
+    $ 78 "Barrenado"
+    $ 79 "alpha≔0"
+    global alpha=0
+    $ 80 "Loop"
+    while (True):
+      $ 81 "MoveJ"
+      $ 82 "casa" "breakAfter"
+      movej(get_inverse_kin(casa_p, qnear=casa_q), a=1.3962634015954636, v=1.0471975511965976)
+      $ 83 "Call Calibracion"
+      Calibracion()
+      $ 84 "Call GoNoGo"
+      GoNoGo()
+      $ 85 "MoveL"
+      $ 86 "Barreno1" "breakAfter"
+      movel(Barreno1_p, a=1.2, v=0.25)
+      $ 87 "Barreno2" "breakAfter"
+      movel(Barreno2_p, a=1.2, v=0.25)
+      $ 88 "Loop 2 times"
+      Loop_9 = 0
+      while (Loop_9 < 2):
+        $ 89 "If alpha≤16"
+        if (alpha <= 16):
+          $ 90 "internos≔interpolate_pose(Barreno1, Barreno2, alpha)"
+          global internos= interpolate_pose (Barreno1_p, Barreno2_p, alpha)
+          $ 91 "bajada≔p[0,0,-0.024,0,0,0]"
+          global bajada=p[0,0,-0.024,0,0,0]
+          $ 92 "subida≔p[0,0,0.024,0,0,0]"
+          global subida=p[0,0,0.024,0,0,0]
+          $ 93 "internos" "breakAfter"
+          movel(internos, a=1.2, v=0.25)
+          $ 94 "Direction: Base Z-"
+          global move_thread_flag_94=0
+          thread move_thread_94():
+            enter_critical
+            move_thread_flag_94 = 1
+            local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 0.067)
+            movel(towardsPos, a=1.2, v=0.25)
+            move_thread_flag_94 = 2
+            exit_critical
+          end
+          move_thread_flag_94 = 0
+          move_thread_han_94 = run move_thread_94()
+          while (True):
+            sleep(1.0E-10)
+            if (move_thread_flag_94 > 1):
+              join move_thread_han_94
+              $ 95 "Until (distance)"
+              break
+            end
+            sync()
+          end
+          $ 96 "Direction: Base Z-"
+          global move_thread_flag_96=0
+          thread move_thread_96():
+            enter_critical
+            move_thread_flag_96 = 1
+            local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,-1.0], 1000.0)
+            movel(towardsPos, a=2.0E-4, v=0.0013)
+            move_thread_flag_96 = 2
+            exit_critical
+          end
+          move_thread_flag_96 = 0
+          move_thread_han_96 = run move_thread_96()
+          while (True):
+            local targetTcpDirection=get_target_tcp_speed()
+            local stepsToRetract=tool_contact(direction=targetTcpDirection)
+            if (stepsToRetract > 0):
+              kill move_thread_han_96
+              stopl(9.0)
+              local backTrackMovement=get_actual_joint_positions_history(stepsToRetract)
+              local contactPose=get_forward_kin(backTrackMovement)
+              local posDir=[targetTcpDirection[0],targetTcpDirection[1],targetTcpDirection[2]]
+              local retractTo=contactPose
+              if (norm(posDir) > 1e-6):
+                local normalizedPosDir=normalize(posDir)
+                local additionalRetraction=p[normalizedPosDir[0] * 0.0, normalizedPosDir[1] * 0.0, normalizedPosDir[2] * 0.0, 0, 0, 0]
+                retractTo = pose_sub(contactPose, additionalRetraction)
+              end
+              movel(retractTo, a=9.0, v=0.1)
+              $ 97 "Until (tool_contact_detection)"
+              break
+            end
+            sync()
+          end
+          $ 98 "Wait: 0.3"
+          sleep(0.3)
+          $ 99 "Set CO[1]=Encender"
+          set_configurable_digital_out(1, True)
+          $ 100 "Wait: 0.5"
+          sleep(0.5)
+          $ 101 "Set CO[1]=Apagar"
+          set_configurable_digital_out(1, False)
+          $ 102 "Direction: Base Z+"
+          global move_thread_flag_102=0
+          thread move_thread_102():
+            enter_critical
+            move_thread_flag_102 = 1
+            local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.002)
+            movel(towardsPos, a=1.2, v=0.25)
+            move_thread_flag_102 = 2
+            exit_critical
+          end
+          move_thread_flag_102 = 0
+          move_thread_han_102 = run move_thread_102()
+          while (True):
+            sleep(1.0E-10)
+            if (move_thread_flag_102 > 1):
+              join move_thread_han_102
+              $ 103 "Until (distance)"
+              break
+            end
+            sync()
+          end
+          $ 104 "Wait: 0.5"
+          sleep(0.5)
+          $ 105 "Set CO[1]=Encender"
+          set_configurable_digital_out(1, True)
+          $ 106 "Wait: 0.3"
+          sleep(0.3)
+          $ 107 "Loop 1 times"
+          Loop_6 = 0
+          while (Loop_6 < 1):
+            $ 108 "bajar≔pose_add(get_actual_tcp_pose(), bajada)"
+            global bajar= pose_add ( get_actual_tcp_pose (), bajada)
+            $ 109 "bajar" "breakAfter"
+            movel(bajar, a=0.01, v=0.005)
+            $ 110 "subir≔pose_add(get_actual_tcp_pose(), subida)"
+            global subir= pose_add ( get_actual_tcp_pose (), subida)
+            $ 111 "subir" "breakAfter"
+            movel(subir, a=0.02, v=0.02)
+            $ 112 "bajada≔pose_add(bajada, p[0,0,-0.008,0,0,0])"
+            global bajada= pose_add (bajada, p[0,0,-0.008,0,0,0])
+            $ 113 "subida≔pose_add(subida, p[0,0,0.008,0,0,0])"
+            global subida= pose_add (subida, p[0,0,0.008,0,0,0])
+            Loop_6 = Loop_6 + 1
+          end
+          $ 114 "Set CO[1]=Apagar"
+          set_configurable_digital_out(1, False)
+          $ 115 "Direction: Base Z+"
+          global move_thread_flag_115=0
+          thread move_thread_115():
+            enter_critical
+            move_thread_flag_115 = 1
+            local towardsPos=calculate_point_to_move_towards(p[0.0,0.0,0.0,0.0,0.0,0.0], [0.0,0.0,1.0], 0.1)
+            movel(towardsPos, a=1.2, v=0.25)
+            move_thread_flag_115 = 2
+            exit_critical
+          end
+          move_thread_flag_115 = 0
+          move_thread_han_115 = run move_thread_115()
+          while (True):
+            sleep(1.0E-10)
+            if (move_thread_flag_115 > 1):
+              join move_thread_han_115
+              $ 116 "Until (distance)"
+              break
+            end
+            sync()
+          end
+          $ 117 "alpha≔alpha+1"
+          global alpha=alpha+1
+        else:
+          $ 118 "Else" "noBreak"
+          $ 119 "Popup: linea barrenada"
+          popup("linea barrenada", "Mensaje", False, False, blocking=True)
+          $ 120 "Call Quitar_Broca_Chida"
+          Quitar_Broca_Chida()
+          $ 121 "Popup: fin"
+          popup("fin", "Mensaje", False, False, blocking=True)
+        end
+        Loop_9 = Loop_9 + 1
+      end
+      $ 122 "Call Quitar_Broca_Chida"
+      Quitar_Broca_Chida()
+      $ 123 "Call Poner_Broca"
+      Poner_Broca()
+    end
+  end
+end
