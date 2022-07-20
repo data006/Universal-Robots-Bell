@@ -1,0 +1,2067 @@
+ Program
+   Robot Program
+     'Pruebas_Cambiador'
+     ''Codigo''
+     Set salida0=Encender
+     MoveJ
+       Off_derecha
+     broca≔1645
+     textmsg("----------DAS-----------")
+     If Lado_Correr≟2
+       If pos_sig_der≟0
+         Arranque
+           Set mensaje_mw10=15
+           Wait Continuar_M30=HI
+           Wait: 1.0
+           MoveJ
+             Off_derecha
+           Set postrnas_m187=Encender
+           Wait: 1.0
+           Set Home_M20=Encender
+           Wait: 1.0
+           Set postrnas_m187=Apagar
+           Set Home_M20=Apagar
+           Set mensaje_mw10=20
+           Wait Continuar_M30=HI
+           Wait: 1.0
+         Traslacion
+           Set mensaje_mw10=25
+           Wait Continuar_M30=HI
+           Wait: 1.0
+           MoveJ
+             Waypoint_8
+             Traslacion_der
+           Set mensaje_mw10=30
+           Wait Continuar_M30=HI
+           Wait: 1.0
+           Set postrnas_m187=Encender
+           Wait: 1.0
+           Set pose2_m252=Encender
+           Wait: 1.0
+           Set pose2_m252=Apagar
+           Set postrnas_m187=Apagar
+           Wait: 10.0
+           Set mensaje_mw10=35
+           Wait Continuar_M30=HI
+           Wait: 1.0
+         Brocas
+           Set carrusel_home=Encender
+           Wait: 1.0
+           Set carrusel_home=Apagar
+           Set mensaje_mw10=40
+           Wait Continuar_M30=HI
+           Wait: 1.0
+           Set carrusel_home=Encender
+           Wait: 1.0
+           Set carrusel_home=Apagar
+           Set mensaje_mw10=45
+           Wait Continuar_M30=HI
+           Wait: 1.0
+           Call Poner_Broca
+         Offsets factor
+           'broca≔1645'
+           L1B1x≔((0.09525254)/(0.09525))*(0.09525254)
+           L1B1y≔((-0.01266698)/(-0.0127))*(-0.01266698)
+           L1B2x≔((0.75576176)/(0.75565))*(0.75576176)
+           L1B2y≔((-0.01269238)/(-0.0127))*(-0.01269238)
+           L2B1x≔((0.09513062)/(0.09525))*(0.09525)
+           L2B1y≔((0.39369238)/(0.3937))*(0.39369238)
+           L2B2x≔((0.75565508)/(0.75565))*(0.75565508)
+           L2B2y≔((0.39372032)/(0.3937))*(0.39372032)
+         Calibracion
+           Set mensaje_mw10=50
+           Wait Continuar_M30=HI
+           Wait: 1.0
+           MoveJ
+             Posicion_Cero
+             Zona_der1
+           broca≔1645
+           Set mensaje_mw10=125
+           Wait Continuar_M30=HI
+           Wait: 1.0
+           Set mensaje_mw10=130
+           Wait Continuar_M30=HI
+           Wait: 1.0
+           Call Calibracion
+         GoNoGo
+           Set mensaje_mw10=55
+           Wait Continuar_M30=HI
+           Wait: 1.0
+           Set mensaje_mw10=60
+           Wait Continuar_M30=HI
+           Wait: 1.0
+           Linea1_Buje1
+             Xfin≔(((L1B1x)*Xp)-(Xd)-((L1B1y)*(1/m2)))*(-1)
+             Yfin≔(((L1B1y)*Yp)-(Yd)+((L1B1x)*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             If broca≟1645
+               PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,0.1,var_3,var_4,var_5]
+             ElseIf broca≟1935
+               PosFinal≔p[Xfin+0.00245745,Yfin+0.00245745,0.1,var_3,var_4,var_5]
+             ElseIf broca≟217
+               PosFinal≔p[Xfin+0.0027559,Yfin+0.0027559,0.1,var_3,var_4,var_5]
+             Buje_Final≔PosFinal
+           MoveJ
+             Buje_Final
+           Wait: 1.0
+           Alturas
+             If P1h[2]<P2h[2]
+               tcp≔get_actual_tcp_pose()
+               offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(altura/1000)),tcp[3],tcp[4],tcp[5]]
+               MoveL
+                 offset_altura
+             Else
+               tcp≔get_actual_tcp_pose()
+               offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)),tcp[3],tcp[4],tcp[5]]
+               MoveL
+                 offset_altura
+           MoveL
+             Freemove
+               Wait: 2.0
+               freedrive_mode()
+               Wait: 2.5
+               end_freedrive_mode()
+               var_11≔get_actual_tcp_pose()
+               var_11≔p[var_11[0]*1000,var_11[1]*1000,420,420,420,420]
+               var_11≔get_actual_tcp_pose()
+               var_11≔p[var_11[0],var_11[1],0.1,var_11[3],var_11[4],var_11[5]]
+             Direction: Base Z+
+               Until (distance)
+             Direction: Base X-
+               Until (distance)
+           L1B1≔var_11
+           Linea1_Buje2
+             Xfin≔(((L1B2x)*Xp)-(Xd)-((L1B2y)*(1/m2)))*(-1)
+             Yfin≔(((L1B2y)*Yp)-(Yd)+((L1B2x)*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             If broca≟1645
+               PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,0.1,var_3,var_4,var_5]
+             ElseIf broca≟1935
+               PosFinal≔p[Xfin+0.00245745,Yfin+0.00245745,0.1,var_3,var_4,var_5]
+             ElseIf broca≟217
+               PosFinal≔p[Xfin+0.0027559,Yfin+0.0027559,0.1,var_3,var_4,var_5]
+             Buje_Final≔PosFinal
+           MoveJ
+             Buje_Final
+           Wait: 1.0
+           Alturas
+             If P1h[2]<P2h[2]
+               tcp≔get_actual_tcp_pose()
+               offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)),tcp[3],tcp[4],tcp[5]]
+               MoveL
+                 offset_altura
+             Else
+               tcp≔get_actual_tcp_pose()
+               offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(altura/1000)),tcp[3],tcp[4],tcp[5]]
+               MoveL
+                 offset_altura
+           MoveL
+             Freemove
+               Wait: 2.0
+               freedrive_mode()
+               Wait: 2.5
+               end_freedrive_mode()
+               var_11≔get_actual_tcp_pose()
+               var_11≔p[var_11[0]*1000,var_11[1]*1000,420,420,420,420]
+               var_11≔get_actual_tcp_pose()
+               var_11≔p[var_11[0],var_11[1],0.1,var_11[3],var_11[4],var_11[5]]
+             Direction: Base Z+
+               Until (distance)
+           L1B2≔var_11
+           Linea2_Buje2
+             Xfin≔(((L2B2x)*Xp)-(Xd)-((L2B2y)*(1/m2)))*(-1)
+             Yfin≔(((L2B2y)*Yp)-(Yd)+((L2B2x)*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             If broca≟1645
+               PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,0.1,var_3,var_4,var_5]
+             ElseIf broca≟1935
+               PosFinal≔p[Xfin+0.00245745,Yfin+0.00245745,0.1,var_3,var_4,var_5]
+             ElseIf broca≟217
+               PosFinal≔p[Xfin+0.0027559,Yfin+0.0027559,0.1,var_3,var_4,var_5]
+             Buje_Final≔PosFinal
+           MoveJ
+             Buje_Final
+           Wait: 1.0
+           Alturas
+             If P1h[2]<P2h[2]
+               tcp≔get_actual_tcp_pose()
+               offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)),tcp[3],tcp[4],tcp[5]]
+               MoveL
+                 offset_altura
+             Else
+               tcp≔get_actual_tcp_pose()
+               offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(altura/1000)),tcp[3],tcp[4],tcp[5]]
+               MoveL
+                 offset_altura
+           MoveL
+             Freemove
+               Wait: 2.0
+               freedrive_mode()
+               Wait: 2.5
+               end_freedrive_mode()
+               var_11≔get_actual_tcp_pose()
+               var_11≔p[var_11[0]*1000,var_11[1]*1000,420,420,420,420]
+               var_11≔get_actual_tcp_pose()
+               var_11≔p[var_11[0],var_11[1],0.1,var_11[3],var_11[4],var_11[5]]
+             Direction: Base Z+
+               Until (distance)
+           L2B2≔var_11
+           Linea2_Buje1
+             Xfin≔(((L2B1x)*Xp)-(Xd)-((L2B1y)*(1/m2)))*(-1)
+             Yfin≔(((L2B1y)*Yp)-(Yd)+((L2B1x)*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             If broca≟1645
+               PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,0.1,var_3,var_4,var_5]
+             ElseIf broca≟1935
+               PosFinal≔p[Xfin+0.00245745,Yfin+0.00245745,0.1,var_3,var_4,var_5]
+             ElseIf broca≟217
+               PosFinal≔p[Xfin+0.0027559,Yfin+0.0027559,0.1,var_3,var_4,var_5]
+             Buje_Final≔PosFinal
+           MoveJ
+             Buje_Final
+           Wait: 1.0
+           Alturas
+             If P1h[2]<P2h[2]
+               tcp≔get_actual_tcp_pose()
+               offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(altura/1000)),tcp[3],tcp[4],tcp[5]]
+               MoveL
+                 offset_altura
+             Else
+               tcp≔get_actual_tcp_pose()
+               offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)),tcp[3],tcp[4],tcp[5]]
+               MoveL
+                 offset_altura
+           MoveL
+             Freemove
+               Wait: 2.0
+               freedrive_mode()
+               Wait: 2.5
+               end_freedrive_mode()
+               var_11≔get_actual_tcp_pose()
+               var_11≔p[var_11[0]*1000,var_11[1]*1000,420,420,420,420]
+               var_11≔get_actual_tcp_pose()
+               var_11≔p[var_11[0],var_11[1],0.1,var_11[3],var_11[4],var_11[5]]
+             Direction: Base Z+
+               Until (distance)
+           L2B1≔var_11
+           MoveJ
+             Zona_der1
+         Colocar broca
+           Call Quitar_Broca_Chida
+           Call Poner_Broca
+         'Cancelar barrenacion'
+         Barrenado
+           Set mensaje_mw10=65
+           Wait Continuar_M30=HI
+           Wait: 1.0
+           Set mensaje_mw10=150
+           Wait: 1.0
+           Linea 1 a 1645
+             broca≔1645
+             Buje_inicial
+               Buje_Inicial≔L1B2
+             Buje_final
+               Buje_Final≔L1B1
+             barrenosTotales≔27
+             barrenoActual≔1
+             Loop barrenoActual≤barrenosTotales
+               MoveL
+                 bajada_broca≔p[0,0,0.006,0,0,0]
+                 internos≔interpolate_pose(Buje_Inicial, Buje_Final, ((barrenoActual)-1)/((barrenosTotales)-1))
+                 If barrenoActual≟1 or barrenoActual≟3 or barrenoActual≟5 or barrenoActual≟7 or barrenoActual≟9 or barrenoActual≟11 or barrenoActual≟13 or barrenoActual≟15 or barrenoActual≟17 or barrenoActual≟19 or barrenoActual≟21 or barrenoActual≟23 or barrenoActual≟25 or barrenoActual≟27
+                   Set mensaje_mw10=200
+                   Wait Continuar_M30=HI
+                   Wait: 1.0
+                   Set mensaje_mw10=150
+                   Wait: 1.0
+                 MoveJ
+                   internos
+                 Wait: 2.0
+                 Alturas
+                   If P1h[2]<P2h[2]
+                     acomodo≔(altura/(barrenosTotales-1))*(barrenoActual-1)
+                     tcp≔get_actual_tcp_pose()
+                     offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(acomodo/1000)),tcp[3],tcp[4],tcp[5]]
+                     MoveL
+                       offset_altura
+                   Else
+                     acomodo≔(altura/(barrenosTotales-1))*(26-(barrenoActual-1))
+                     tcp≔get_actual_tcp_pose()
+                     offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(acomodo/1000)),tcp[3],tcp[4],tcp[5]]
+                     MoveL
+                       offset_altura
+                 Freemove
+                   Wait: 2.0
+                   freedrive_mode()
+                   Wait: 2.5
+                   end_freedrive_mode()
+                 Wait: 0.3
+                 Set CO[1]=Encender
+                 Wait: 1.0
+                 Wait: 0.3
+                 Wait: 0.3
+                 Wait: 0.3
+                 Loop 3 times
+                   Poses_taladrado≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                   Poses_taladrado
+                   If bajada_broca≟p[0,0,0.018,0,0,0]
+                     num_barreno≔str_cat("Barreno: ",barrenoActual)
+                     tcp_actual≔get_actual_tcp_pose()
+                     X_actual≔str_cat("     X: ",tcp_actual[0])
+                     Y_actual≔str_cat("     Y: ",tcp_actual[1])
+                     pos_barreno≔str_cat(X_actual,Y_actual)
+                     textmsg(num_barreno,pos_barreno)
+                   Poses_taladrado≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                   Poses_taladrado
+                   bajada_broca≔pose_add(bajada_broca, p[0,0,0.006,0,0,0])
+                 Direction: Base Z+
+                   Until (distance)
+                 MoveJ
+                   internos
+                 Wait: 0.3
+                 Set CO[1]=Apagar
+                 Wait: 0.3
+                 If barrenoActual≟13 or barrenoActual≟27
+                   Direction: Base Z+
+                     Until (distance)
+                   MoveJ
+                     Zona_der1
+                     Posicion_Cero
+                   Call Quitar_Broca_Chida
+                   If barrenoActual≟13
+                     Call Poner_Broca
+                   ElseIf barrenoActual≟27
+                     Call Poner_Broca
+                   MoveJ
+                     Posicion_Cero
+                     Zona_der1
+                 barrenoActual≔barrenoActual+1
+           Linea 2 a 1645
+             broca≔1645
+             Buje_inicial
+               Buje_Inicial≔L2B2
+             Buje_final
+               Buje_Final≔L2B1
+             barrenosTotales≔27
+             barrenoActual≔1
+             Loop barrenoActual≤barrenosTotales
+               MoveL
+                 bajada_broca≔p[0,0,0.006,0,0,0]
+                 internos≔interpolate_pose(Buje_Inicial, Buje_Final, ((barrenoActual)-1)/((barrenosTotales)-1))
+                 Alturas
+                   If barrenoActual≟1 or barrenoActual≟3 or barrenoActual≟5 or barrenoActual≟7 or barrenoActual≟9 or barrenoActual≟11 or barrenoActual≟13 or barrenoActual≟15 or barrenoActual≟17 or barrenoActual≟19 or barrenoActual≟21 or barrenoActual≟23 or barrenoActual≟25 or barrenoActual≟27
+                     Set mensaje_mw10=200
+                     Wait Continuar_M30=HI
+                     Wait: 1.0
+                     Set mensaje_mw10=150
+                     Wait: 1.0
+                   MoveJ
+                     internos
+                   Wait: 2.0
+                   If P1h[2]<P2h[2]
+                     acomodo≔(altura/(barrenosTotales-1))*(barrenoActual-1)
+                     tcp≔get_actual_tcp_pose()
+                     offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(acomodo/1000)),tcp[3],tcp[4],tcp[5]]
+                     MoveL
+                       offset_altura
+                   Else
+                     acomodo≔(altura/(barrenosTotales-1))*(26-(barrenoActual-1))
+                     tcp≔get_actual_tcp_pose()
+                     offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(acomodo/1000)),tcp[3],tcp[4],tcp[5]]
+                     MoveL
+                       offset_altura
+                 Freemove
+                   Wait: 2.0
+                   freedrive_mode()
+                   Wait: 2.5
+                   end_freedrive_mode()
+                 Wait: 0.3
+                 Set CO[1]=Encender
+                 Wait: 1.0
+                 Wait: 0.3
+                 Wait: 0.3
+                 Wait: 0.3
+                 Loop 3 times
+                   Poses_taladrado≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                   Poses_taladrado
+                   If bajada_broca≟p[0,0,0.018,0,0,0]
+                     num_barreno≔str_cat("Barreno: ",barrenoActual)
+                     tcp_actual≔get_actual_tcp_pose()
+                     X_actual≔str_cat("     X: ",tcp_actual[0])
+                     Y_actual≔str_cat("     Y: ",tcp_actual[1])
+                     pos_barreno≔str_cat(X_actual,Y_actual)
+                     textmsg(num_barreno,pos_barreno)
+                   Poses_taladrado≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                   Poses_taladrado
+                   bajada_broca≔pose_add(bajada_broca, p[0,0,0.006,0,0,0])
+                 Direction: Base Z+
+                   Until (distance)
+                 MoveJ
+                   internos
+                 Wait: 0.3
+                 Set CO[1]=Apagar
+                 Wait: 0.3
+                 If barrenoActual≟13
+                   Direction: Base Z+
+                     Until (distance)
+                   MoveJ
+                     Zona_der1
+                     Posicion_Cero
+                   Call Quitar_Broca_Chida
+                   Call Poner_Broca
+                   MoveJ
+                     Posicion_Cero
+                     Zona_der1
+                 ElseIf barrenoActual≟27
+                   Direction: Base Z+
+                     Until (distance)
+                   MoveJ
+                     Zona_der1
+                     Posicion_Cero
+                   Call Quitar_Broca_Chida
+                   Set carrusel_home=Encender
+                   Wait: 1.0
+                   Set carrusel_home=Apagar
+                   Set mensaje_mw10=70
+                   Wait Continuar_M30=HI
+                   Wait: 1.0
+                   Set mensaje_mw10=120
+                   Wait Continuar_M30=HI
+                   Wait: 1.0
+                   Set carrusel_home=Encender
+                   Wait: 1.0
+                   Set carrusel_home=Apagar
+                   Set mensaje_mw10=75
+                   Wait Continuar_M30=HI
+                   Wait: 1.0
+                   Call Poner_Broca
+                   broca≔1935
+                   MoveJ
+                     Posicion_Cero
+                     Zona_der1
+                   Set mensaje_mw10=80
+                   Wait Continuar_M30=HI
+                   Wait: 1.0
+                   Set mensaje_mw10=150
+                   Wait Continuar_M30=HI
+                   Wait: 1.0
+                 barrenoActual≔barrenoActual+1
+           Linea 1 a 1935
+             broca≔1935
+             Buje_inicial
+               Buje_Inicial≔L1B2
+             Buje_final
+               Buje_Final≔L1B1
+             barrenosTotales≔27
+             barrenoActual≔1
+             Loop barrenoActual≤barrenosTotales
+               MoveL
+                 bajada_broca≔p[0,0,0.009,0,0,0]
+                 internos≔interpolate_pose(Buje_Inicial, Buje_Final, ((barrenoActual)-1)/((barrenosTotales)-1))
+                 Alturas
+                   If barrenoActual≟1 or barrenoActual≟3 or barrenoActual≟5 or barrenoActual≟7 or barrenoActual≟9 or barrenoActual≟11 or barrenoActual≟13 or barrenoActual≟15 or barrenoActual≟17 or barrenoActual≟19 or barrenoActual≟21 or barrenoActual≟23 or barrenoActual≟25 or barrenoActual≟27
+                     Set mensaje_mw10=200
+                     Wait Continuar_M30=HI
+                     Wait: 1.0
+                     Set mensaje_mw10=150
+                     Wait: 1.0
+                   MoveJ
+                     internos
+                   Wait: 2.0
+                   If P1h[2]<P2h[2]
+                     acomodo≔(altura/(barrenosTotales-1))*(barrenoActual-1)
+                     tcp≔get_actual_tcp_pose()
+                     offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(acomodo/1000)),tcp[3],tcp[4],tcp[5]]
+                     MoveL
+                       offset_altura
+                   Else
+                     acomodo≔(altura/(barrenosTotales-1))*(26-(barrenoActual-1))
+                     tcp≔get_actual_tcp_pose()
+                     offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(acomodo/1000)),tcp[3],tcp[4],tcp[5]]
+                     MoveL
+                       offset_altura
+                 Freemove
+                   Wait: 2.0
+                   freedrive_mode()
+                   Wait: 2.5
+                   end_freedrive_mode()
+                 Wait: 0.3
+                 Set CO[1]=Encender
+                 Wait: 1.0
+                 Wait: 0.3
+                 Wait: 0.3
+                 Wait: 0.3
+                 Loop 2 times
+                   Poses_taladrado≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                   Poses_taladrado
+                   If bajada_broca≟p[0,0,0.018,0,0,0]
+                     num_barreno≔str_cat("Barreno: ",barrenoActual)
+                     tcp_actual≔get_actual_tcp_pose()
+                     X_actual≔str_cat("     X: ",tcp_actual[0])
+                     Y_actual≔str_cat("     Y: ",tcp_actual[1])
+                     pos_barreno≔str_cat(X_actual,Y_actual)
+                     textmsg(num_barreno,pos_barreno)
+                   Poses_taladrado≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                   Poses_taladrado
+                   bajada_broca≔pose_add(bajada_broca, p[0,0,0.009,0,0,0])
+                 Direction: Base Z+
+                   Until (distance)
+                 MoveJ
+                   internos
+                 Wait: 0.3
+                 Set CO[1]=Apagar
+                 Wait: 0.3
+                 If barrenoActual≟13 or barrenoActual≟27
+                   Direction: Base Z+
+                     Until (distance)
+                   MoveJ
+                     Zona_der1
+                     Posicion_Cero
+                   Call Quitar_Broca_Chida
+                   If barrenoActual≟13
+                     Call Poner_Broca
+                   ElseIf barrenoActual≟27
+                     Call Poner_Broca
+                   MoveJ
+                     Posicion_Cero
+                     Zona_der1
+                 barrenoActual≔barrenoActual+1
+           Linea 2 a 1935
+             broca≔1935
+             Buje_inicial
+               Buje_Inicial≔L2B2
+             Buje_final
+               Buje_Final≔L2B1
+             barrenosTotales≔27
+             barrenoActual≔1
+             Loop barrenoActual≤barrenosTotales
+               MoveL
+                 bajada_broca≔p[0,0,0.009,0,0,0]
+                 internos≔interpolate_pose(Buje_Inicial, Buje_Final, ((barrenoActual)-1)/((barrenosTotales)-1))
+                 Alturas
+                   If barrenoActual≟1 or barrenoActual≟3 or barrenoActual≟5 or barrenoActual≟7 or barrenoActual≟9 or barrenoActual≟11 or barrenoActual≟13 or barrenoActual≟15 or barrenoActual≟17 or barrenoActual≟19 or barrenoActual≟21 or barrenoActual≟23 or barrenoActual≟25 or barrenoActual≟27
+                     Set mensaje_mw10=200
+                     Wait Continuar_M30=HI
+                     Wait: 1.0
+                     Set mensaje_mw10=150
+                     Wait: 1.0
+                   MoveJ
+                     internos
+                   Wait: 2.0
+                   If P1h[2]<P2h[2]
+                     acomodo≔(altura/(barrenosTotales-1))*(barrenoActual-1)
+                     tcp≔get_actual_tcp_pose()
+                     offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(acomodo/1000)),tcp[3],tcp[4],tcp[5]]
+                     MoveL
+                       offset_altura
+                   Else
+                     acomodo≔(altura/(barrenosTotales-1))*(26-(barrenoActual-1))
+                     tcp≔get_actual_tcp_pose()
+                     offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(acomodo/1000)),tcp[3],tcp[4],tcp[5]]
+                     MoveL
+                       offset_altura
+                 Freemove
+                   Wait: 2.0
+                   freedrive_mode()
+                   Wait: 2.5
+                   end_freedrive_mode()
+                 Wait: 0.3
+                 Set CO[1]=Encender
+                 Wait: 1.0
+                 Wait: 0.3
+                 Wait: 0.3
+                 Wait: 0.3
+                 Loop 2 times
+                   Poses_taladrado≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                   Poses_taladrado
+                   If bajada_broca≟p[0,0,0.018,0,0,0]
+                     num_barreno≔str_cat("Barreno: ",barrenoActual)
+                     tcp_actual≔get_actual_tcp_pose()
+                     X_actual≔str_cat("     X: ",tcp_actual[0])
+                     Y_actual≔str_cat("     Y: ",tcp_actual[1])
+                     pos_barreno≔str_cat(X_actual,Y_actual)
+                     textmsg(num_barreno,pos_barreno)
+                   Poses_taladrado≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                   Poses_taladrado
+                   bajada_broca≔pose_add(bajada_broca, p[0,0,0.009,0,0,0])
+                 Direction: Base Z+
+                   Until (distance)
+                 MoveJ
+                   internos
+                 Wait: 0.3
+                 Set CO[1]=Apagar
+                 Wait: 0.3
+                 If barrenoActual≟13
+                   Direction: Base Z+
+                     Until (distance)
+                   MoveJ
+                     Zona_der1
+                     Posicion_Cero
+                   Call Quitar_Broca_Chida
+                   Call Poner_Broca
+                   MoveJ
+                     Posicion_Cero
+                     Zona_der1
+                 ElseIf barrenoActual≟27
+                   Direction: Base Z+
+                     Until (distance)
+                   MoveJ
+                     Zona_der1
+                     Posicion_Cero
+                   Call Quitar_Broca_Chida
+                   Set carrusel_home=Encender
+                   Wait: 1.0
+                   Set carrusel_home=Apagar
+                   Set mensaje_mw10=85
+                   Wait Continuar_M30=HI
+                   Wait: 1.0
+                   Set mensaje_mw10=120
+                   Wait Continuar_M30=HI
+                   Wait: 1.0
+                   Set carrusel_home=Encender
+                   Wait: 1.0
+                   Set carrusel_home=Apagar
+                   Set mensaje_mw10=90
+                   Wait Continuar_M30=HI
+                   Wait: 1.0
+                   Call Poner_Broca
+                   broca≔217
+                   MoveJ
+                     Posicion_Cero
+                     Zona_der1
+                   Set mensaje_mw10=95
+                   Wait Continuar_M30=HI
+                   Wait: 1.0
+                   Set mensaje_mw10=150
+                   Wait Continuar_M30=HI
+                   Wait: 1.0
+                 barrenoActual≔barrenoActual+1
+           Linea 1 a 217
+             broca≔217
+             Buje_inicial
+               Buje_Inicial≔L1B2
+             Buje_final
+               Buje_Final≔L1B1
+             barrenosTotales≔27
+             barrenoActual≔1
+             Loop barrenoActual≤barrenosTotales
+               MoveL
+                 bajada_broca≔p[0,0,0.018,0,0,0]
+                 internos≔interpolate_pose(Buje_Inicial, Buje_Final, ((barrenoActual)-1)/((barrenosTotales)-1))
+                 Wait: 2.0
+                 Alturas
+                   If barrenoActual≟1 or barrenoActual≟3 or barrenoActual≟5 or barrenoActual≟7 or barrenoActual≟9 or barrenoActual≟11 or barrenoActual≟13 or barrenoActual≟15 or barrenoActual≟17 or barrenoActual≟19 or barrenoActual≟21 or barrenoActual≟23 or barrenoActual≟25 or barrenoActual≟27
+                     Set mensaje_mw10=200
+                     Wait Continuar_M30=HI
+                     Wait: 1.0
+                     Set mensaje_mw10=150
+                     Wait: 1.0
+                   MoveJ
+                     internos
+                   Wait: 2.0
+                   If P1h[2]<P2h[2]
+                     acomodo≔(altura/(barrenosTotales-1))*(barrenoActual-1)
+                     tcp≔get_actual_tcp_pose()
+                     offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(acomodo/1000)),tcp[3],tcp[4],tcp[5]]
+                     MoveL
+                       offset_altura
+                   Else
+                     acomodo≔(altura/(barrenosTotales-1))*(26-(barrenoActual-1))
+                     tcp≔get_actual_tcp_pose()
+                     offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(acomodo/1000)),tcp[3],tcp[4],tcp[5]]
+                     MoveL
+                       offset_altura
+                 Freemove
+                   Wait: 2.0
+                   freedrive_mode()
+                   Wait: 2.5
+                   end_freedrive_mode()
+                 Wait: 0.3
+                 Set CO[1]=Encender
+                 Wait: 1.0
+                 Wait: 0.3
+                 Wait: 0.3
+                 Wait: 0.3
+                 Loop 1 times
+                   Poses_taladrado≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                   Poses_taladrado
+                   If bajada_broca≟p[0,0,0.018,0,0,0]
+                     num_barreno≔str_cat("Barreno: ",barrenoActual)
+                     tcp_actual≔get_actual_tcp_pose()
+                     X_actual≔str_cat("     X: ",tcp_actual[0])
+                     Y_actual≔str_cat("     Y: ",tcp_actual[1])
+                     pos_barreno≔str_cat(X_actual,Y_actual)
+                     textmsg(num_barreno,pos_barreno)
+                   Poses_taladrado≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                   Poses_taladrado
+                   bajada_broca≔pose_add(bajada_broca, p[0,0,0.018,0,0,0])
+                 Direction: Base Z+
+                   Until (distance)
+                 MoveJ
+                   internos
+                 Wait: 0.3
+                 Set CO[1]=Apagar
+                 Wait: 0.3
+                 If barrenoActual≟13 or barrenoActual≟27
+                   Direction: Base Z+
+                     Until (distance)
+                   MoveJ
+                     Zona_der1
+                     Posicion_Cero
+                   Call Quitar_Broca_Chida
+                   If barrenoActual≟13
+                     Call Poner_Broca
+                   ElseIf barrenoActual≟27
+                     Call Poner_Broca
+                   MoveJ
+                     Posicion_Cero
+                     Zona_der1
+                 barrenoActual≔barrenoActual+1
+           Linea 2 a 217
+             broca≔217
+             Buje_inicial
+               Buje_Inicial≔L2B2
+             Buje_final
+               Buje_Final≔L2B1
+             barrenosTotales≔27
+             barrenoActual≔1
+             Loop barrenoActual≤barrenosTotales
+               MoveL
+                 bajada_broca≔p[0,0,0.018,0,0,0]
+                 internos≔interpolate_pose(Buje_Inicial, Buje_Final, ((barrenoActual)-1)/((barrenosTotales)-1))
+                 Alturas
+                   If barrenoActual≟1 or barrenoActual≟3 or barrenoActual≟5 or barrenoActual≟7 or barrenoActual≟9 or barrenoActual≟11 or barrenoActual≟13 or barrenoActual≟15 or barrenoActual≟17 or barrenoActual≟19 or barrenoActual≟21 or barrenoActual≟23 or barrenoActual≟25 or barrenoActual≟27
+                     Set mensaje_mw10=200
+                     Wait Continuar_M30=HI
+                     Wait: 1.0
+                     Set mensaje_mw10=150
+                     Wait: 1.0
+                   MoveJ
+                     internos
+                   Wait: 2.0
+                   If P1h[2]<P2h[2]
+                     acomodo≔(altura/(barrenosTotales-1))*(barrenoActual-1)
+                     tcp≔get_actual_tcp_pose()
+                     offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(acomodo/1000)),tcp[3],tcp[4],tcp[5]]
+                     MoveL
+                       offset_altura
+                   Else
+                     acomodo≔(altura/(barrenosTotales-1))*(26-(barrenoActual-1))
+                     tcp≔get_actual_tcp_pose()
+                     offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(acomodo/1000)),tcp[3],tcp[4],tcp[5]]
+                     MoveL
+                       offset_altura
+                 Freemove
+                   Wait: 2.0
+                   freedrive_mode()
+                   Wait: 2.5
+                   end_freedrive_mode()
+                 Wait: 0.3
+                 Set CO[1]=Encender
+                 Wait: 1.0
+                 Wait: 0.3
+                 Wait: 0.3
+                 Wait: 0.3
+                 Loop 1 times
+                   Poses_taladrado≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                   Poses_taladrado
+                   If bajada_broca≟p[0,0,0.018,0,0,0]
+                     num_barreno≔str_cat("Barreno: ",barrenoActual)
+                     tcp_actual≔get_actual_tcp_pose()
+                     X_actual≔str_cat("     X: ",tcp_actual[0])
+                     Y_actual≔str_cat("     Y: ",tcp_actual[1])
+                     pos_barreno≔str_cat(X_actual,Y_actual)
+                     textmsg(num_barreno,pos_barreno)
+                   Poses_taladrado≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                   Poses_taladrado
+                   bajada_broca≔pose_add(bajada_broca, p[0,0,0.018,0,0,0])
+                 Direction: Base Z+
+                   Until (distance)
+                 MoveJ
+                   internos
+                 Wait: 0.3
+                 Set CO[1]=Apagar
+                 Wait: 0.3
+                 If barrenoActual≟13
+                   Direction: Base Z+
+                     Until (distance)
+                   MoveJ
+                     Zona_der1
+                     Posicion_Cero
+                   Call Quitar_Broca_Chida
+                   Call Poner_Broca
+                   MoveJ
+                     Posicion_Cero
+                     Zona_der1
+                 ElseIf barrenoActual≟27
+                   Direction: Base Z+
+                     Until (distance)
+                   MoveJ
+                     Zona_der1
+                     Posicion_Cero
+                   Call Quitar_Broca_Chida
+                   Set carrusel_home=Encender
+                   Wait: 1.0
+                   Set carrusel_home=Apagar
+                   Set mensaje_mw10=120
+                   Wait Continuar_M30=HI
+                   Wait: 1.0
+                   Set mensaje_mw10=100
+                   Wait Continuar_M30=HI
+                   Wait: 1.0
+                   MoveJ
+                     Traslacion_der
+                 barrenoActual≔barrenoActual+1
+         Set pos1_term_m611=Encender
+         Wait: 1.0
+         Set pos1_term_m611=Apagar
+       ElseIf pos_sig_der≟1
+         Arranque
+           Set mensaje_mw10=15
+           Wait Continuar_M30=HI
+           Wait: 1.0
+           MoveJ
+             Off_derecha
+           Set postrnas_m187=Encender
+           Wait: 1.0
+           Set Home_M20=Encender
+           Wait: 1.0
+           Set postrnas_m187=Apagar
+           Set Home_M20=Apagar
+           Set mensaje_mw10=20
+           Wait Continuar_M30=HI
+           Wait: 1.0
+         Traslacion
+           Set mensaje_mw10=25
+           Wait Continuar_M30=HI
+           Wait: 1.0
+           MoveJ
+             Waypoint_8
+             Traslacion_der
+           Set mensaje_mw10=105
+           Wait Continuar_M30=HI
+           Wait: 1.0
+           Set mensaje_mw10=145
+           Wait Continuar_M30=HI
+           Wait: 1.0
+           Set postrnas_m187=Encender
+           Wait: 1.0
+           Set pos2_der_mw698=Encender
+           Wait: 1.0
+           Set pos2_der_mw698=Apagar
+           Set postrnas_m187=Apagar
+           Wait: 10.0
+         Brocas
+           Set carrusel_home=Encender
+           Wait: 1.0
+           Set carrusel_home=Apagar
+           Set mensaje_mw10=40
+           Wait Continuar_M30=HI
+           Wait: 1.0
+           Set carrusel_home=Encender
+           Wait: 1.0
+           Set carrusel_home=Apagar
+           Set mensaje_mw10=45
+           Wait Continuar_M30=HI
+           Wait: 1.0
+           Call Poner_Broca
+         Offsets factor
+           'broca≔1645'
+           L1B1x≔(((0.09525254)/(0.09525))*(0.09525254))*(1)
+           L1B1y≔(((-0.012)/(-0.0127))*(-0.012))*(1)
+           L1B2x≔(((0.74)/(0.75565))*(0.74))*(1.0003)
+           L1B2y≔(((-0.00986)/(-0.0127))*(-0.00986))*(1.0086956521739)
+           L2B1x≔((0.09513062)/(0.09525))*(0.09525)
+           L2B1y≔((0.39369238)/(0.3937))*(0.39369238)
+           L2B2x≔((0.75565508)/(0.75565))*(0.75565508)
+           L2B2y≔((0.39290032)/(0.3937))*(0.39290032)
+         Calibracion
+           Set mensaje_mw10=50
+           Wait Continuar_M30=HI
+           Wait: 1.0
+           MoveJ
+             Posicion_Cero
+             Zona_der1
+           broca≔1645
+           Set mensaje_mw10=125
+           Wait Continuar_M30=HI
+           Wait: 1.0
+           Set mensaje_mw10=130
+           Wait Continuar_M30=HI
+           Wait: 1.0
+           Call Calibracion
+         GoNoGo
+           Set mensaje_mw10=55
+           Wait Continuar_M30=HI
+           Wait: 1.0
+           Set mensaje_mw10=60
+           Wait Continuar_M30=HI
+           Wait: 1.0
+           Linea1_Buje1
+             Xfin≔(((L1B1x)*Xp)-(Xd)-((L1B1y)*(1/m2)))*(-1)
+             Yfin≔(((L1B1y)*Yp)-(Yd)+((L1B1x)*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             If broca≟1645
+               PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,0.1,var_3,var_4,var_5]
+             ElseIf broca≟1935
+               PosFinal≔p[Xfin+0.00245745,Yfin+0.00245745,0.1,var_3,var_4,var_5]
+             ElseIf broca≟217
+               PosFinal≔p[Xfin+0.0027559,Yfin+0.0027559,0.1,var_3,var_4,var_5]
+             Buje_Final≔PosFinal
+           MoveJ
+             Buje_Final
+           Wait: 1.0
+           Alturas
+             If P1h[2]<P2h[2]
+               tcp≔get_actual_tcp_pose()
+               offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(altura/1000)),tcp[3],tcp[4],tcp[5]]
+               MoveL
+                 offset_altura
+             Else
+               tcp≔get_actual_tcp_pose()
+               offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)),tcp[3],tcp[4],tcp[5]]
+               MoveL
+                 offset_altura
+           MoveL
+             Freemove
+               Wait: 2.0
+               freedrive_mode()
+               Wait: 2.5
+               end_freedrive_mode()
+               var_11≔get_actual_tcp_pose()
+               var_11≔p[var_11[0]*1000,var_11[1]*1000,420,420,420,420]
+               var_11≔get_actual_tcp_pose()
+               var_11≔p[var_11[0],var_11[1],0.1,var_11[3],var_11[4],var_11[5]]
+             Direction: Base Z+
+               Until (distance)
+             Direction: Base X-
+               Until (distance)
+           L1B1≔var_11
+           Linea1_Buje2
+             Xfin≔(((L1B2x)*Xp)-(Xd)-((L1B2y)*(1/m2)))*(-1)
+             Yfin≔(((L1B2y)*Yp)-(Yd)+((L1B2x)*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             If broca≟1645
+               PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,0.1,var_3,var_4,var_5]
+             ElseIf broca≟1935
+               PosFinal≔p[Xfin+0.00245745,Yfin+0.00245745,0.1,var_3,var_4,var_5]
+             ElseIf broca≟217
+               PosFinal≔p[Xfin+0.0027559,Yfin+0.0027559,0.1,var_3,var_4,var_5]
+             Buje_Final≔PosFinal
+           MoveJ
+             Buje_Final
+           Wait: 1.0
+           Alturas
+             If P1h[2]<P2h[2]
+               tcp≔get_actual_tcp_pose()
+               offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)),tcp[3],tcp[4],tcp[5]]
+               MoveL
+                 offset_altura
+             Else
+               tcp≔get_actual_tcp_pose()
+               offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(altura/1000)),tcp[3],tcp[4],tcp[5]]
+               MoveL
+                 offset_altura
+           MoveL
+             Freemove
+               Wait: 2.0
+               freedrive_mode()
+               Wait: 2.5
+               end_freedrive_mode()
+               var_11≔get_actual_tcp_pose()
+               var_11≔p[var_11[0]*1000,var_11[1]*1000,420,420,420,420]
+               var_11≔get_actual_tcp_pose()
+               var_11≔p[var_11[0],var_11[1],0.1,var_11[3],var_11[4],var_11[5]]
+             Direction: Base Z+
+               Until (distance)
+           L1B2≔var_11
+           Linea2_Buje2
+             Xfin≔(((L2B2x)*Xp)-(Xd)-((L2B2y)*(1/m2)))*(-1)
+             Yfin≔(((L2B2y)*Yp)-(Yd)+((L2B2x)*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             If broca≟1645
+               PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,0.1,var_3,var_4,var_5]
+             ElseIf broca≟1935
+               PosFinal≔p[Xfin+0.00245745,Yfin+0.00245745,0.1,var_3,var_4,var_5]
+             ElseIf broca≟217
+               PosFinal≔p[Xfin+0.0027559,Yfin+0.0027559,0.1,var_3,var_4,var_5]
+             Buje_Final≔PosFinal
+           MoveJ
+             Buje_Final
+           Wait: 1.0
+           Alturas
+             If P1h[2]<P2h[2]
+               tcp≔get_actual_tcp_pose()
+               offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)),tcp[3],tcp[4],tcp[5]]
+               MoveL
+                 offset_altura
+             Else
+               tcp≔get_actual_tcp_pose()
+               offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(altura/1000)),tcp[3],tcp[4],tcp[5]]
+               MoveL
+                 offset_altura
+           MoveL
+             Freemove
+               Wait: 2.0
+               freedrive_mode()
+               Wait: 2.5
+               end_freedrive_mode()
+               var_11≔get_actual_tcp_pose()
+               var_11≔p[var_11[0]*1000,var_11[1]*1000,420,420,420,420]
+               var_11≔get_actual_tcp_pose()
+               var_11≔p[var_11[0],var_11[1],0.1,var_11[3],var_11[4],var_11[5]]
+             Direction: Base Z+
+               Until (distance)
+           L2B2≔var_11
+           Linea2_Buje1
+             Xfin≔(((L2B1x)*Xp)-(Xd)-((L2B1y)*(1/m2)))*(-1)
+             Yfin≔(((L2B1y)*Yp)-(Yd)+((L2B1x)*m1))*(-1)
+             rotaciones≔get_actual_tcp_pose()
+             var_3≔rotaciones[3]
+             var_4≔rotaciones[4]
+             var_5≔rotaciones[5]
+             If broca≟1645
+               PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,0.1,var_3,var_4,var_5]
+             ElseIf broca≟1935
+               PosFinal≔p[Xfin+0.00245745,Yfin+0.00245745,0.1,var_3,var_4,var_5]
+             ElseIf broca≟217
+               PosFinal≔p[Xfin+0.0027559,Yfin+0.0027559,0.1,var_3,var_4,var_5]
+             Buje_Final≔PosFinal
+           MoveJ
+             Buje_Final
+           Wait: 1.0
+           Alturas
+             If P1h[2]<P2h[2]
+               tcp≔get_actual_tcp_pose()
+               offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(altura/1000)),tcp[3],tcp[4],tcp[5]]
+               MoveL
+                 offset_altura
+             Else
+               tcp≔get_actual_tcp_pose()
+               offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)),tcp[3],tcp[4],tcp[5]]
+               MoveL
+                 offset_altura
+           MoveL
+             Freemove
+               Wait: 2.0
+               freedrive_mode()
+               Wait: 2.5
+               end_freedrive_mode()
+               var_11≔get_actual_tcp_pose()
+               var_11≔p[var_11[0]*1000,var_11[1]*1000,420,420,420,420]
+               var_11≔get_actual_tcp_pose()
+               var_11≔p[var_11[0],var_11[1],0.1,var_11[3],var_11[4],var_11[5]]
+             Direction: Base Z+
+               Until (distance)
+           L2B1≔var_11
+           MoveJ
+             Zona_der1
+         'Cancelar barrenacion'
+         Colocar broca
+           Call Quitar_Broca_Chida
+           Call Poner_Broca
+         Barrenado
+           Set mensaje_mw10=65
+           Wait Continuar_M30=HI
+           Wait: 1.0
+           Set mensaje_mw10=150
+           Wait: 1.0
+           Linea 1 a 1645
+             broca≔1645
+             Buje_inicial
+               Buje_Inicial≔L1B2
+             Buje_final
+               Buje_Final≔L1B1
+             barrenosTotales≔27
+             barrenoActual≔1
+             Loop barrenoActual≤barrenosTotales
+               MoveL
+                 bajada_broca≔p[0,0,0.006,0,0,0]
+                 internos≔interpolate_pose(Buje_Inicial, Buje_Final, ((barrenoActual)-1)/((barrenosTotales)-1))
+                 If barrenoActual≟1 or barrenoActual≟3 or barrenoActual≟5 or barrenoActual≟7 or barrenoActual≟9 or barrenoActual≟11 or barrenoActual≟13 or barrenoActual≟15 or barrenoActual≟17 or barrenoActual≟19 or barrenoActual≟21 or barrenoActual≟23 or barrenoActual≟25 or barrenoActual≟27
+                   Set mensaje_mw10=200
+                   Wait Continuar_M30=HI
+                   Wait: 1.0
+                   Set mensaje_mw10=150
+                   Wait: 1.0
+                 MoveJ
+                   internos
+                 Wait: 2.0
+                 Alturas
+                   If P1h[2]<P2h[2]
+                     acomodo≔(altura/(barrenosTotales-1))*(barrenoActual-1)
+                     tcp≔get_actual_tcp_pose()
+                     offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(acomodo/1000)),tcp[3],tcp[4],tcp[5]]
+                     MoveL
+                       offset_altura
+                   Else
+                     acomodo≔(altura/(barrenosTotales-1))*(26-(barrenoActual-1))
+                     tcp≔get_actual_tcp_pose()
+                     offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(acomodo/1000)),tcp[3],tcp[4],tcp[5]]
+                     MoveL
+                       offset_altura
+                 Freemove
+                   Wait: 2.0
+                   freedrive_mode()
+                   Wait: 2.5
+                   end_freedrive_mode()
+                 Wait: 0.3
+                 Set CO[1]=Encender
+                 Wait: 1.0
+                 Wait: 0.3
+                 Wait: 0.3
+                 Wait: 0.3
+                 Loop 3 times
+                   Poses_taladrado≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                   Poses_taladrado
+                   If bajada_broca≟p[0,0,0.018,0,0,0]
+                     num_barreno≔str_cat("Barreno: ",barrenoActual)
+                     tcp_actual≔get_actual_tcp_pose()
+                     X_actual≔str_cat("     X: ",tcp_actual[0])
+                     Y_actual≔str_cat("     Y: ",tcp_actual[1])
+                     pos_barreno≔str_cat(X_actual,Y_actual)
+                     textmsg(num_barreno,pos_barreno)
+                   Poses_taladrado≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                   Poses_taladrado
+                   bajada_broca≔pose_add(bajada_broca, p[0,0,0.006,0,0,0])
+                 Direction: Base Z+
+                   Until (distance)
+                 MoveJ
+                   internos
+                 Wait: 0.3
+                 Set CO[1]=Apagar
+                 Wait: 0.3
+                 If barrenoActual≟13 or barrenoActual≟27
+                   Direction: Base Z+
+                     Until (distance)
+                   MoveJ
+                     Zona_der1
+                     Posicion_Cero
+                   Call Quitar_Broca_Chida
+                   If barrenoActual≟13
+                     Call Poner_Broca
+                   ElseIf barrenoActual≟27
+                     Call Poner_Broca
+                   MoveJ
+                     Posicion_Cero
+                     Zona_der1
+                 barrenoActual≔barrenoActual+1
+           Linea 2 a 1645
+             broca≔1645
+             Buje_inicial
+               Buje_Inicial≔L2B2
+             Buje_final
+               Buje_Final≔L2B1
+             barrenosTotales≔27
+             barrenoActual≔1
+             Loop barrenoActual≤barrenosTotales
+               MoveL
+                 bajada_broca≔p[0,0,0.006,0,0,0]
+                 internos≔interpolate_pose(Buje_Inicial, Buje_Final, ((barrenoActual)-1)/((barrenosTotales)-1))
+                 Alturas
+                   If barrenoActual≟1 or barrenoActual≟3 or barrenoActual≟5 or barrenoActual≟7 or barrenoActual≟9 or barrenoActual≟11 or barrenoActual≟13 or barrenoActual≟15 or barrenoActual≟17 or barrenoActual≟19 or barrenoActual≟21 or barrenoActual≟23 or barrenoActual≟25 or barrenoActual≟27
+                     Set mensaje_mw10=200
+                     Wait Continuar_M30=HI
+                     Wait: 1.0
+                     Set mensaje_mw10=150
+                     Wait: 1.0
+                   MoveJ
+                     internos
+                   Wait: 2.0
+                   If P1h[2]<P2h[2]
+                     acomodo≔(altura/(barrenosTotales-1))*(barrenoActual-1)
+                     tcp≔get_actual_tcp_pose()
+                     offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(acomodo/1000)),tcp[3],tcp[4],tcp[5]]
+                     MoveL
+                       offset_altura
+                   Else
+                     acomodo≔(altura/(barrenosTotales-1))*(26-(barrenoActual-1))
+                     tcp≔get_actual_tcp_pose()
+                     offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(acomodo/1000)),tcp[3],tcp[4],tcp[5]]
+                     MoveL
+                       offset_altura
+                 Freemove
+                   Wait: 2.0
+                   freedrive_mode()
+                   Wait: 2.5
+                   end_freedrive_mode()
+                 Wait: 0.3
+                 Set CO[1]=Encender
+                 Wait: 1.0
+                 Wait: 0.3
+                 Wait: 0.3
+                 Wait: 0.3
+                 Loop 3 times
+                   Poses_taladrado≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                   Poses_taladrado
+                   If bajada_broca≟p[0,0,0.018,0,0,0]
+                     num_barreno≔str_cat("Barreno: ",barrenoActual)
+                     tcp_actual≔get_actual_tcp_pose()
+                     X_actual≔str_cat("     X: ",tcp_actual[0])
+                     Y_actual≔str_cat("     Y: ",tcp_actual[1])
+                     pos_barreno≔str_cat(X_actual,Y_actual)
+                     textmsg(num_barreno,pos_barreno)
+                   Poses_taladrado≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                   Poses_taladrado
+                   bajada_broca≔pose_add(bajada_broca, p[0,0,0.006,0,0,0])
+                 Direction: Base Z+
+                   Until (distance)
+                 MoveJ
+                   internos
+                 Wait: 0.3
+                 Set CO[1]=Apagar
+                 Wait: 0.3
+                 If barrenoActual≟13
+                   Direction: Base Z+
+                     Until (distance)
+                   MoveJ
+                     Zona_der1
+                     Posicion_Cero
+                   Call Quitar_Broca_Chida
+                   Call Poner_Broca
+                   MoveJ
+                     Posicion_Cero
+                     Zona_der1
+                 ElseIf barrenoActual≟27
+                   Direction: Base Z+
+                     Until (distance)
+                   MoveJ
+                     Zona_der1
+                     Posicion_Cero
+                   Call Quitar_Broca_Chida
+                   Set carrusel_home=Encender
+                   Wait: 1.0
+                   Set carrusel_home=Apagar
+                   Set mensaje_mw10=70
+                   Wait Continuar_M30=HI
+                   Wait: 1.0
+                   Set mensaje_mw10=120
+                   Wait Continuar_M30=HI
+                   Wait: 1.0
+                   Set carrusel_home=Encender
+                   Wait: 1.0
+                   Set carrusel_home=Apagar
+                   Set mensaje_mw10=75
+                   Wait Continuar_M30=HI
+                   Wait: 1.0
+                   Call Poner_Broca
+                   broca≔1935
+                   MoveJ
+                     Posicion_Cero
+                     Zona_der1
+                   Set mensaje_mw10=80
+                   Wait Continuar_M30=HI
+                   Wait: 1.0
+                   Set mensaje_mw10=150
+                   Wait Continuar_M30=HI
+                   Wait: 1.0
+                 barrenoActual≔barrenoActual+1
+           Linea 1 a 1935
+             broca≔1935
+             Buje_inicial
+               Buje_Inicial≔L1B2
+             Buje_final
+               Buje_Final≔L1B1
+             barrenosTotales≔27
+             barrenoActual≔1
+             Loop barrenoActual≤barrenosTotales
+               MoveL
+                 bajada_broca≔p[0,0,0.009,0,0,0]
+                 internos≔interpolate_pose(Buje_Inicial, Buje_Final, ((barrenoActual)-1)/((barrenosTotales)-1))
+                 Alturas
+                   If barrenoActual≟1 or barrenoActual≟3 or barrenoActual≟5 or barrenoActual≟7 or barrenoActual≟9 or barrenoActual≟11 or barrenoActual≟13 or barrenoActual≟15 or barrenoActual≟17 or barrenoActual≟19 or barrenoActual≟21 or barrenoActual≟23 or barrenoActual≟25 or barrenoActual≟27
+                     Set mensaje_mw10=200
+                     Wait Continuar_M30=HI
+                     Wait: 1.0
+                     Set mensaje_mw10=150
+                     Wait: 1.0
+                   MoveJ
+                     internos
+                   Wait: 2.0
+                   If P1h[2]<P2h[2]
+                     acomodo≔(altura/(barrenosTotales-1))*(barrenoActual-1)
+                     tcp≔get_actual_tcp_pose()
+                     offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(acomodo/1000)),tcp[3],tcp[4],tcp[5]]
+                     MoveL
+                       offset_altura
+                   Else
+                     acomodo≔(altura/(barrenosTotales-1))*(26-(barrenoActual-1))
+                     tcp≔get_actual_tcp_pose()
+                     offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(acomodo/1000)),tcp[3],tcp[4],tcp[5]]
+                     MoveL
+                       offset_altura
+                 Freemove
+                   Wait: 2.0
+                   freedrive_mode()
+                   Wait: 2.5
+                   end_freedrive_mode()
+                 Wait: 0.3
+                 Set CO[1]=Encender
+                 Wait: 1.0
+                 Wait: 0.3
+                 Wait: 0.3
+                 Wait: 0.3
+                 Loop 2 times
+                   Poses_taladrado≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                   Poses_taladrado
+                   If bajada_broca≟p[0,0,0.018,0,0,0]
+                     num_barreno≔str_cat("Barreno: ",barrenoActual)
+                     tcp_actual≔get_actual_tcp_pose()
+                     X_actual≔str_cat("     X: ",tcp_actual[0])
+                     Y_actual≔str_cat("     Y: ",tcp_actual[1])
+                     pos_barreno≔str_cat(X_actual,Y_actual)
+                     textmsg(num_barreno,pos_barreno)
+                   Poses_taladrado≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                   Poses_taladrado
+                   bajada_broca≔pose_add(bajada_broca, p[0,0,0.009,0,0,0])
+                 Direction: Base Z+
+                   Until (distance)
+                 MoveJ
+                   internos
+                 Wait: 0.3
+                 Set CO[1]=Apagar
+                 Wait: 0.3
+                 If barrenoActual≟13 or barrenoActual≟27
+                   Direction: Base Z+
+                     Until (distance)
+                   MoveJ
+                     Zona_der1
+                     Posicion_Cero
+                   Call Quitar_Broca_Chida
+                   If barrenoActual≟13
+                     Call Poner_Broca
+                   ElseIf barrenoActual≟27
+                     Call Poner_Broca
+                   MoveJ
+                     Posicion_Cero
+                     Zona_der1
+                 barrenoActual≔barrenoActual+1
+           Linea 2 a 1935
+             broca≔1935
+             Buje_inicial
+               Buje_Inicial≔L2B2
+             Buje_final
+               Buje_Final≔L2B1
+             barrenosTotales≔27
+             barrenoActual≔1
+             Loop barrenoActual≤barrenosTotales
+               MoveL
+                 bajada_broca≔p[0,0,0.009,0,0,0]
+                 internos≔interpolate_pose(Buje_Inicial, Buje_Final, ((barrenoActual)-1)/((barrenosTotales)-1))
+                 Alturas
+                   If barrenoActual≟1 or barrenoActual≟3 or barrenoActual≟5 or barrenoActual≟7 or barrenoActual≟9 or barrenoActual≟11 or barrenoActual≟13 or barrenoActual≟15 or barrenoActual≟17 or barrenoActual≟19 or barrenoActual≟21 or barrenoActual≟23 or barrenoActual≟25 or barrenoActual≟27
+                     Set mensaje_mw10=200
+                     Wait Continuar_M30=HI
+                     Wait: 1.0
+                     Set mensaje_mw10=150
+                     Wait: 1.0
+                   MoveJ
+                     internos
+                   Wait: 2.0
+                   If P1h[2]<P2h[2]
+                     acomodo≔(altura/(barrenosTotales-1))*(barrenoActual-1)
+                     tcp≔get_actual_tcp_pose()
+                     offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(acomodo/1000)),tcp[3],tcp[4],tcp[5]]
+                     MoveL
+                       offset_altura
+                   Else
+                     acomodo≔(altura/(barrenosTotales-1))*(26-(barrenoActual-1))
+                     tcp≔get_actual_tcp_pose()
+                     offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(acomodo/1000)),tcp[3],tcp[4],tcp[5]]
+                     MoveL
+                       offset_altura
+                 Freemove
+                   Wait: 2.0
+                   freedrive_mode()
+                   Wait: 2.5
+                   end_freedrive_mode()
+                 Wait: 0.3
+                 Set CO[1]=Encender
+                 Wait: 1.0
+                 Wait: 0.3
+                 Wait: 0.3
+                 Wait: 0.3
+                 Loop 2 times
+                   Poses_taladrado≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                   Poses_taladrado
+                   If bajada_broca≟p[0,0,0.018,0,0,0]
+                     num_barreno≔str_cat("Barreno: ",barrenoActual)
+                     tcp_actual≔get_actual_tcp_pose()
+                     X_actual≔str_cat("     X: ",tcp_actual[0])
+                     Y_actual≔str_cat("     Y: ",tcp_actual[1])
+                     pos_barreno≔str_cat(X_actual,Y_actual)
+                     textmsg(num_barreno,pos_barreno)
+                   Poses_taladrado≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                   Poses_taladrado
+                   bajada_broca≔pose_add(bajada_broca, p[0,0,0.009,0,0,0])
+                 Direction: Base Z+
+                   Until (distance)
+                 MoveJ
+                   internos
+                 Wait: 0.3
+                 Set CO[1]=Apagar
+                 Wait: 0.3
+                 If barrenoActual≟13
+                   Direction: Base Z+
+                     Until (distance)
+                   MoveJ
+                     Zona_der1
+                     Posicion_Cero
+                   Call Quitar_Broca_Chida
+                   Call Poner_Broca
+                   MoveJ
+                     Posicion_Cero
+                     Zona_der1
+                 ElseIf barrenoActual≟27
+                   Direction: Base Z+
+                     Until (distance)
+                   MoveJ
+                     Zona_der1
+                     Posicion_Cero
+                   Call Quitar_Broca_Chida
+                   Set carrusel_home=Encender
+                   Wait: 1.0
+                   Set carrusel_home=Apagar
+                   Set mensaje_mw10=85
+                   Wait Continuar_M30=HI
+                   Wait: 1.0
+                   Set mensaje_mw10=120
+                   Wait Continuar_M30=HI
+                   Wait: 1.0
+                   Set carrusel_home=Encender
+                   Wait: 1.0
+                   Set carrusel_home=Apagar
+                   Set mensaje_mw10=90
+                   Wait Continuar_M30=HI
+                   Wait: 1.0
+                   Call Poner_Broca
+                   broca≔217
+                   MoveJ
+                     Posicion_Cero
+                     Zona_der1
+                   Set mensaje_mw10=95
+                   Wait Continuar_M30=HI
+                   Wait: 1.0
+                   Set mensaje_mw10=150
+                   Wait Continuar_M30=HI
+                   Wait: 1.0
+                 barrenoActual≔barrenoActual+1
+           Linea 1 a 217
+             broca≔217
+             Buje_inicial
+               Buje_Inicial≔L1B2
+             Buje_final
+               Buje_Final≔L1B1
+             barrenosTotales≔27
+             barrenoActual≔1
+             Loop barrenoActual≤barrenosTotales
+               MoveL
+                 bajada_broca≔p[0,0,0.018,0,0,0]
+                 internos≔interpolate_pose(Buje_Inicial, Buje_Final, ((barrenoActual)-1)/((barrenosTotales)-1))
+                 Wait: 2.0
+                 Alturas
+                   If barrenoActual≟1 or barrenoActual≟3 or barrenoActual≟5 or barrenoActual≟7 or barrenoActual≟9 or barrenoActual≟11 or barrenoActual≟13 or barrenoActual≟15 or barrenoActual≟17 or barrenoActual≟19 or barrenoActual≟21 or barrenoActual≟23 or barrenoActual≟25 or barrenoActual≟27
+                     Set mensaje_mw10=200
+                     Wait Continuar_M30=HI
+                     Wait: 1.0
+                     Set mensaje_mw10=150
+                     Wait: 1.0
+                   MoveJ
+                     internos
+                   Wait: 2.0
+                   If P1h[2]<P2h[2]
+                     acomodo≔(altura/(barrenosTotales-1))*(barrenoActual-1)
+                     tcp≔get_actual_tcp_pose()
+                     offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(acomodo/1000)),tcp[3],tcp[4],tcp[5]]
+                     MoveL
+                       offset_altura
+                   Else
+                     acomodo≔(altura/(barrenosTotales-1))*(26-(barrenoActual-1))
+                     tcp≔get_actual_tcp_pose()
+                     offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(acomodo/1000)),tcp[3],tcp[4],tcp[5]]
+                     MoveL
+                       offset_altura
+                 Freemove
+                   Wait: 2.0
+                   freedrive_mode()
+                   Wait: 2.5
+                   end_freedrive_mode()
+                 Wait: 0.3
+                 Set CO[1]=Encender
+                 Wait: 1.0
+                 Wait: 0.3
+                 Wait: 0.3
+                 Wait: 0.3
+                 Loop 1 times
+                   Poses_taladrado≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                   Poses_taladrado
+                   If bajada_broca≟p[0,0,0.018,0,0,0]
+                     num_barreno≔str_cat("Barreno: ",barrenoActual)
+                     tcp_actual≔get_actual_tcp_pose()
+                     X_actual≔str_cat("     X: ",tcp_actual[0])
+                     Y_actual≔str_cat("     Y: ",tcp_actual[1])
+                     pos_barreno≔str_cat(X_actual,Y_actual)
+                     textmsg(num_barreno,pos_barreno)
+                   Poses_taladrado≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                   Poses_taladrado
+                   bajada_broca≔pose_add(bajada_broca, p[0,0,0.018,0,0,0])
+                 Direction: Base Z+
+                   Until (distance)
+                 MoveJ
+                   internos
+                 Wait: 0.3
+                 Set CO[1]=Apagar
+                 Wait: 0.3
+                 If barrenoActual≟13 or barrenoActual≟27
+                   Direction: Base Z+
+                     Until (distance)
+                   MoveJ
+                     Zona_der1
+                     Posicion_Cero
+                   Call Quitar_Broca_Chida
+                   If barrenoActual≟13
+                     Call Poner_Broca
+                   ElseIf barrenoActual≟27
+                     Call Poner_Broca
+                   MoveJ
+                     Posicion_Cero
+                     Zona_der1
+                 barrenoActual≔barrenoActual+1
+           Linea 2 a 217
+             broca≔217
+             Buje_inicial
+               Buje_Inicial≔L2B2
+             Buje_final
+               Buje_Final≔L2B1
+             barrenosTotales≔27
+             barrenoActual≔1
+             Loop barrenoActual≤barrenosTotales
+               MoveL
+                 bajada_broca≔p[0,0,0.018,0,0,0]
+                 internos≔interpolate_pose(Buje_Inicial, Buje_Final, ((barrenoActual)-1)/((barrenosTotales)-1))
+                 Alturas
+                   If barrenoActual≟1 or barrenoActual≟3 or barrenoActual≟5 or barrenoActual≟7 or barrenoActual≟9 or barrenoActual≟11 or barrenoActual≟13 or barrenoActual≟15 or barrenoActual≟17 or barrenoActual≟19 or barrenoActual≟21 or barrenoActual≟23 or barrenoActual≟25 or barrenoActual≟27
+                     Set mensaje_mw10=200
+                     Wait Continuar_M30=HI
+                     Wait: 1.0
+                     Set mensaje_mw10=150
+                     Wait: 1.0
+                   MoveJ
+                     internos
+                   Wait: 2.0
+                   If P1h[2]<P2h[2]
+                     acomodo≔(altura/(barrenosTotales-1))*(barrenoActual-1)
+                     tcp≔get_actual_tcp_pose()
+                     offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(acomodo/1000)),tcp[3],tcp[4],tcp[5]]
+                     MoveL
+                       offset_altura
+                   Else
+                     acomodo≔(altura/(barrenosTotales-1))*(26-(barrenoActual-1))
+                     tcp≔get_actual_tcp_pose()
+                     offset_altura≔p[tcp[0],tcp[1],((alta-0.0095)-(acomodo/1000)),tcp[3],tcp[4],tcp[5]]
+                     MoveL
+                       offset_altura
+                 Freemove
+                   Wait: 2.0
+                   freedrive_mode()
+                   Wait: 2.5
+                   end_freedrive_mode()
+                 Wait: 0.3
+                 Set CO[1]=Encender
+                 Wait: 1.0
+                 Wait: 0.3
+                 Wait: 0.3
+                 Wait: 0.3
+                 Loop 1 times
+                   Poses_taladrado≔pose_sub(get_actual_tcp_pose(), bajada_broca)
+                   Poses_taladrado
+                   If bajada_broca≟p[0,0,0.018,0,0,0]
+                     num_barreno≔str_cat("Barreno: ",barrenoActual)
+                     tcp_actual≔get_actual_tcp_pose()
+                     X_actual≔str_cat("     X: ",tcp_actual[0])
+                     Y_actual≔str_cat("     Y: ",tcp_actual[1])
+                     pos_barreno≔str_cat(X_actual,Y_actual)
+                     textmsg(num_barreno,pos_barreno)
+                   Poses_taladrado≔pose_add(get_actual_tcp_pose(), bajada_broca)
+                   Poses_taladrado
+                   bajada_broca≔pose_add(bajada_broca, p[0,0,0.018,0,0,0])
+                 Direction: Base Z+
+                   Until (distance)
+                 MoveJ
+                   internos
+                 Wait: 0.3
+                 Set CO[1]=Apagar
+                 Wait: 0.3
+                 If barrenoActual≟13
+                   Direction: Base Z+
+                     Until (distance)
+                   MoveJ
+                     Zona_der1
+                     Posicion_Cero
+                   Call Quitar_Broca_Chida
+                   Call Poner_Broca
+                   MoveJ
+                     Posicion_Cero
+                     Zona_der1
+                 ElseIf barrenoActual≟27
+                   Direction: Base Z+
+                     Until (distance)
+                   MoveJ
+                     Zona_der1
+                     Posicion_Cero
+                   Call Quitar_Broca_Chida
+                   Set carrusel_home=Encender
+                   Wait: 1.0
+                   Set carrusel_home=Apagar
+                   Set mensaje_mw10=120
+                   Wait Continuar_M30=HI
+                   Wait: 1.0
+                   Set mensaje_mw10=100
+                   Wait Continuar_M30=HI
+                   Wait: 1.0
+                   MoveJ
+                     Traslacion_der
+                 barrenoActual≔barrenoActual+1
+         Set pos4_term_m612=Encender
+         Wait: 1.0
+         Set pos4_term_m612=Apagar
+       'GoNoGo'
+       'Set'
+       Traslacion
+         MoveJ
+           Traslacion_der
+         Set mensaje_mw10=105
+         Wait Continuar_M30=HI
+         Wait: 1.0
+         Set mensaje_mw10=110
+         Wait Continuar_M30=HI
+         Wait: 1.0
+         Set postrnas_m187=Encender
+         Wait: 1.0
+         Set Home_M20=Encender
+         Wait: 1.0
+         Set Home_M20=Apagar
+         Set postrnas_m187=Apagar
+         Wait: 10.0
+       Apagar
+         Set mensaje_mw10=115
+         Wait Continuar_M30=HI
+         Wait: 1.0
+         MoveJ
+           Waypoint_8
+           Off_derecha
+         Set mensaje_mw10=0
+         Wait: 1.0
+         Wait Continuar_M30=HI
+         Wait: 1.0
+         Popup: Apagar DAS
+     ElseIf Lado_Correr≟1
+       Set mensaje_mw10=205
+     ElseIf Lado_Correr≟0
+       Set mensaje_mw10=205
+     Else
+       Lado≔ False 
+       Set mensaje_mw10=205
+       Popup: DAS no anclado
+   Poner_Broca
+     If Lado_Correr≟2
+       Poner_Broca
+         Set ini_cambro_m289=Apagar
+         MoveJ
+           Precambio_der
+         MoveL
+           Dejar_der
+         Set ini_cambro_m289=Encender
+         Wait: 3.8
+         Set ini_cambro_m289=Apagar
+         Wait: 0.5
+         Wait fciclocarr_m292=LO
+         Wait: 0.5
+         freedrive_mode()
+         Wait: 2.0
+         end_freedrive_mode()
+         MoveJ
+           Dejar_der
+         MoveL
+           Precambio_der
+     ElseIf Lado_Correr≟1
+       'Popup: __'
+     ElseIf Lado_Correr≟0
+       'Popup: __'
+     Else
+       Lado≔ False 
+       Popup: DAS no anclado
+   Quitar_Broca_Chida
+     If Lado_Correr≟2
+       Quitar_Broca
+         MoveJ
+           Loop 1 times
+             MoveL
+               MoveJ
+                 Precambio_der
+               Dejar_der
+               Wait: 0.5
+               freedrive_mode()
+               Wait: 2.0
+               end_freedrive_mode()
+               Set outputbroc_m291=Encender
+               Wait: 0.5
+               Set outputbroc_m291=Apagar
+               Wait: 0.5
+               Wait fciclocarr_m292=LO
+               Wait: 0.5
+               freedrive_mode()
+               Wait: 2.0
+               end_freedrive_mode()
+               Precambio_der
+               Set avancarrusel_m7=Encender
+               Wait: 1.1
+               Set avancarrusel_m7=Apagar
+     ElseIf Lado_Correr≟1
+       'Popup: _____'
+     ElseIf Lado_Correr≟0
+       'Popup: _____'
+     Else
+       Lado≔ False 
+       Popup: DAS no anclado
+   Calibracion
+     'Offsets factor'
+     'Offsets factor'
+     Offsets factor
+       broca≔1645
+       L1B1x≔((0.09525))
+       L1B1y≔((-0.0127))
+       L1B2x≔((0.75565))
+       L1B2y≔(-0.0127)
+       L2B1x≔((0.09525))
+       L2B1y≔((0.3937))
+       L2B2x≔((0.75565))
+       L2B2y≔((0.3937))
+     If Lado_Correr≟2
+       Subvariables
+         muestras≔1
+         muestrasTomadas≔0
+         P1≔p[0,0,0,0,0,0]
+         P2≔p[0,0,0,0,0,0]
+         P3≔p[0,0,0,0,0,0]
+         P4≔p[0,0,0,0,0,0]
+         P1h≔p[0,0,0,0,0,0]
+         P2h≔p[0,0,0,0,0,0]
+         altura≔0
+         rotaciones≔p[0,0,0,0,0,0]
+         PosFinal≔p[0,0,0,0,0,0]
+         m1≔0
+         m2≔0
+         b1≔0
+         b2≔0
+         Xd≔0
+         Yd≔0
+         Xp≔0
+         Yp≔0
+         Xfin≔0
+         Yfin≔0
+       Calibracion
+         MoveL
+           Direction: Base Z+
+             Until (distance)
+           MoveJ
+             Zona_der1
+           MoveL
+             MoveJ
+               If pos_eje7_mw13≟1
+                 Paso1_Der1
+               ElseIf pos_eje7_mw13≟2
+                 Paso1_Der2
+             P1
+               Loop muestrasTomadas<muestras
+                 MoveJ
+                   If pos_eje7_mw13≟1
+                     Sacar1_der1
+                   ElseIf pos_eje7_mw13≟2
+                     Sacar1_der2
+                 Wait: 0.5
+                 Direction: Base Y+
+                   Until (tool_contact_detection)
+                 Wait: 2.0
+                 P1≔pose_add(get_actual_tcp_pose(), P1)
+                 muestrasTomadas≔muestrasTomadas+1
+               muestrasTomadas≔0
+               var_1≔(P1[0])/muestras
+               var_2≔(P1[1])/muestras
+               rotaciones≔get_actual_tcp_pose()
+               var_3≔rotaciones[3]
+               var_4≔rotaciones[4]
+               var_5≔rotaciones[5]
+               P1≔p[var_1,var_2,-0.37,var_3,var_4,var_5]
+             P1h
+               Loop muestrasTomadas<muestras
+                 Direction: Base Z+
+                   Until (distance)
+                 MoveJ
+                   If pos_eje7_mw13≟1
+                     Sacar1h_der1
+                   ElseIf pos_eje7_mw13≟2
+                     Sacar1h_der2
+                 Wait: 0.5
+                 Direction: Base Z-
+                   Until (distance)
+                 Direction: Base Z-
+                   Until (tool_contact_detection)
+                 Wait: 2.0
+                 P1h≔pose_add(get_actual_tcp_pose(), P1h)
+                 muestrasTomadas≔muestrasTomadas+1
+               muestrasTomadas≔0
+               var_1≔(P1h[0])/muestras
+               var_2≔(P1h[1])/muestras
+               var_9≔(P1h[2])/muestras
+               rotaciones≔get_actual_tcp_pose()
+               var_3≔rotaciones[3]
+               var_4≔rotaciones[4]
+               var_5≔rotaciones[5]
+               P1h≔p[var_1,var_2,var_9,var_3,var_4,var_5]
+             MoveJ
+               If pos_eje7_mw13≟1
+                 Paso1_Der1
+                 Waypoint_9
+               ElseIf pos_eje7_mw13≟2
+                 Paso1_Der2
+             P2
+               Loop muestrasTomadas<muestras
+                 MoveJ
+                   If pos_eje7_mw13≟1
+                     Sacar2_der1
+                   ElseIf pos_eje7_mw13≟2
+                     Sacar2_der2
+                 Wait: 0.5
+                 Direction: Base Y+
+                   Until (tool_contact_detection)
+                 Wait: 2.0
+                 P2≔pose_add(get_actual_tcp_pose(), P2)
+                 muestrasTomadas≔muestrasTomadas+1
+               muestrasTomadas≔0
+               var_1≔(P2[0])/muestras
+               var_2≔(P2[1])/muestras
+               rotaciones≔get_actual_tcp_pose()
+               var_3≔rotaciones[3]
+               var_4≔rotaciones[4]
+               var_5≔rotaciones[5]
+               P2≔p[var_1,var_2,-0.37,var_3,var_4,var_5]
+             P2h
+               Loop muestrasTomadas<muestras
+                 MoveJ
+                   If pos_eje7_mw13≟1
+                     Waypoint_11
+                     Waypoint_10
+                   ElseIf pos_eje7_mw13≟2
+                     Paso1_Der2
+                     Sacar2h_der2
+                 Wait: 0.5
+                 Direction: Base Z-
+                   Until (tool_contact_detection)
+                 Wait: 2.0
+                 P2h≔pose_add(get_actual_tcp_pose(), P2h)
+                 muestrasTomadas≔muestrasTomadas+1
+               muestrasTomadas≔0
+               var_1≔(P2h[0])/muestras
+               var_2≔(P2h[1])/muestras
+               var_9≔(P2h[2])/muestras
+               rotaciones≔get_actual_tcp_pose()
+               var_3≔rotaciones[3]
+               var_4≔rotaciones[4]
+               var_5≔rotaciones[5]
+               P2h≔p[var_1,var_2,var_9,var_3,var_4,var_5]
+             MoveJ
+               If pos_eje7_mw13≟1
+                 Waypoint_9
+                 Paso1_Der1
+               ElseIf pos_eje7_mw13≟2
+                 Paso1_Der2
+             m1
+               var_1≔(P1[0])
+               var_2≔(P1[1])
+               var_3≔(P2[0])
+               var_4≔(P2[1])
+               m1≔(var_4-var_2)/(var_3-var_1)
+             b1
+               b1≔((m1*var_1)-var_2)*(-1)
+             MoveJ
+               If pos_eje7_mw13≟1
+                 Paso2_der1
+               ElseIf pos_eje7_mw13≟2
+                 Paso2_der2
+             P3
+               Loop muestrasTomadas<muestras
+                 MoveJ
+                   If pos_eje7_mw13≟1
+                     Sacar3_der1
+                   ElseIf pos_eje7_mw13≟2
+                     Sacar3_der2
+                 Wait: 0.5
+                 Direction: Base X+
+                   Until (tool_contact_detection)
+                 Wait: 2.0
+                 P3≔pose_add(get_actual_tcp_pose(), P3)
+                 muestrasTomadas≔muestrasTomadas+1
+               muestrasTomadas≔0
+               var_1≔(P3[0])/muestras
+               var_2≔(P3[1])/muestras
+               rotaciones≔get_actual_tcp_pose()
+               var_3≔rotaciones[3]
+               var_4≔rotaciones[4]
+               var_5≔rotaciones[5]
+               P3≔p[var_1,var_2,-0.37,var_3,var_4,var_5]
+             MoveJ
+               If pos_eje7_mw13≟1
+                 Paso2_der1
+               ElseIf pos_eje7_mw13≟2
+                 Paso2_der2
+             P4
+               Loop muestrasTomadas<muestras
+                 MoveJ
+                   If pos_eje7_mw13≟1
+                     Sacar4_der1
+                   ElseIf pos_eje7_mw13≟2
+                     Sacar4_der2
+                 Wait: 0.5
+                 Direction: Base X+
+                   Until (tool_contact_detection)
+                 Wait: 2.0
+                 P4≔pose_add(get_actual_tcp_pose(), P4)
+                 muestrasTomadas≔muestrasTomadas+1
+               muestrasTomadas≔0
+               var_1≔(P4[0])/muestras
+               var_2≔(P4[1])/muestras
+               rotaciones≔get_actual_tcp_pose()
+               var_3≔rotaciones[3]
+               var_4≔rotaciones[4]
+               var_5≔rotaciones[5]
+               P4≔p[var_1,var_2,-0.37,var_3,var_4,var_5]
+             MoveJ
+               If pos_eje7_mw13≟1
+                 Paso2_der1
+               ElseIf pos_eje7_mw13≟2
+                 Paso2_der2
+             m2
+               var_1≔(P3[0])
+               var_2≔(P3[1])
+               var_3≔(P4[0])
+               var_4≔(P4[1])
+               m2≔(var_4-var_2)/(var_3-var_1)
+             b2
+               b2≔((m2*var_1)-var_2)*(-1)
+             Xd y Yd
+               Xd≔(b2-b1)/(m1-m2)
+               Yd≔(m1*Xd)+b1
+             'Zp'
+             Xp y Yp
+               Xp≔((1)/(sqrt((m1*m1)+1)))*(1)
+               Yp≔((m2)/(sqrt((m2*m2)+1)))*(1)
+             Origen
+               Xfin≔((0*Xp)-(Xd)-(0*(1/m2)))*(-1)
+               Yfin≔((0*Yp)-(Yd)+(0*m1))*(-1)
+               rotaciones≔get_actual_tcp_pose()
+               var_3≔rotaciones[3]
+               var_4≔rotaciones[4]
+               var_5≔rotaciones[5]
+               If broca≟1645
+                 PosFinal≔p[Xfin+0.00208915,Yfin+0.00208915,0.065,var_3,var_4,var_5]
+               ElseIf broca≟1935
+                 PosFinal≔p[Xfin+0.00245745,Yfin+0.00245745,0.065,var_3,var_4,var_5]
+               ElseIf broca≟217
+                 PosFinal≔p[Xfin+0.0027559,Yfin+0.0027559,0.065,var_3,var_4,var_5]
+               origen≔PosFinal
+             Linea1_Buje1
+               Xfin≔(((L1B1x)*Xp)-(Xd)-((L1B1y)*(1/m2)))*(-1)
+               Yfin≔(((L1B1y)*Yp)-(Yd)+((L1B1x)*m1))*(-1)
+               rotaciones≔get_actual_tcp_pose()
+               var_3≔rotaciones[3]
+               var_4≔rotaciones[4]
+               var_5≔rotaciones[5]
+               If broca≟1645
+                 PosFinal≔p[(Xfin+0.00208915)*1000,(Yfin+0.00208915)*1000,0.065,var_3,var_4,var_5]
+               ElseIf broca≟1935
+                 PosFinal≔p[Xfin+0.00245745,Yfin+0.00245745,0.065,var_3,var_4,var_5]
+               ElseIf broca≟217
+                 PosFinal≔p[Xfin+0.0027559,Yfin+0.0027559,0.065,var_3,var_4,var_5]
+               Linea1_Buje1≔PosFinal
+             Linea1_Buje27
+               Xfin≔(((L1B2x)*Xp)-(Xd)-((L1B2y)*(1/m2)))*(-1)
+               Yfin≔(((L1B2y)*Yp)-(Yd)+((L1B2x)*m1))*(-1)
+               rotaciones≔get_actual_tcp_pose()
+               var_3≔rotaciones[3]
+               var_4≔rotaciones[4]
+               var_5≔rotaciones[5]
+               If broca≟1645
+                 PosFinal≔p[(Xfin+0.00208915)*1000,(Yfin+0.00208915)*1000,0.065,var_3,var_4,var_5]
+               ElseIf broca≟1935
+                 PosFinal≔p[Xfin+0.00245745,Yfin+0.00245745,0.065,var_3,var_4,var_5]
+               ElseIf broca≟217
+                 PosFinal≔p[Xfin+0.0027559,Yfin+0.0027559,0.065,var_3,var_4,var_5]
+               Linea1_Buje27≔PosFinal
+             Linea2_Buje1
+               Xfin≔(((L2B1x)*Xp)-(Xd)-((L2B1y)*(1/m2)))*(-1)
+               Yfin≔(((L2B1y)*Yp)-(Yd)+((L2B1x)*m1))*(-1)
+               rotaciones≔get_actual_tcp_pose()
+               var_3≔rotaciones[3]
+               var_4≔rotaciones[4]
+               var_5≔rotaciones[5]
+               If broca≟1645
+                 PosFinal≔p[(Xfin+0.00208915)*1000,(Yfin+0.00208915)*1000,0.065,var_3,var_4,var_5]
+               ElseIf broca≟1935
+                 PosFinal≔p[Xfin+0.00245745,Yfin+0.00245745,0.065,var_3,var_4,var_5]
+               ElseIf broca≟217
+                 PosFinal≔p[Xfin+0.0027559,Yfin+0.0027559,0.065,var_3,var_4,var_5]
+               Linea2_Buje1≔PosFinal
+             Linea2_Buje27
+               Xfin≔(((L2B2x)*Xp)-(Xd)-((L2B2y)*(1/m2)))*(-1)
+               Yfin≔(((L2B2y)*Yp)-(Yd)+((L2B2x)*m1))*(-1)
+               rotaciones≔get_actual_tcp_pose()
+               var_3≔rotaciones[3]
+               var_4≔rotaciones[4]
+               var_5≔rotaciones[5]
+               If broca≟1645
+                 PosFinal≔p[(Xfin+0.00208915)*1000,(Yfin+0.00208915)*1000,0.065,var_3,var_4,var_5]
+               ElseIf broca≟1935
+                 PosFinal≔p[Xfin+0.00245745,Yfin+0.00245745,0.065,var_3,var_4,var_5]
+               ElseIf broca≟217
+                 PosFinal≔p[Xfin+0.0027559,Yfin+0.0027559,0.065,var_3,var_4,var_5]
+               Linea2_Buje27≔PosFinal
+             Altura
+               If P1h[2]<P2h[2]
+                 altura≔(P2h[2]-P1h[2])*1000
+                 alta≔(P2h[2])
+               Else
+                 altura≔(P1h[2]-P2h[2])*1000
+                 alta≔(P1h[2])
+             Direction: Base Z+
+               Until (distance)
+             MoveJ
+               Zona_der1
+     ElseIf Lado_Correr≟1
+       'Popup: __'
+     ElseIf Lado_Correr≟0
+       'Popup: __'
+     Else
+       Lado≔ False 
+       Popup: DAS no anclado
